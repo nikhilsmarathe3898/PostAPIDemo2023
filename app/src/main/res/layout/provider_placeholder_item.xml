@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="@dimen/dimen_80dp"
+        android:layout_height="@dimen/dimen_8dp"
+        android:background="@color/shimmer_color"
+        android:layout_margin="@dimen/app_margin"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/dimen_60dp"
+            android:layout_height="@dimen/dimen_60dp"
+            android:background="@drawable/circle_pro_image"
+            android:backgroundTint="@color/shimmer_color"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <View
+                android:layout_width="@dimen/dimen_100dp"
+                android:layout_height="8dp"
+                android:background="@color/shimmer_color"/>
+
+            <View
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="7dp"
+                android:background="@color/shimmer_color"
+                android:layout_marginTop="@dimen/dimen_8dp"/>
+
+            <View
+                android:layout_width="@dimen/dimen_80dp"
+                android:layout_height="7dp"
+                android:background="@color/shimmer_color"
+                android:layout_marginTop="@dimen/dimen_8dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="@dimen/dimen_90dp"
+            android:layout_height="8dp"
+            android:background="@color/shimmer_color"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginLeft="@dimen/dimen_100dp"
+
+            />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,1341 @@
+<resources>
+    <string name="app_name">Service Genie</string>
+
+    <!-- <string name="facebook_app_id">2076671035896921</string>-->
+    <!--on iserve3embed@gmail.com-->
+    <string name="facebook_app_id">445340349536589</string>
+    <string name="fb_login_protocol_scheme">fb445340349536589</string>
+
+    <string name="title_activity_splash_screen">SplashScreen</string>
+
+    <string name="livemAppLink">service-genie.xyz</string>
+
+    <string name="msgMandatoryupdate">Your application version is outdated, please update it from the store…</string>
+    <string name="msgNonMandatoryupdate">There is a new update available for GoTasker Provider. Please click on the UPDATE button to download the most current version!</string>
+
+    <string name="or">OR</string>
+    <string name="ors">Or</string>
+    <string name="dummy_date">8 Aug 2017</string>
+    <string name="dummy_time">6:40 PM</string>
+    <string name="confirm">Confirm</string>
+    <string name="trusted_services_delivered">Trusted Services. Delivered</string>
+    <string name="beauticians_to_yoga_trainers">Beauticians to Yoga Trainers, Plumbers to Photographers - get 60+ services</string>
+    <string name="get_started">Get Started</string>
+    <string name="dummy_name">Sara Francis</string>
+    <string name="dummy_email">sarafrancis@gmail.com</string>
+    <string name="dummy_phone">1997823091</string>
+
+    <string name="dummy_text">English, Maths, Science</string>
+    <string name="dummy_distance">2 Miles Away</string>
+    <string name="dummy_price">$ 250.00</string>
+    <string name="share">Share</string>
+    <string name="per_hour">Per hour</string>
+    <string name="choose_time_slots">Choose Time Slots</string>
+    <string name="dummy_text_lorem">Check job details</string>
+    <string name="dummy_text_lorem_small">Check job details</string>
+    <string name="about_me_hint">We would like to know a few more about you</string>
+    <string name="about_me">About Me</string>
+
+    <string name="languages_i_know">Languages I know</string>
+    <string name="hire">Hire</string>
+    <string name="job_photos">Job photos</string>
+    <string name="reviews">Reviews</string>
+    <string name="reviewsAndRating">Ratings &amp; Reviews</string>
+    <string name="youravgrating">Your average ratings</string>
+    <string name="rating">Ratings</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="select_payment">Select payment method</string>
+    <string name="select_lang">Select Language</string>
+    <string name="mapKey">AIzaSyCGuMdlNff07useqJz2Z2MqhXvAljLqPUo</string>
+    <string-array name="dummy_array">
+        <item>All</item>
+        <item>Tutor</item>
+        <item>Cleaners</item>
+        <item>Doctors</item>
+    </string-array>
+
+
+    <!-- Login Activity -->
+    <string name="err_uname">Username cannot be empty!</string>
+    <string name="err_password">Password cannot be empty!</string>
+    <string name="err_email">Email cannot be empty!</string>
+    <string name="err_mobile">Mobile no cannot be empty!</string>
+    <string name="googleClientIsNotConnected">Not able to connect google account, please try again!</string>
+
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+
+    <!--Profile-->
+
+    <string name="your_profile">Your Profile</string>
+    <string name="profile_sp">Profile  </string>
+    <string name="wait_change_password">Change Password</string>
+    <string name="PasswordShouldBeSame">Password should be same</string>
+
+    <!-- Signup Activity -->
+    <string name="err_fname">Enter first name.</string>
+    <string name="err_lname">Enter last name.</string>
+    <string name="err_invalid_email">Not a valid email!</string>
+    <string name="err_mobile_invalid">Not a valid mobile no!</string>
+
+    <string name="invalid_username">Invalid username</string>
+    <string name="invalid_email">Invalid Email!</string>
+    <string name="invalid_mobile">Invalid Mobile!</string>
+    <string name="invalid_password">Password should consist of a capital letter, a small letter, a number &amp; minimum of 7 characters!</string>
+
+
+    <string name="pls_select_later_time">Please select a future time, atleast 30 min from now for later booking</string>
+    <string name="receipt">Receipt</string>
+    <string name="rate_your_provider">Rate your experience</string>
+    <string name="close">close</string>
+    <string name="add_a_comment">Add a comment !</string>
+    <string name="your_average_ratings">Your average ratings   |  </string>
+    <string name="menu_profile">PROFILE</string>
+    <string name="menu_my_projects">MY PROJECTS</string>
+    <string name="menu_services">SERVICES</string>
+    <string name="profile">Profile</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone number</string>
+    <string name="d_o_b">D.O.B</string>
+    <string name="logout">Logout</string>
+    <string name="change_password">Change Password</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="view_all">View All</string>
+    <string name="your_location">YOUR LOCATION</string>
+    <string name="allow_location">Allow Location access</string>
+    <string name="location_hint">Your Location will help us to find professionals who serve in the area.</string>
+    <string name="enable_loc">Enable Location</string>
+    <string name="manual_loc">Enter manually</string>
+    <string name="search_for_service"><font size="14">Search for a service</font></string>
+
+    <string name="verify">Verify</string>
+    <string name="resendcode">Resend code</string>
+    <string name="helpwithpassword">Help with password ?</string>
+    <string name="signin_login">Login</string>
+    <string name="verify_phone">Verify phone number</string>
+    <string name="donthaveanAccount">Don\'t have an account !</string>
+    <string name="signup">Signup</string>
+    <string name="next">Next</string>
+    <string name="forgot_password">Help with Password</string>
+    <string name="prompt_password">Password !</string>
+    <string name="prompt_email">Your email or phone number ?</string>
+    <string name="loginwithfacebook">login with facebook</string>
+    <string name="or_small">or</string>
+    <string name="or_small_1">or,</string>
+
+    <string name="yourname">Name</string>
+    <string name="yourfirst_name">First Name</string>
+    <string name="yourlast_name">Last Name</string>
+
+    <string name="your_email">Email</string>
+    <string name="your_password">Password</string>
+    <string name="your_new_password">New password</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="termsAndConditionclick">By clicking on signup I agree to the Privacy Policy and Terms &amp; Conditions</string>
+    <string name="termsAndCondition">Terms &amp; Conditions</string>
+    <string name="privacyPolicy">Privacy Policy</string>
+    <!-- <string name="termofservice">Terms of Service.</string>-->
+    <string name="enter_verification_code">Enter verification code</string>
+    <string name="we_sent_4_digit">Please enter the verification code that has been sent to your registered mobile phone number</string>
+
+    <string name="forgotpwd_header_text">Enter your mobile  number / email address and you will get a verification code / link to reset password.</string>
+    <string name="email_addr">Email address</string>
+
+    <string name="add_card">+Add card</string>
+
+    <string name="your_addresses">Your Addresses</string>
+
+    <string name="add_new_address">Add New Address</string>
+    <string name="add_address">Add Address</string>
+    <string name="No_AddressSaved">There is no saved address, add one</string>
+    <string name="wait_adding_address">Adding address…</string>
+    <string name="wait_editing_address">Editing address…</string>
+    <string name="wait_validating_promo">Validating promo code…</string>
+    <string name="areYouSureYouWantOTDelete">Are you sure you want to delete this address ?</string>
+    <string name="areYouSureYouWantOTDeleteImage">Are you sure you want to delete this Image ?</string>
+    <string name="areYouSureYouWantOTHire">Are you certain to hire</string>
+    <string name="forThisJob">for this job?</string>
+
+
+    <!--IntroActivity-->
+
+    <string name="wait_guest_login">Guest Login</string>
+
+    <!--LogIn-->
+    <string name="cant_cancel">Sorry! we can not process your request</string>
+    <string name="login_with_google">Login with google</string>
+
+    <!-- Address Bottom Sheet -->
+    <string name="set_location">Set job location</string>
+    <string name="skip">SKIP</string>
+    <string name="location">LOCATION</string>
+    <string name="house_flat_no">HOUSE/FLAT NO.</string>
+    <string name="landmark">LANDMARK</string>
+    <string name="save_as">SAVE AS</string>
+    <string name="saved_Address">Saved address</string>
+    <string name="home">Home</string>
+    <string name="office">Office</string>
+    <string name="work">Work</string>
+    <string name="other">Other</string>
+    <string name="save_proceed">SAVE AND PROCEED</string>
+    <string name="noaddressavailable">No address available please add a new address.</string>
+    <string name="delete">Delete</string>
+    <string name="other_tag_hint">e.g.: Dad\'s Place\, John\'s Home</string>
+    <string name="want_to_delete">Are you sure you want to delete this card?</string>
+
+    <string name="change_pwd_txt">Mobile number Verified.\n Enter your new Password</string>
+    <string name="new_password">New password</string>
+    <string name="reenter_password">Re-enter password</string>
+    <string name="continue_txt">Continue</string>
+    <string name="verification_success">Verification successful</string>
+
+    <!--Sign up Activity-->
+    <string name="add_a_photo">Add a photo</string>
+    <string name="takephoto">Take Photo</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="cancel">Cancel</string>
+    <string name="remove_photo">Remove Photo</string>
+    <string name="Countrypicker">Country Picker</string>
+    <string name="signup_with_google">Signup with google</string>
+    <string name="signup_with_facebook">signup with facebook</string>
+
+    <!--ForGotPassword-->
+
+    <string name="invalid_empty_email">Invalid/empty Email address!</string>
+    <string name="invalid_empty_phone">Invalid/empty Phone Number!</string>
+
+    <string name="headRatingApp">Rate Us</string>
+    <string name="msgRatingApp">If you are enjoy our app, please take a moment to rate us!</string>
+    <string name="noThanks">No thanks</string>
+    <string name="remindLater">Remind me later</string>
+    <string name="rateNow">Rate now</string>
+
+    <!--Edit Email Phone-->
+
+    <string name="emailEditInfo">We will send a verification link to this email address. Post verification, it will be added to your account.</string>
+    <string name="mobilEditInfo">enter the new mobile number and you will get a verification code to reset.</string>
+    <string name="changeEmail">Change email</string>
+    <string name="changePhone">Change phone number</string>
+    <string name="phoneNumnber">Phone number</string>
+    <string name="old_password">Old password</string>
+
+    <!--About-->
+    <string name="rate_store">Rate us on Google Play</string>
+    <string name="like_us_facebook">Like us on facebook</string>
+    <string name="legal">Legal</string>
+    <string name="lsp_website">service-genie.xyz</string>
+    <string name="about">About Service Genie</string>
+
+    <!--Faq-->
+    <string name="supportFragment">Support</string>
+    <string name="faq">FAQ</string>
+    <string name="wait_faq">Fetching FAQ</string>
+
+    <!--Share-->
+
+    <string name="share_header_text">Refer your friends to join Service genie and both you and your friends can earn credits or promo codes whenever they sign up.</string>
+    <string name="share_code">Share code</string>
+    <string name="share_social_text">Share this to your friends using these</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="message_social">Message</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="twitter">Twitter</string>
+    <string name="guestLoginMessage">Message</string>
+    <string name="share_text_1">Register with Service genie using my referral code</string>
+    <string name="share_text_2">to earn discounts on the Service genie app. Download the app @ "</string>
+
+    <!--Progress Bar Texts-->
+    <string name="wait_signin">Logging in</string>
+    <string name="wait_verify_signup">Verifying phone number…</string>
+    <string name="wait_first_signin">Signing up…</string>
+    <string name="wait_resend">Resending…</string>
+    <string name="wait_otp_verify">Verifying phone number…</string>
+    <string name="wait_register">Registering</string>
+    <string name="wait_email">Validating Email</string>
+    <string name="wait_phone">Validating Phone number</string>
+    <string name="wait_profile">Fetching Profile</string>
+    <string name="wait_providers">Fetching Providers</string>
+    <string name="wait_fetch_addr">Fetching Addresses</string>
+    <string name="wait_logout">Logging out…</string>
+    <string name="deleting">deleting…</string>
+    <string name="saving">saving…</string>
+
+    <string-array name="sidescreens">
+        <item>Add Card</item>
+        <item>Wallet</item>
+        <item>Favourite Providers</item>
+        <item>My Addresses</item>
+        <item>Share</item>
+        <item>FAQ</item>
+        <item>Help Centre</item>
+        <item>Live Chat</item>
+        <item>About Service Genie</item>
+    </string-array>
+
+    <string-array name="takefoto">
+        <item>Take Photo</item>
+        <item>Choose from Gallery</item>
+        <item>Cancel</item>
+    </string-array>
+
+    <string-array name="takeremovefoto">
+        <item>Take Photo</item>
+        <item>Choose from Gallery</item>
+        <item>Remove Photo</item>
+        <item>Cancel</item>
+    </string-array>
+
+
+    <string-array name="DialingCountryCode">
+        <item>+32,BE</item>
+        <item>+501,BZ</item>
+        <item>+229,BJ</item>
+        <item>+975,BT</item>
+        <item>+591,BO</item>
+        <item>+387,BA</item>
+        <item>+267,BW</item>
+        <item>+55,BR</item>
+        <item>+673,BN</item>
+        <item>+359,BG</item>
+        <item>+226,BF</item>
+        <item>+95,MM</item>
+        <item>+257,BI</item>
+        <item>+855,KH</item>
+        <item>+237,CM</item>
+        <item>+1,CA</item>
+        <item>+238,CV</item>
+        <item>+236,CF</item>
+        <item>+235,TD</item>
+        <item>+56,CL</item>
+        <item>+86,CN</item>
+        <item>+61,CX</item>
+        <item>+61,CC</item>
+        <item>+57,CO</item>
+        <item>+269,KM</item>
+        <item>+242,CG</item>
+        <item>+243,CD</item>
+        <item>+682,CK</item>
+        <item>+506,CR</item>
+        <item>+385,HR</item>
+        <item>+53,CU</item>
+        <item>+357,CY</item>
+        <item>+93,AF</item>
+        <item>+355,AL</item>
+        <item>+213,DZ</item>
+        <item>+376,AD</item>
+        <item>+244,AO</item>
+        <item>+672,AQ</item>
+        <item>+54,AR</item>
+        <item>+374,AM</item>
+        <item>+297,AW</item>
+        <item>+61,AU</item>
+        <item>+43,AT</item>
+        <item>+994,AZ</item>
+        <item>+973,BH</item>
+        <item>+880,BD</item>
+        <item>+375,BY</item>
+        <item>+420,CZ</item>
+        <item>+45,DK</item>
+        <item>+253,DJ</item>
+        <item>+670,TL</item>
+        <item>+593,EC</item>
+        <item>+2,EG</item>
+        <item>+503,SV</item>
+        <item>+240,GQ</item>
+        <item>+358,FI</item>
+        <item>+33,FR</item>
+        <item>+291,ER</item>
+        <item>+372,EE</item>
+        <item>+251,ET</item>
+        <item>+500,FK</item>
+        <item>+298,FO</item>
+        <item>+679,FJ</item>
+        <item>+689,PF</item>
+        <item>+241,GA</item>
+        <item>+220,GM</item>
+        <item>+995,GE</item>
+        <item>+49,DE</item>
+        <item>+233,GH</item>
+        <item>+350,GI</item>
+        <item>+30,GR</item>
+        <item>+299,GL</item>
+        <item>+502,GT</item>
+        <item>+224,GN</item>
+        <item>+245,GW</item>
+        <item>+592,GY</item>
+        <item>+509,HT</item>
+        <item>+504,HN</item>
+        <item>+852,HK</item>
+        <item>+36,HU</item>
+        <item>+91,IN</item>
+        <item>+62,ID</item>
+        <item>+98,IR</item>
+        <item>+964,IQ</item>
+        <item>+353,IE</item>
+        <item>+44,IM</item>
+        <item>+972,IL</item>
+        <item>+39,IT</item>
+        <item>+225,CI</item>
+        <item>+81,JP</item>
+        <item>+962,JO</item>
+        <item>+7,KZ</item>
+        <item>+254,KE</item>
+        <item>+686,KI</item>
+        <item>+965,KW</item>
+        <item>+996,KG</item>
+        <item>+856,LA</item>
+        <item>+371,LV</item>
+        <item>+961,LB</item>
+        <item>+266,LS</item>
+        <item>+231,LR</item>
+        <item>+218,LY</item>
+        <item>+423,LI</item>
+        <item>+370,LT</item>
+        <item>+352,LU</item>
+        <item>+853,MO</item>
+        <item>+389,MK</item>
+        <item>+261,MG</item>
+        <item>+265,MW</item>
+        <item>+60,MY</item>
+        <item>+960,MV</item>
+        <item>+223,ML</item>
+        <item>+356,MT</item>
+        <item>+692,MH</item>
+        <item>+222,MR</item>
+        <item>+230,MU</item>
+        <item>+262,YT</item>
+        <item>+52,MX</item>
+        <item>+691,FM</item>
+        <item>+373,MD</item>
+        <item>+377,MC</item>
+        <item>+976,MN</item>
+        <item>+382,ME</item>
+        <item>+212,MA</item>
+        <item>+258,MZ</item>
+        <item>+264,NA</item>
+        <item>+674,NR</item>
+        <item>+977,NP</item>
+        <item>+31,NL</item>
+        <item>+599,AN</item>
+        <item>+687,NC</item>
+        <item>+64,NZ</item>
+        <item>+505,NI</item>
+        <item>+227,NE</item>
+        <item>+234,NG</item>
+        <item>+683,NU</item>
+        <item>+850,KP</item>
+        <item>+47,NO</item>
+        <item>+968,OM</item>
+        <item>+92,PK</item>
+        <item>+680,PW</item>
+        <item>+507,PA</item>
+        <item>+675,PG</item>
+        <item>+595,PY</item>
+        <item>+51,PE</item>
+        <item>+63,PH</item>
+        <item>+870,PN</item>
+        <item>+48,PL</item>
+        <item>+351,PT</item>
+        <item>+1,PR</item>
+        <item>+974,QA</item>
+        <item>+40,RO</item>
+        <item>+7,RU</item>
+        <item>+250,RW</item>
+        <item>+590,BL</item>
+        <item>+685,WS</item>
+        <item>+378,SM</item>
+        <item>+239,ST</item>
+        <item>+966,SA</item>
+        <item>+221,SN</item>
+        <item>+381,RS</item>
+        <item>+248,SC</item>
+        <item>+232,SL</item>
+        <item>+65,SG</item>
+        <item>+421,SK</item>
+        <item>+386,SI</item>
+        <item>+677,SB</item>
+        <item>+252,SO</item>
+        <item>+27,ZA</item>
+        <item>+82,KR</item>
+        <item>+34,ES</item>
+        <item>+94,LK</item>
+        <item>+290,SH</item>
+        <item>+508,PM</item>
+        <item>+249,SD</item>
+        <item>+597,SR</item>
+        <item>+268,SZ</item>
+        <item>+46,SE</item>
+        <item>+41,CH</item>
+        <item>+963,SY</item>
+        <item>+886,TW</item>
+        <item>+992,TJ</item>
+        <item>+255,TZ</item>
+        <item>+66,TH</item>
+        <item>+228,TG</item>
+        <item>+690,TK</item>
+        <item>+676,TO</item>
+        <item>+216,TN</item>
+        <item>+90,TR</item>
+        <item>+993,TM</item>
+        <item>+688,TV</item>
+        <item>+971,AE</item>
+        <item>+256,UG</item>
+        <item>+44,GB</item>
+        <item>+380,UA</item>
+        <item>+598,UY</item>
+        <item>+1,US</item>
+        <item>+998,UZ</item>
+        <item>+678,VU</item>
+        <item>+39,VA</item>
+        <item>+58,VE</item>
+        <item>+84,VN</item>
+        <item>+681,WF</item>
+        <item>+967,YE</item>
+        <item>+260,ZM</item>
+        <item>+263,ZW</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="responses">Responses</string>
+    <string name="messages">Messages</string>
+
+    <string name="looking_for_a_provider">Looking for a Provider</string>
+    <string name="hire_by_dummy_price_text">Hire by the hour @ $100 per hour</string>
+    <string name="select_service">Select Service</string>
+    <string name="rate_card">Rate Card</string>
+    <string name="submit">Submit</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <string name="permissiondenied">Sorry! SMS Permission Denied</string>
+    <string name="smsPermission">Sorry! sms Permission for verification code is Denied.\nDo you wish to continue?</string>
+    <string name="smsPermissionDenied">Sorry! SMS Permission for verification code is Denied \n Please grant SMS permission to proceed further!</string>
+
+
+    <!--Alert Message-->
+    <string name="system_error">Alert!</string>
+    <string name="ok">OK</string>
+    <string name="network_alert_title">Network Settings</string>
+    <string name="network_alert_message">Network service is disabled. Do you wish to enable it?</string>
+    <string name="action_settings">Settings</string>
+    <string name="availableNow">Available now</string>
+    <string name="availableLater">Unavailable</string>
+    <string name="yourFavouriteProvider">This is your favourite provider</string>
+    <string name="favouriteProvider">Favourite Providers</string>
+    <string name="pleaseCheckInternet">It looks like your internet is slow .Please try again.<!--Please check your internet and try again.--></string>
+
+
+    <!--MainActivity-->
+
+    <string name="myProject">My Jobs</string>
+    <string name="chats">Chats</string>
+    <string name="chat">Chat</string>
+    <string name="recommendedService">Recommended services</string>
+
+
+    <!--Filter-->
+
+    <string name="distance">Distance</string>
+    <string name="locationDistance">Location</string>
+    <string name="reset">Reset</string>
+    <string name="filter">Filters</string>
+    <string name="categories">Sub categories</string>
+    <string name="price">Price</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="min">Min</string>
+    <string name="max">Max</string>
+    <string name="filterWillNotForWork">*Please choose a price between "min value" and "max value"*</string>
+
+
+    <!--Booking type -->
+
+    <string name="discountUpTo">discount up to</string>
+    <string name="bookingType">Booking Type</string>
+    <string name="whenYouWantToBook">When do you want to book for?</string>
+    <string name="now">Now</string>
+    <string name="nowBookingDesc">Now bookings are meant to book services where the tasker should be available in the next 30 to 40 minutes.</string>
+    <string name="nowBookingFooter">Provider may take 30 to 40 minutes to arrive at your location. </string>
+
+    <string name="scheduledDesc">Scheduled bookings are meant to book services where the tasker is required to be available at a particular date and time.</string>
+    <string name="select_date">Select date</string>
+    <string name="select_timing">Select timings</string>
+    <string name="select_time">Select time</string>
+    <string name="please_shift_time">Please provide shift start time</string>
+    <string name="select_shift_time">Select shift start time</string>
+    <string name="select_shift_Duration">Select shift duration</string>
+    <string name="select_duration">Select duration</string>
+    <string name="job_duration">Job duration</string>
+    <string name="minimum">Minimum</string>
+    <string name="maximum">Maximum</string>
+
+    <string name="bookingTimeShouldBeMoreThenCurrentTime">Booking time should be at least an hour more than the current time</string>
+    <!-- <string name="repeat">Book For Multiple Shift</string>-->
+    <string name="repeat">Schedule Multiple Shifts</string>
+    <string name="bookedForMultiple">Schedule Multiple Shifts</string>
+    <string name="schedule">Schedule Single Shift</string>
+    <string name="startDate">Select start date</string>
+    <string name="endDate">Select end date and time</string>
+    <string name="selectEndDate">Select end date</string>
+    <string name="repeatDays">Repeat Days</string>
+    <string name="time">Time</string>
+    <string name="StarTime">Start Time</string>
+    <string name="EndTime">End Time</string>
+    <string name="repeatDesc">Subscribe to services that are needed on multiple days for a selected duration.</string>
+    <string name="eachDaysOfTheWeeks">Select all days.</string>
+    <string name="WeekDays">Week days.</string>
+    <string name="Weekend">Weekend.</string>
+    <string name="selectDays">Select Days</string>
+
+    <string name="shift_time_duration">Shift Time &amp; Duration</string>
+    <string name="shift_date">Shift Date</string>
+    <string name="shift_RepeatDays">Shift Repeat Days</string>
+    <string name="shift_time">Shift Start Time</string>
+    <string name="shift_Duration">Shift Duration</string>
+    <string name="shift_ThisWeek">This Week</string>
+    <string name="shift_ThisMonth">This Month</string>
+    <string name="shift_CustomDate">Custom Date</string>
+    <string name="pleaseSelectSuitableDate">Please select suitable date for shit booking</string>
+    <string name="shift_requirement">Minimum 2 shifts required for multiple shift booking</string>
+    <string name="budgetAllShift">Budget for all shift</string>
+    <string name="budgetPerShift">Budget per shift</string>
+    <string name="budgetPerHour">Budget per hour</string>
+    <string name="numberOfShifts">No. of shifts</string>
+    <string name="pricePershift">Price/shift</string>
+    <string name="shiftDuration">Shifts duration</string>
+    <string name="perShifts">(Per Shift)</string>
+    <string name="shifts">Shifts</string>
+
+
+    <!--ProviderDetails-->
+    <string name="fare_may_vary">Service charges may vary after the booking. you would like to pay by.</string>
+    <string name="confirmBook">Confirm and Book</string>
+    <string name="eventLocation">Event location</string>
+    <string name="change">change</string>
+
+    <string name="typeOfEvent">Type of event</string>
+    <string name="eventStart">Event start</string>
+
+    <string name="yourPromocode">Your promocode</string>
+    <string name="apply">Apply</string>
+    <string name="paymentBreakDown">Payment breakdown</string>
+
+    <string name="addYourCardDtls">Add your card details</string>
+    <string name="add">add</string>
+    <string name="add_capsFirst">Add</string>
+    <string name="title_activity_confirm_book">ConfirmBookActivity</string>
+    <string name="areas_of_expertise">Areas of expertise</string>
+    <string name="book">Post the Job</string>
+    <string name="bookSmall">Book</string>
+    <string name="distanceKm">Km away</string>
+    <string name="distanceMiles">Miles away</string>
+    <string name="readMore">read more</string>
+    <string name="readLess">read less</string>
+    <string name="daysAgo">days ago</string>
+    <string name="hoursAgo">hours ago</string>
+    <string name="minutesAgo">min ago</string>
+    <string name="secondsAgo">sec ago</string>
+    <string name="bulletText">●</string>
+    <string name="jobimage">Past works</string>
+    <string name="nojobimage">No Job Image</string>
+    <string name="AvailableSlots">Available Slots</string>
+    <string name="selectTimeSlots">Select a time slot</string>
+    <string name="providerNotAvailable">Currently no Slots Available</string>
+
+
+    <!--ConfirmationBooking-->
+
+    <string name="confirmAddress">Confirm Address</string>
+    <string name="providerLocation">Provider Location</string>
+    <string name="promocode">Promo code</string>
+    <string name="feeEstimate">Fee estimate</string>
+    <string name="visitFee">Visit fee</string>
+    <string name="offer">Offer</string>
+    <string name="travelFee">Travel fee</string>
+    <string name="timeFees">Gig time fee</string>
+    <string name="cancelledFee">Cancellation fee</string>
+    <string name="discountFee">Discount</string>
+    <string name="total">Total</string>
+    <string name="howDoyouWishToPay">Payment Method</string>
+    <string name="pleaseAddCardToPay">Please add card to pay</string>
+    <string name="card">Card</string>
+    <string name="cards">Cards</string>
+    <string name="cash">Cash</string>
+    <string name="wallet">Wallet</string>
+    <string name="giveUsaBriefDes">Give us a brief description of the job</string>
+    <string name="writeHere">Write your requirement</string>
+    <string name="enterMsgHere">Type a message</string>
+    <string name="yay_booking_received">Yay! booking received</string>
+    <string name="we_will_let_you_know_when_the_provider_accepts_your_booking">We will let you know when the provider accepts your booking!</string>
+    <string name="bookingFor"> Booking For</string>
+    <string name="bookingForDesc"> Booking for now, provider will be available for you in 30 to 40 minutes</string>
+    <string name="Wallet_balance">Wallet balance</string>
+    <string name="add_Wallet_balance">Add wallet balance</string>
+    <string name="toPay">To Pay</string>
+    <string name="viewDetailedBill">View detailed bill</string>
+    <string name="addNewCard">Add new card</string>
+    <string name="pay">Pay</string>
+    <string name="all">All</string>
+    <string name="multipleShiftsBooking">Multiple shifts booking</string>
+    <string name="amountChargeAfter">The amount will be charged after every shift</string>
+
+    <!--AddToCart-->
+
+
+    <string name="checkout">Checkout</string>
+    <string name="Services">Services</string>
+    <string name="add_Cart">Add</string>
+    <string name="remove_Cart">Remove</string>
+    <string name="hireByHour">In-Case you don\'t find a service listed below, you can hire
+    our tasker by the hour.</string>
+    <string name="hireByTheHour">Hire by the hour</string>
+    <string name="itemsAlreadyInCart">Services already in cart</string>
+
+    <!--Bookings-->
+    <string name="services">Services</string>
+
+    <string name="bookings">My Jobs</string>
+    <string name="NoBookingSchedule">No booking scheduled</string>
+    <string name="searchCategory">Search category</string>
+    <string name="bookAService">Book a service</string>
+    <string name="youHaveNoPendingEvent">You have no open booking.</string>
+    <string name="youHaveNoUpcomingEvent">You have no upcoming booking.</string>
+    <string name="youHaveNoPastEvent">You have no past booking.</string>
+    <string name="pending">Open</string>
+    <string name="UpComing">Assigned</string>
+    <string name="Past">Past</string>
+
+    <!--Card-->
+    <string name="add_cards">Add card</string>
+    <string name="wait_card">please wait…</string>
+    <string name="stars">**** **** **** </string>
+    <string name="expiry">expiry</string>
+    <string name="delete_card">Delete Card</string>
+    <string name="card_removed">Card Removed Successfully</string>
+    <string name="make_card_default">Make this card default</string>
+    <string name="your_card_details">Your Card Details</string>
+    <string name="enter_card_details">Enter Card Details</string>
+
+
+    <string name="done">DONE</string>
+    <string name="dones">Done</string>
+    <string name="scan_card">Scan your card</string>
+    <string name="wait_add_card">Adding Card…</string>
+
+    <!--Rate Provider-->
+
+    <string name="yourEventOn">your event on</string>
+    <string name="totalBillAmount">total bill amount</string>
+    <string name="customerReviewHint">how was the performance ?</string>
+    <string name="date">Date</string>
+    <string name="gigTime">Gig Time</string>
+    <string name="amountPaid">amount paid</string>
+    <string name="youRated">You rated</string>
+    <string name="eventType">Event type</string>
+    <string name="details">details</string>
+    <string name="detailsCaps">Details</string>
+    <string name="cancelFee">Cancel Fee</string>
+    <string name="title_activity_provider_details">ProviderDetailsActivity</string>
+    <string name="write_something">Write something</string>
+    <string name="addToFav">Add to favourites</string>
+    <string name="removeFromFav">Remove from favourites</string>
+
+    <!--In-Call Out-Call-->
+
+    <string name="whatAreYouBooking">What are you booking?</string>
+    <string name="inCall">In - Call</string>
+    <string name="inCallDesc">Appointment to visit the provider.</string>
+    <string name="outCall">Out - Call</string>
+    <string name="outCallDesc">For the provider to visit you.</string>
+    <string name="outTeleCall">Tele - Call</string>
+
+    <string name="shiftSummary">Shift Summary(Tele - Call)</string>
+    <string name="outTeleCallDesc">For the provider to visit you.</string>
+    <string name="availability">availability</string>2
+    <string name="bookingCall">Calling Type</string>
+
+    <!--Help Index-->
+
+    <string name="helpcenter">Help Center</string>
+    <string name="priorityUrgent">Urgent</string>
+    <string name="priorityHigh">High</string>
+    <string name="priorityNormal">Normal</string>
+    <string name="priorityLow">Low</string>
+    <string name="status">Status</string>
+    <string name="newTicket">New Ticket</string>
+    <string name="ticket">Ticket</string>
+    <string name="networkErrorMsg">You are not connected to internet</string>
+    <string name="my_location">My Location</string>
+    <string name="select_location">Select Location</string>
+    <string name="search_location">Search location</string>
+    <string name="writeboutyourself">We would like to know a little about you.</string>
+    <string name="minute">min</string>
+    <string name="helpSubject">Subject</string>
+    <string name="helpMessage">Message</string>
+    <string name="helpSend">SEND</string>
+
+
+    <string-array name="ticketPriority">
+        <item>urgent</item>
+        <item>high</item>
+        <item>normal</item>
+        <item>low</item>
+    </string-array>
+
+    <!--JobDetails-->
+
+    <string name="job_finished">Job Finished</string>
+    <string name="jobCompleted">Completed</string>
+    <string name="job_started">Started</string>
+    <string name="job_Arrived">Arrived</string>
+    <string name="pro_on_the_way">On the way</string>
+    <string name="pro_hired">hired</string>
+    <!-- <string name="wait_for_responses">Wait for responses</string>-->
+    <string name="wait_for_responses">Bid response</string>
+    <string name="waitingForResponse">Waiting for providers to respond</string>
+    <string name="job_posted">Open Job</string>
+    <string name="you_hired">You Hired</string>
+    <string name="call">Call</string>
+    <string name="message">Message</string>
+    <string name="view_profile">View profile</string>
+    <string name="minutes">MINUTES</string>
+    <string name="seconds">SECONDS</string>
+    <string name="hour">HOUR</string>
+    <string name="jobDetails">Job details</string>
+    <string name="bookedFor">Booked for</string>
+    <string name="address">Address</string>
+    <string name="quotedPrice">Quoted price: </string>
+    <string name="feeBreakDown">Fee Break Down</string>
+    <string name="requestedService">Requested Services</string>
+    <string name="noDescriptionForJob">No description for the job</string>
+    <string name="BidResponse">Response</string>
+    <string name="BidMessage">Message</string>
+    <string name="dateAndTime">Date &amp; Time</string>
+    <string name="showLocation">Show on Maps</string>
+
+    <!-- Cancelled Booking -->
+    <string name="jobLocation">Job location</string>
+    <string name="bookingId">Job id : </string>
+    <string name="bookingIgnored">Booking ignored </string>
+    <string name="help_problemWithCanFe">Problem with cancellation fee</string>
+    <string name="help_InvolvedAccident">I was involved in an accident</string>
+    <string name="help_refund">I would like a refund</string>
+    <string name="help_lost_item">I lost an item</string>
+    <string name="help_DifferentIssue">I had a different issue</string>
+    <string name="help_unprofessional">My provider was unprofessional</string>
+    <string name="subTotal">Sub Total</string>
+
+    <!--Chatting Activity-->
+
+    <string name="send">Send</string>
+    <string name="jobId">Job id</string>
+    <string name="activeChats">Active</string>
+    <string name="pastChats">Past</string>
+    <string name="youHaveNoOpenChat">You have no active chats</string>
+    <string name="youHaveNoPastChat">You have no past chats.</string>
+
+    <!--Wallet-->
+
+    <string name="_0_00">0.00</string>
+    <string name="credit_desc">Credit is the money due to the app for past bookings</string>
+    <string name="payAmount">Pay Amount</string>
+    <string name="choose_card">Choose card</string>
+    <string name="current_credit">Current credit</string>
+    <string name="pleaseWait">please wait</string>
+    <string name="messagealert">Message Alert</string>
+    <string name="alert_cap">ALERT</string>
+    <string name="recent_trans">Recent Transactions</string>
+
+    <string name="currentCashBalance">CURRENT CASH BALANCE</string>
+    <string name="softLimit">Soft Limit :</string>
+    <string name="confirmAndPay">Confirm &#38; Pay</string>
+    <string name="hardLimit">Hard Limit :</string>
+    <string name="recentTransactions">Recent Transactions</string>
+    <string name="payUsingCard">Pay Using Card</string>
+    <string name="addMoney">Add Money</string>
+    <string name="walletCreditMsg">Credit is the money due to the app for past bookings</string>
+    <string name="softLimitMsg"> wallet balance close to lowest allowed limit.</string>
+    <string name="hardLimitMsg"> lowest balance hit, no wallet bookings allowed.</string>
+    <string name="You_did_not_enter_valid_card">You did not enter a valid card</string>
+    <string name="try_again">Try Again&#8230;.</string>
+    <string name="cardFirst16Digit">*** *** ****</string>
+    <string name="card_ending_with">Card Ending With</string>
+    <string name="expiryEXp">EXP</string>
+    <string name="carddflttxt">Make this card default</string>
+    <string name="wait">Please Wait&#8230;.</string>
+    <string name="card_info">CARD INFO</string>
+    <string name="Card_Info">Card Details</string>
+    <string name="confirmPayment">Confirm Payment</string>
+    <string name="paymentMsg1">Click on CONFIRM to authorize</string>
+    <string name="paymentMsg2">to re-charge your wallet with</string>
+    <string name="transactionID">Trans. ID &#58;</string>
+    <string name="bookingID">Job ID &#58;</string>
+    <string name="debit">DEBIT</string>
+    <string name="credit">CREDIT</string>
+    <string name="handlingFee">Handling</string>
+    <string name="requested_For">Requested for</string>
+    <string name="creditLine">Credit Line</string>
+    <string name="Cancellation_fare">Cancellation Fare</string>
+    <string name="wallet_enabled">Wallet enabled.</string>
+    <string name="wallet_disabled">Wallet disabled.</string>
+    <string name="plsSelectCard">Please select card</string>
+    <string name="addcard">Add Card</string>
+    <string name="scanCard">Scan Card</string>
+    <string name="plsEnterValidCard">Please enter valid card</string>
+    <string name="unableToAddCard">Unable to add card</string>
+    <string name="no_transactions_done">No Transaction Done</string>
+    <string name="selectCard">Select Card</string>
+    <string name="amountIsTooLess">Recharge with at least 200 bucks!</string>
+    <string name="amountToRecharge">Please enter amount to recharge!</string>
+    <string name="pleaseChooseCardToPay">Please select card to recharge</string>
+    <string name="pleaseChoosePayment">Please choose payment method</string>
+    <string name="howWouldYouLikeToPay">How would you like to pay?</string>
+    <string name="reachedSoftLimit">you have reached your wallet soft limit, recharge your wallet</string>
+    <string name="reachedHardLimit">you have reached your wallet Hard limit, recharge your wallet to proceed for</string>
+    <string name="cashBooking">cash booking</string>
+    <string name="warning">Warning</string>
+    <string name="later">Later</string>
+    <string name="update">Update</string>
+    <string name="error">Error</string>
+
+    <!--PromoCode-->
+    <string name="availableCode">Available Code</string>
+    <string name="moreDetails">More Details</string>
+
+    <string name="No_Internet_Connection_Available">No Internet Connection!!</string>
+
+    <!--Bidding-->
+
+    <string name="biddingInfoQuestion">We will ask a few questions to connect you with the right</string>
+    <string name="getStarted">Get Started</string>
+    <string name="postTheJob">Post the job</string>
+    <string name="postTheJobs">Post The Job</string>
+    <string name="pleaseSetBiddingAmount">Please set bidding amount</string>
+    <string name="uploadPic">Upload Photo</string>
+    <string name="minimumBookingDuration">Minimum booking duration needs to be 60 minutes +</string>
+    <string name="thankYouLookForTheRightProvider">Thank you! we will look to provide you a right bidder</string>
+
+    <!--Reminder-->
+    <string name="remainderDescText">You have a booking scheduled</string>
+    <string name="CallType">Choose your preferred call type</string>
+
+
+    <!--
+
+    For calls
+
+    -->
+    <string name="call_initiate">Hangup current call to initiate another call!!</string>
+    <string name="StartCall">Start Call</string>
+    <string name="CallOption">Start Audio/Video call</string>
+
+    <string name="connecting">CONNECTING</string>
+
+    <string name="ringing">RINGING</string>
+
+
+
+
+
+
+
+
+    <string name="pref_startvideobitrate_key">startvideobitrate_preference</string>
+    <string name="pref_startvideobitrate_title">Start video bitrate setting.</string>
+    <string name="pref_startvideobitrate_dlg">Start video bitrate setting.</string>
+    <string name="pref_startvideobitrate_default">Default</string>
+
+
+    <string name="pref_startvideobitratevalue_key">startvideobitratevalue_preference</string>
+    <string name="pref_startvideobitratevalue_title">Video encoder start bitrate.</string>
+    <string name="pref_startvideobitratevalue_dlg">Enter video encoder start bitrate in kbps.</string>
+    <string name="pref_startvideobitratevalue_default">1000</string>
+
+
+
+
+
+
+
+
+    <string name="Mqtt_Audio_Call">Service Genie Audio Call</string>
+    <string name="Mqtt_Video_Call">Service Genie Video Call</string>
+
+    <string name="Timeout">No reply</string>
+
+    <string name="AudioCall">Audio Call</string>
+    <string name="VideoCall">Video Call</string>
+
+
+    <string name="busy">is busy on another call</string>
+
+    <string name="NoAnswer">No answer by </string>
+    <string name="waiting_for_connection">Waiting for call connection!!</string>
+
+
+    <!--For getting the user details-->
+    <string name="UserIdHint">User Uid(Ex-userId)</string>
+    <string name="UserNameHint">User Name(Ex-Joseph)</string>
+    <string name="UserIdentifierHint">User Image Url</string>
+    <string name="UserImageUrlHint">User Identifier(Ex-Phone,email,Username)</string>
+
+    <!--For getting the opponent details-->
+    <string name="ReceiverIdHint">Opponent Uid(Ex-userId)</string>
+    <string name="ReceiverNameHint">Opponent Name(Ex-Joseph)</string>
+    <string name="ReceiverIdentifierHint">Opponent Image Url</string>
+    <string name="ReceiverImageUrlHint">Opponent Identifier(Ex-Phone,email,Username)</string>
+
+
+    <item name="image_id" type="id" />
+
+
+    <!--
+    <string name="pref_room_server_url_default" translatable="false">https://webrtc-224411.appspot.com</string>
+-->
+    <!--https://appr.tc-->
+
+
+
+    <string name="title_activity_scrolll">Scrolll</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_search">Search</string>
+    <string name="search_for_providers">Search for providers</string>
+    <string name="drop_photos">Drop Photos</string>
+    <string name="pick_up_photos">Pick Up Photos</string>
+    <string name="for_multiple_shift_minimum_two">For multiple shift booking, minimum two shift  required.</string>
+    <string name="consultation_fee">Consultation Fee</string>
+    <string name="schedule_booking">Single shift</string>
+    <string name="scheduled_single_shift">Scheduled Single shift</string>
+    <string name="scheduled_shift">Scheduled  shift</string>
+    <string name="applyPromoCode">Apply promocode</string>
+    <string name="pleaseEndterPromoCode">Please enter promocode</string>
+    <string name="selected_service">Selected services</string>
+    <string name="jobFee">Job fee</string>
+    <string name="lastDue">Last Due</string>
+    <string name="serviceFee">Service fee</string>
+    <string name="consulationFee">Consulation fee</string>
+    <string name="addNewItem">Add new item(s)</string>
+    <string name="editAddNewItem">Edit item(s)</string>
+    <string name="signatureHeader">Signature</string>
+    <string name="businessSignature">Sign &amp; Pay</string>
+    <string name="cleared">cleared</string>
+    <string name="alert">Alert</string>
+    <string name="serviceToPay">Job fee</string>
+    <string name="travellingExpenses">Misc. expenses</string>
+    <string name="plsEnterServiceName">Enter description</string>
+    <string name="plsEnterPrice">Enter pay</string>
+    <string name="raisingInvoice">Paying Invoice</string>
+    <string name="plsProvideSignature">Please provide signature</string>
+    <string name="discountFeeLess">Promo code is not applicable</string>
+    <string name="retake">Retake</string>
+    <string name="invoiceCustomer">Pay invoice</string>
+    <string name="cancelIcon">Cancel Service</string>
+    <string name="camera2_texture_only_error">Camera2 only supports capturing to texture. Either disable Camera2 or enable capturing to texture in the options.</string>
+
+
+
+
+    <string name="two_min_call_cut">Your slot for the call shall end\nin the next 2 minutes.Please book another slot.</string>
+    <string name="telecallalert">Call Alert!</string>
+
+
+
+    <!-- Settings strings. -->
+    <string name="pref_room_key">room_preference</string>
+    <string name="pref_room_list_key">room_list_preference</string>
+
+    <string name="pref_videosettings_key">video_settings_key</string>
+    <string name="pref_videosettings_title">Video call settings.</string>
+
+    <string name="pref_videocall_key">videocall_preference</string>
+    <string name="pref_videocall_title">Video call.</string>
+    <string name="pref_videocall_dlg">Enable video in a call.</string>
+    <string name="pref_videocall_default">true</string>
+
+    <string name="pref_screencapture_key">screencapture_preference</string>
+    <string name="pref_screencapture_title">Use screencapture.</string>
+    <string name="pref_screencapture_default">false</string>
+
+    <string name="pref_camera2_key">camera2_preference</string>
+    <string name="pref_camera2_title">Use Camera2.</string>
+    <string name="pref_camera2_default">true</string>
+    <string name="pref_camera2_not_supported">Not supported on this device.</string>
+
+    <string name="pref_resolution_key">resolution_preference</string>
+    <string name="pref_resolution_title">Video quality.</string>
+    <string name="pref_resolution_dlg">Select video call quality.</string>
+    <string name="pref_resolution_default">Default</string>
+
+    <string name="pref_fps_key">fps_preference</string>
+    <string name="pref_fps_title">Camera fps.</string>
+    <string name="pref_fps_dlg">Enter local camera fps.</string>
+    <string name="pref_fps_default">Default</string>
+
+    <string name="pref_capturequalityslider_key">capturequalityslider_preference</string>
+    <string name="pref_capturequalityslider_title">Capture quality slider.</string>
+    <string name="pref_capturequalityslider_dlg">Enable slider for changing capture quality.</string>
+    <string name="pref_capturequalityslider_default">false</string>
+
+    <string name="pref_maxvideobitrate_key">maxvideobitrate_preference</string>
+    <string name="pref_maxvideobitrate_title">Maximum video bitrate setting.</string>
+    <string name="pref_maxvideobitrate_dlg">Maximum video bitrate setting.</string>
+    <string name="pref_maxvideobitrate_default">Default</string>
+
+    <string name="pref_maxvideobitratevalue_key">maxvideobitratevalue_preference</string>
+    <string name="pref_maxvideobitratevalue_title">Video encoder maximum bitrate.</string>
+    <string name="pref_maxvideobitratevalue_dlg">Enter video encoder maximum bitrate in kbps.</string>
+    <string name="pref_maxvideobitratevalue_default">1700</string>
+
+    <string name="pref_videocodec_key">videocodec_preference</string>
+    <string name="pref_videocodec_title">Default video codec.</string>
+    <string name="pref_videocodec_dlg">Select default video codec.</string>
+    <string name="pref_videocodec_default">VP8</string>
+
+    <string name="pref_hwcodec_key">hwcodec_preference</string>
+    <string name="pref_hwcodec_title">Video codec hardware acceleration.</string>
+    <string name="pref_hwcodec_dlg">Use hardware accelerated video codec (if available).</string>
+    <string name="pref_hwcodec_default">true</string>
+
+    <string name="pref_capturetotexture_key">capturetotexture_preference</string>
+    <string name="pref_capturetotexture_title">Video capture to surface texture.</string>
+    <string name="pref_capturetotexture_dlg">Capture video to textures (if available).</string>
+    <string name="pref_capturetotexture_default">true</string>
+
+    <string name="pref_flexfec_key">flexfec_preference</string>
+    <string name="pref_flexfec_title">Codec-agnostic Flexible FEC.</string>
+    <string name="pref_flexfec_dlg">Enable FlexFEC.</string>
+    <string name="pref_flexfec_default">false</string>
+
+    <string name="pref_value_enabled">Enabled</string>
+    <string name="pref_value_disabled">Disabled</string>
+
+    <string name="pref_audiosettings_key">audio_settings_key</string>
+    <string name="pref_audiosettings_title">WebRTC audio settings.</string>
+
+    <string name="pref_startaudiobitrate_key">startaudiobitrate_preference</string>
+    <string name="pref_startaudiobitrate_title">Audio bitrate setting.</string>
+    <string name="pref_startaudiobitrate_dlg">Audio bitrate setting.</string>
+    <string name="pref_startaudiobitrate_default">Default</string>
+
+    <string name="pref_startaudiobitratevalue_key">startaudiobitratevalue_preference</string>
+    <string name="pref_startaudiobitratevalue_title">Audio codec bitrate.</string>
+    <string name="pref_startaudiobitratevalue_dlg">Enter audio codec bitrate in kbps.</string>
+    <string name="pref_startaudiobitratevalue_default">32</string>
+
+    <string name="pref_audiocodec_key">audiocodec_preference</string>
+    <string name="pref_audiocodec_title">Default audio codec.</string>
+    <string name="pref_audiocodec_dlg">Select default audio codec.</string>
+    <string name="pref_audiocodec_default">OPUS</string>
+
+    <string name="pref_noaudioprocessing_key">audioprocessing_preference</string>
+    <string name="pref_noaudioprocessing_title">Disable audio processing.</string>
+    <string name="pref_noaudioprocessing_dlg">Disable audio processing pipeline.</string>
+    <string name="pref_noaudioprocessing_default">false</string>
+
+    <string name="pref_aecdump_key">aecdump_preference</string>
+    <string name="pref_aecdump_title">Create aecdump.</string>
+    <string name="pref_aecdump_dlg">Enable diagnostic audio recordings.</string>
+    <string name="pref_aecdump_default">false</string>
+
+    <string name="pref_enable_save_input_audio_to_file_key">enable_key</string>
+    <string name="pref_enable_save_input_audio_to_file_title">Save input audio to file.</string>
+    <string name="pref_enable_save_input_audio_to_file_dlg">Save input audio to file.</string>
+    <string name="pref_enable_save_input_audio_to_file_default">false</string>
+
+    <string name="pref_opensles_key">opensles_preference</string>
+    <string name="pref_opensles_title">Use OpenSL ES for audio playback.</string>
+    <string name="pref_opensles_dlg">Use OpenSL ES for audio playback.</string>
+    <string name="pref_opensles_default">false</string>
+
+    <string name="pref_disable_built_in_aec_key">disable_built_in_aec_preference</string>
+    <string name="pref_disable_built_in_aec_title">Disable hardware AEC.</string>
+    <string name="pref_disable_built_in_aec_dlg">Disable hardware AEC.</string>
+    <string name="pref_disable_built_in_aec_default">false</string>
+    <string name="pref_built_in_aec_not_available">Hardware AEC is not available</string>
+
+    <string name="pref_disable_built_in_agc_key">disable_built_in_agc_preference</string>
+    <string name="pref_disable_built_in_agc_title">Disable hardware AGC.</string>
+    <string name="pref_disable_built_in_agc_dlg">Disable hardware AGC.</string>
+    <string name="pref_disable_built_in_agc_default">false</string>
+    <string name="pref_built_in_agc_not_available">Hardware AGC is not available</string>
+
+    <string name="pref_disable_built_in_ns_key">disable_built_in_ns_preference</string>
+    <string name="pref_disable_built_in_ns_title">Disable hardware NS.</string>
+    <string name="pref_disable_built_in_ns_dlg">Disable hardware NS.</string>
+    <string name="pref_disable_built_in_ns_default">false</string>
+    <string name="pref_built_in_ns_not_available">Hardware NS is not available</string>
+
+    <string name="pref_disable_webrtc_agc_and_hpf_key">disable_webrtc_agc_and_hpf_preference</string>
+    <string name="pref_disable_webrtc_agc_and_hpf_title">Disable WebRTC AGC and HPF.</string>
+    <string name="pref_disable_webrtc_agc_default">false</string>
+
+    <string name="pref_speakerphone_key">speakerphone_preference</string>
+    <string name="pref_speakerphone_title">Speakerphone.</string>
+    <string name="pref_speakerphone_dlg">Speakerphone.</string>
+    <string name="pref_speakerphone_default">auto</string>
+
+    <string name="pref_datasettings_key">data_settings_key</string>
+    <string name="pref_datasettings_title">WebRTC data channel settings.</string>
+
+    <string name="pref_enable_datachannel_key">enable_datachannel_preference</string>
+    <string name="pref_enable_datachannel_title">Enable datachannel.</string>
+    <string name="pref_enable_datachannel_default" translatable="false">false</string>
+
+    <string name="pref_ordered_key">ordered_preference</string>
+    <string name="pref_ordered_title">Order messages.</string>
+    <string name="pref_ordered_default" translatable="false">true</string>
+
+    <string name="pref_data_protocol_key">Subprotocol</string>
+    <string name="pref_data_protocol_title">Subprotocol.</string>
+    <string name="pref_data_protocol_dlg">Enter subprotocol.</string>
+    <string name="pref_data_protocol_default" translatable="false"></string>
+
+    <string name="pref_negotiated_key">negotiated_preference</string>
+    <string name="pref_negotiated_title">Negotiated.</string>
+    <string name="pref_negotiated_default" translatable="false">false</string>
+
+    <string name="pref_max_retransmit_time_ms_key">max_retransmit_time_ms_preference</string>
+    <string name="pref_max_retransmit_time_ms_title">Max delay to retransmit.</string>
+    <string name="pref_max_retransmit_time_ms_dlg">Enter max delay to retransmit (in ms).</string>
+    <string name="pref_max_retransmit_time_ms_default" translatable="false">-1</string>
+
+    <string name="pref_max_retransmits_key">max_retransmits_preference</string>
+    <string name="pref_max_retransmits_title">Max attempts to retransmit.</string>
+    <string name="pref_max_retransmits_dlg">Enter max attempts to retransmit.</string>
+    <string name="pref_max_retransmits_default" translatable="false">-1</string>
+
+    <string name="pref_data_id_key">data_id_preference</string>
+    <string name="pref_data_id_title">Data id.</string>
+    <string name="pref_data_id_dlg">Enter data channel id.</string>
+    <string name="pref_data_id_default" translatable="false">-1</string>
+
+    <string name="pref_miscsettings_key">misc_settings_key</string>
+    <string name="pref_miscsettings_title">Miscellaneous settings.</string>
+
+    <string name="pref_room_server_url_key">room_server_url_preference</string>
+    <string name="pref_room_server_url_title">Room server URL.</string>
+    <string name="pref_room_server_url_dlg">Enter a room server URL.</string>
+
+    <string name="pref_displayhud_key">displayhud_preference</string>
+    <string name="pref_displayhud_title">Display call statistics.</string>
+    <string name="pref_displayhud_dlg">Display call statistics.</string>
+    <string name="pref_displayhud_default" translatable="false">false</string>
+
+    <string name="pref_tracing_key">tracing_preference</string>
+    <string name="pref_tracing_title">Debug performance tracing.</string>
+    <string name="pref_tracing_dlg">Debug performance tracing.</string>
+    <string name="pref_tracing_default" translatable="false">false</string>
+
+    <string name="pref_enable_rtceventlog_key">enable_rtceventlog_key</string>
+    <string name="pref_enable_rtceventlog_title">Enable RtcEventLog.</string>
+    <string name="pref_enable_rtceventlog_default">false</string>
+
+    <string name="reconnecting">RECONNECTING</string>
+
+
+    <string name="reconnect_failed">Failed to reconnect!!</string>
+
+    <string name="CallQuality">CALL QUALITY</string>
+    <string name="call_quality">Video Call Quality</string>
+    <string name="pref_room_server_url_default" translatable="false">https://appr.tc</string>
+    <string name="payment">Payment</string>
+    <string name="notificationChannelNameCall">TeleCall Push</string>
+    <string name="notificationChannelDescriptionCall">Notifications for video call from provider</string>
+
+    <!--<string name="pref_room_server_url_default" translatable="false">https://appr.tc</string>-->
+
+
+</resources>

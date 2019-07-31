@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlFbLogin"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:background="@drawable/fb_login_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loginwithfacebook"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dimen_15dp"
+            android:textColor="@color/blue_facebook"
+            android:fontFamily="sans-serif"
+            android:id="@+id/tv_login_withfb"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_login_fb"
+            android:src="@drawable/ic_login_facebook_icon_off"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_login_withfb"
+            android:layout_toStartOf="@+id/tv_login_withfb"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlGoogleLogin"
+        android:layout_below="@id/rlFbLogin"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:background="@drawable/google_login_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_with_google"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dimen_15dp"
+            android:textColor="@color/red_google"
+            android:fontFamily="sans-serif"
+            android:id="@+id/tv_login_Google"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_login_google"
+            android:src="@drawable/ic_google"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_login_Google"
+            android:layout_toStartOf="@+id/tv_login_Google"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rlGoogleLogin"
+        android:layout_marginTop="@dimen/dimen_20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:id="@+id/loginleftview"
+            android:background="@color/grey_background_vdarker"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or_small"
+            android:textSize="@dimen/dimen_14dp"
+            android:textColor="@color/grey_background_vdarker"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="@dimen/dimen_3dp"
+            android:fontFamily="sans-serif"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/grey_background_vdarker"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

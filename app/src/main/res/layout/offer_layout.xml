@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dimen_150dp"
+    android:layout_height="@dimen/dimen_100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dimen_2dp"
+    android:layout_marginRight="@dimen/dimen_8dp"
+    android:layout_marginEnd="@dimen/dimen_8dp"
+    app:cardBackgroundColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivOffer"
+            android:src="@drawable/ic_offer_icon"
+            android:layout_marginRight="@dimen/dimen_7dp"
+            android:layout_marginEnd="@dimen/dimen_7dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_7dp"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDiscountUpTo"
+            android:text="@string/discountUpTo"
+            android:textSize="@dimen/textSize_14sp"
+            android:layout_toRightOf="@+id/ivOffer"
+            android:layout_toEndOf="@+id/ivOffer"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:textColor="@color/grey_background_vdarker"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_below="@+id/ivOffer"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDiscount"
+                android:text="@string/discountUpTo"
+                android:textSize="@dimen/textSize_24sp"
+                android:textColor="@color/grey_john"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvShiftRange"
+                android:layout_marginTop="-5dp"
+                android:text="@string/discountUpTo"
+                android:textSize="@dimen/textSize_12sp"
+                android:textColor="@color/red_login_dark"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

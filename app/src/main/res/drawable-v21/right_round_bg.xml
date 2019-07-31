@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:attr/colorActivatedHighlight">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:bottomRightRadius="@dimen/dimen_5dp"
+                android:topRightRadius="@dimen/dimen_5dp"/>
+            <solid android:color="@color/parrotGreen"/>
+        </shape>
+    </item>
+</ripple>

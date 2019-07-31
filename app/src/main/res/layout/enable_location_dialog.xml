@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/booking_dialog_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/your_location"
+            android:padding="@dimen/dimen_20dp"
+            android:src="@drawable/popup_location"/>
+
+        <TextView
+            android:id="@+id/tvMainMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dimen_20dp"
+            android:text="@string/allow_location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_16sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvMainDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dimen_20dp"
+            android:text="@string/location_hint"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_16sp"
+            />
+
+        <Button
+            android:id="@+id/enableLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_40dp"
+            android:layout_marginLeft="@dimen/dimen_40dp"
+            android:layout_marginRight="@dimen/dimen_40dp"
+            android:layout_marginStart="@dimen/dimen_40dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@drawable/parrot_green_rounded_btn2"
+            android:text="@string/enable_loc"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+
+        <LinearLayout
+            android:id="@+id/manual_loc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_40dp"
+            android:layout_marginLeft="@dimen/dimen_40dp"
+            android:layout_marginRight="@dimen/dimen_40dp"
+            android:layout_marginStart="@dimen/dimen_40dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_5dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:text="@string/or_small_1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_16sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_manual_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/manual_loc"
+                android:textColor="@color/parrotGreen"
+                android:textSize="@dimen/textSize_16sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_services"
+        android:title="@string/menu_services"
+        android:icon="@drawable/ic_services_unselected"
+        />
+    <item
+        android:id="@+id/menu_project"
+        android:title="@string/menu_my_projects"
+        android:icon="@drawable/ic_myprojects_unselected"/>
+
+    <item
+        android:id="@+id/menu_profile"
+        android:title="@string/menu_profile"
+        android:icon="@drawable/ic_profile_unselected" />
+</menu>

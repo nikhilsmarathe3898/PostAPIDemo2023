@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AboutLSPActivity">
+
+    <include android:id="@+id/toolbarLayout"
+        layout="@layout/tool_barlayout"/>
+
+    <TextView
+        android:id="@+id/tv_rate_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarLayout"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/app_margin"
+        android:drawableLeft="@drawable/about_star"
+        android:drawablePadding="@dimen/dimen_10dp"
+        android:drawableStart="@drawable/about_star"
+        android:gravity="center_vertical"
+        android:text="@string/rate_store"
+        android:textSize="@dimen/textSize_16sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:layout_below="@+id/tv_rate_store"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/dialogDivider"/>
+
+    <TextView
+        android:id="@+id/tv_like_fb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_rate_store"
+        android:layout_gravity="center_vertical"
+        android:drawableLeft="@drawable/about_like"
+        android:layout_margin="@dimen/app_margin"
+        android:drawablePadding="@dimen/dimen_10dp"
+        android:drawableStart="@drawable/about_like"
+        android:gravity="center_vertical"
+
+        android:text="@string/like_us_facebook"
+        android:textSize="@dimen/textSize_16sp"/>
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:layout_below="@+id/tv_like_fb"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/dialogDivider"/>-->
+
+    <TextView
+        android:id="@+id/tv_legal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_like_fb"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
+        android:drawableLeft="@drawable/about_legal"
+        android:drawablePadding="@dimen/dimen_10dp"
+        android:drawableStart="@drawable/about_legal"
+        android:gravity="center_vertical"
+
+        android:text="@string/legal"
+        android:textSize="@dimen/textSize_16sp"/>
+
+    <View
+        android:id="@+id/divider_last"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:visibility="gone"
+        android:layout_below="@+id/tv_legal"
+        android:background="@color/dialogDivider"/>
+
+
+    <ImageView
+        android:id="@+id/about_logo"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/divider_last"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_landing_logo"/>
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_logo"
+        android:autoLink="web"
+        android:gravity="center_horizontal"
+        android:linksClickable="true"
+        android:layout_marginTop="@dimen/app_margin"
+        android:text="@string/lsp_website"
+        android:textSize="@dimen/textSize_16sp"/>
+
+
+    <TextView
+        android:id="@+id/tvAppVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_below="@+id/website"
+
+        android:textSize="@dimen/textSize_14sp"
+        android:textStyle="normal"
+        android:gravity="center_horizontal"
+        />
+
+</RelativeLayout>

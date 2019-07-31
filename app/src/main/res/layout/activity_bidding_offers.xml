@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/tool_barlayout"
+        android:id="@+id/biddingOffer"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/biddingOffer"
+        android:layout_above="@+id/tvBiddingOfferNxt"
+        android:scrollbars="none"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llMainOfferBidding">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvQuestionDesc"
+                tools:text="@string/hello_blank_fragment"
+                android:layout_marginTop="@dimen/app_margin"
+                android:textColor="@color/black_john"
+                android:textSize="22sp"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"/>
+
+            <android.support.v7.widget.GridLayout
+                android:id="@+id/glBudgetAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rowCount="3"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginBottom="@dimen/app_margin"
+                app:columnCount="3"
+                >
+                <ImageView
+                    android:id="@+id/ivBudgetAllCheck"
+                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:src="@drawable/circle_check_uncheck"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:contentDescription="@string/app_name" />
+                <TextView
+                    android:id="@+id/tvBudgetAllNow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:textSize="14sp"
+                    android:text="@string/budgetAllShift"
+                    android:textColor="@color/grey_black_color_selector"
+                    app:layout_gravity="center_vertical"
+                    app:layout_columnWeight="1"/>
+                <Space android:layout_width="@dimen/dimen_30dp"
+                    android:layout_height="wrap_content"/>
+                <Space />
+                <TextView
+                    android:id="@+id/tvBudgetAllNowDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    app:layout_columnWeight="1"
+                    android:textColor="@color/red_login_dark"
+                    android:visibility="gone"
+                    android:text="@string/amountChargeAfter"/>
+                <Space android:layout_width="30dp"
+                    android:layout_height="wrap_content"/>
+                <Space />
+                <TextView
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:id="@+id/tvBudgetAllNowDecSelected"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    app:layout_columnWeight="1"
+                    android:textColor="@color/black_john"
+                    android:text="@string/nowBookingFooter"
+                    android:visibility="gone"
+                    />
+                <Space android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    android:id="@+id/spaceBudgetAllNow"/>
+            </android.support.v7.widget.GridLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rlAddAtRunTime"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey_background_darker"/>
+
+            <android.support.v7.widget.GridLayout
+                android:id="@+id/glBudgetPerShift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rowCount="3"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginBottom="@dimen/app_margin"
+                app:columnCount="3"
+               >
+                <ImageView
+                    android:id="@+id/ivBudgetPerShiftCheck"
+                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:src="@drawable/circle_check_uncheck"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:contentDescription="@string/app_name" />
+                <TextView
+                    android:id="@+id/tvBudgetPerShift"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:textSize="14sp"
+                    android:text="@string/budgetPerShift"
+                    android:textColor="@color/grey_black_color_selector"
+                    app:layout_gravity="center_vertical"
+                    app:layout_columnWeight="1"/>
+                <Space android:layout_width="@dimen/dimen_30dp"
+                    android:layout_height="wrap_content"/>
+                <Space />
+                <TextView
+                    android:id="@+id/tvBudgetPerShiftDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    app:layout_columnWeight="1"
+                    android:visibility="gone"
+                    android:textColor="@color/red_login_dark"
+                    android:text="@string/amountChargeAfter"/>
+                <Space android:layout_width="30dp"
+                    android:layout_height="wrap_content"/>
+                <Space />
+                <TextView
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:id="@+id/tvBudgetPerShiftDecSelected"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    app:layout_columnWeight="1"
+                    android:textColor="@color/black_john"
+                    android:text="@string/nowBookingFooter"
+                    android:visibility="gone"
+                    />
+                <Space android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    android:id="@+id/spaceBudgetPerShift"/>
+            </android.support.v7.widget.GridLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rlPerShiftAddAtRunTime"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey_background_darker"/>
+
+            <android.support.v7.widget.GridLayout
+                android:id="@+id/glBudgetPerHr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rowCount="3"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginBottom="@dimen/app_margin"
+                app:columnCount="3"
+                >
+                <ImageView
+                    android:id="@+id/ivBudgetPerHrCheck"
+                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:src="@drawable/circle_check_uncheck"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:contentDescription="@string/app_name" />
+                <TextView
+                    android:id="@+id/tvBudgetPerHr"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:textSize="14sp"
+                    android:text="@string/budgetPerHour"
+                    android:textColor="@color/grey_black_color_selector"
+                    app:layout_gravity="center_vertical"
+                    app:layout_columnWeight="1"/>
+                <Space android:layout_width="@dimen/dimen_30dp"
+                    android:layout_height="wrap_content"/>
+                <Space />
+                <TextView
+                    android:id="@+id/tvBudgetPerHrDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    app:layout_columnWeight="1"
+                    android:visibility="gone"
+                    android:textColor="@color/red_login_dark"
+                    android:text="@string/amountChargeAfter"/>
+                <Space android:layout_width="30dp"
+                    android:layout_height="wrap_content"/>
+                <Space />
+                <TextView
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:id="@+id/tvBudgetPerHrDecSelected"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    app:layout_columnWeight="1"
+                    android:textColor="@color/black_john"
+                    android:text="@string/nowBookingFooter"
+                    android:visibility="gone"
+                    />
+                <Space android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    android:id="@+id/spaceBudgetPerHr"/>
+            </android.support.v7.widget.GridLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rlPerHrAddAtRunTime"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey_background_darker"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvBiddingOfferNxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:background="@drawable/button_appcolor_ripple_selector"
+        android:paddingTop="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        android:textSize="@dimen/textSize_18sp"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginBottom="@dimen/app_margin"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        />
+
+</RelativeLayout>
