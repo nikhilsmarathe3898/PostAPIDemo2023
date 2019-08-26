@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <integer name="id_1">1</integer>
-    <integer name="id_2">2</integer>
-    <integer name="id_3">3</integer>
-    <integer name="id_4">4</integer>
-    <integer name="anim_duration_long">500</integer>
-</resources>
