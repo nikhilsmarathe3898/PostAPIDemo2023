@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".biddingFlow.MyBiddingBookTypeFrag">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tvBookTypeSave">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlBookingQuestionFrag"
+           >
+            <include layout="@layout/include_booking_type" />
+        </RelativeLayout>
+
+       <!-- <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlBookingQuestionFragPay"
+            android:visibility="visible">
+            <include layout="@layout/multiple_shifts"/>
+
+        </RelativeLayout>-->
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvBookTypeSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:background="@drawable/button_appcolor_ripple_selector"
+        android:paddingTop="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        android:textSize="@dimen/textSize_18sp"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginBottom="@dimen/app_margin"
+        />
+
+</RelativeLayout>

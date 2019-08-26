@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/dimen_8dp"
+    android:layout_marginTop="@dimen/dimen_8dp"
+    android:layout_marginLeft="@dimen/dimen_8dp"
+    android:layout_marginRight="@dimen/dimen_8dp"
+    app:cardCornerRadius="@dimen/dimen_4dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+           <!-- <ImageView
+                android:id="@+id/ivMyEventProPic"
+                android:layout_width="@dimen/dimen_50dp"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginStart="@dimen/app_margin"
+                android:background="@color/colorPrimary"
+                android:transitionName="ivProImage"
+                android:visibility="gone"
+                />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginStart="@dimen/app_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:id="@+id/tvBookingCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="John Phillips "
+                        android:textColor="@color/black_john"
+                        android:textSize="@dimen/textSize_16sp" />
+                    <TextView
+                        android:id="@+id/tvBookingAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="$ 250"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/black_john"
+                        android:layout_marginRight="@dimen/app_margin"
+                        android:layout_marginLeft="@dimen/app_margin"
+                        android:textSize="@dimen/textSize_16sp"
+                        />
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:id="@+id/tvMyEvnetDateNTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22 June 2017 | 10:00 PM"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:layout_marginBottom="@dimen/dimen_5dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvMyEvnetProStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_addresses"
+                        android:textColor="@color/black"
+                        android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                        android:drawableStart="@drawable/ic_location_on_black_24dp"
+                        android:textSize="@dimen/textSize_14sp"
+                        android:layout_marginLeft="-2dp"
+                        android:layout_marginStart="-2dp"
+                        android:layout_marginRight="@dimen/app_margin"
+                        android:layout_marginEnd="@dimen/app_margin"
+                        android:maxLines="@integer/id_1"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey_background_vdarker"
+            android:layout_marginTop="@dimen/dimen_10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            >
+            <!--<android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dimen_10dp"
+                app:cardBackgroundColor="@color/parrotGreen">
+
+                <TextView
+                    android:id="@+id/tvAsap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asap"
+                    android:textColor="@color/white"
+                    android:paddingTop="@dimen/dimen_1dp"
+                    android:paddingBottom="@dimen/dimen_1dp"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    />
+            </android.support.v7.widget.CardView>-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llProfileAccepted"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_40dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:id="@+id/ivMyEventProPic"
+                    android:contentDescription="@string/app_name"
+                    android:background="@drawable/circle"
+                    android:padding="@dimen/dimen_1dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvMyEventProName"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/grey_john"
+                    android:text="@string/app_name"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvAsap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asap"
+                android:textColor="@color/black_john"
+                android:paddingTop="@dimen/dimen_1dp"
+                android:paddingBottom="@dimen/dimen_1dp"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:textSize="@dimen/textSize_14sp"
+                android:layout_centerVertical="true"
+
+                />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                tools:text="Asap"
+                android:textColor="@color/parrotGreen"
+                android:paddingTop="@dimen/dimen_1dp"
+                android:paddingBottom="@dimen/dimen_2dp"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</android.support.v7.widget.CardView>

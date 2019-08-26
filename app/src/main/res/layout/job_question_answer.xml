@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llJobDetailsQA">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:paddingBottom="@dimen/dimen_5dp"
+        android:id="@+id/rlQuestion">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvJobQuestion"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginStart="@dimen/app_margin"
+            android:textSize="@dimen/textSize_15sp"
+            android:textColor="@color/black_john"
+            android:text="Q."/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvJobQuestions"
+        android:textSize="@dimen/textSize_14sp"
+        android:textColor="@color/black_john"
+        android:layout_toRightOf="@+id/tvJobQuestion"
+        android:layout_toEndOf="@+id/tvJobQuestion"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginEnd="@dimen/app_margin"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:text="@string/app_name"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:paddingBottom="@dimen/dimen_5dp"
+        android:id="@+id/rlAnswer">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvJobAnswer"
+            android:textSize="@dimen/textSize_15sp"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginStart="@dimen/app_margin"
+            android:textColor="@color/black_john"
+            android:text="A."/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvJobAnswers"
+        android:layout_toRightOf="@+id/tvJobAnswer"
+        android:layout_toEndOf="@+id/tvJobAnswer"
+        android:textSize="@dimen/textSize_14sp"
+        android:textColor="@color/black_john"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginEnd="@dimen/app_margin"
+        android:text="@string/skip"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerViewQuestionImage"
+            android:layout_toRightOf="@+id/tvJobAnswer"
+            android:layout_toEndOf="@+id/tvJobAnswer"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:visibility="gone">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/viewJobQA"
+        android:background="@color/grey_background"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        />
+
+
+</LinearLayout>

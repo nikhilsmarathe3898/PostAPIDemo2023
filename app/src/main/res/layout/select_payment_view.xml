@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+
+            android:id="@+id/llConfirmPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/app_margin"
+            android:layout_marginLeft="@dimen/app_margin"
+            >
+
+            <LinearLayout
+                android:id="@+id/llSelectCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/tvConfirmPaymentCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:text="@string/card"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/grey_black_color_selector"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:maxLines="1"
+                    android:drawableRight="@drawable/circle_check_uncheck"
+                    android:drawableEnd="@drawable/circle_check_uncheck"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/llConfirmCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+
+                    ><!-- -->
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recyclerViewCard">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <include layout="@layout/card_footer"
+                        android:id="@+id/footerLayout" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey_background"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:id="@+id/viewSelectCard"
+                android:visibility="gone"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llSelectWallet"
+                android:visibility="gone"
+                >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvConfirmPaymentWallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/circle_check_uncheck"
+                        android:drawableEnd="@drawable/circle_check_uncheck"
+                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:text="@string/wallet"
+                        android:textSize="@dimen/textSize_14sp"
+                        android:textColor="@color/grey_black_color_selector"
+                        android:gravity="center_vertical"
+                        android:paddingTop="@dimen/dimen_10dp"
+                        android:maxLines="1"
+                        android:layout_gravity="center_vertical"
+                        />
+                    <TextView
+                        android:id="@+id/tvWalletBalanceAmt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="$ 50.00"
+                        android:textSize="@dimen/textSize_13sp"
+                        android:textColor="@color/parrotGreen"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dimen_80dp"
+                        android:layout_marginStart="@dimen/dimen_80dp"
+                        android:paddingTop="@dimen/dimen_10dp"
+
+                        />
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:visibility="gone"
+                    android:id="@+id/rlWalletPay"
+                    >
+                    <TextView
+                        android:id="@+id/tvWalletBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Wallet_balance"
+                        android:textSize="@dimen/textSize_13sp"
+                        android:textColor="@color/grey_black_color_selector"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvWalletBalanceAmts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="$ 50.00"
+                        android:textSize="@dimen/textSize_13sp"
+                        android:textColor="@color/grey_black_color_selector"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        />
+                </RelativeLayout>
+
+               <!-- <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvSelectedWalletPay"
+                    android:background="@drawable/button_appcolor_ripple_selector"
+                    android:layout_marginRight="@dimen/dimen_35dp"
+                    android:layout_marginLeft="@dimen/dimen_35dp"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:text="@string/pay"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_8dp"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    />-->
+
+                <TextView
+                    android:id="@+id/tvConfirmAddWalletBalance"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_add_circle_outline_black_24dp"
+                    android:drawableStart="@drawable/ic_add_circle_outline_black_24dp"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:text="@string/add_Wallet_balance"
+                    android:textSize="@dimen/textSize_13sp"
+                    android:textColor="@color/grey_black_color_selector"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:maxLines="1"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey_background"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:id="@+id/viewSelectWallet"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tvConfirmPaymentCash"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/circle_check_uncheck"
+                android:drawableEnd="@drawable/circle_check_uncheck"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:text="@string/cash"
+                android:textSize="@dimen/textSize_14sp"
+                android:textColor="@color/grey_black_color_selector"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:maxLines="1"
+                android:visibility="gone"
+
+                />
+           <!-- <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSelectedCashPay"
+                android:background="@drawable/button_appcolor_ripple_selector"
+                android:layout_marginRight="@dimen/dimen_35dp"
+                android:layout_marginLeft="@dimen/dimen_35dp"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:text="@string/pay"
+                android:textSize="@dimen/textSize_14sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/dimen_8dp"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                />-->
+
+        </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

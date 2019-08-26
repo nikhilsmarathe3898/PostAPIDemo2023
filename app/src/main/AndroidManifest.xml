@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.localgenie">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--
+<uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" /> <!-- For automatic restarting of the mqtt service on the app boot -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- For calls -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--Permission for below marshmallow-->
+    <!--For crashes fix on video call-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- WebRTC Dependencies -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+
+    <permission
+        android:name="com.localgenie.googlemapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:name="com.localgenie.utilities.LSPApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name="com.localgenie.ProviderSearch.ProviderSearchActivity"
+            android:label="Search Providers"></activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider445340349536589"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- Used google map key from other projects == need to change -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/mapKey" /> <!-- userName = iserve3embed@gmail.com password 3Embed..1 -->
+        <!-- AIzaSyC5yruAsn7wH3ubFxFG5epsmiYp-/-9nz54 -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <!--
+ <activity android:name="com.localserviceprovider.ProgressActivity"></activity>
+ .SplashScreen.SplashActivity
+        -->
+        <activity
+            android:name="com.localgenie.SplashScreen.SplashActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="eu.janmuller.android.simplecropimage.CropImage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.IntroActivity.IntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.youraddress.YourAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.add_address.AddAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.forgotpassword.ForgotPwdActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.localgenie.otp.OtpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.localgenie.changepassword.ChangePwdActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.utility.NetworkErrorActivity"
+            android:theme="@style/Theme.TransparentNetwork" /> <!-- android:screenOrientation="portrait" -->
+        <!-- Network change receiver -->
+        <receiver
+            android:name="com.utility.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.localgenie.utilities.MySMSBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.localgenie.home.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.localgenie.profile.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.localgenie.Login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.signup.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.localgenie.jobDetailsStatus.JobDetailsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.localgenie.home.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.localgenie.providerList.ProviderList"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.localgenie.videocalling.AudioCallService"
+            android:stopWithTask="true" />
+        <service
+            android:name="com.localgenie.videocalling.VideoCallService"
+            android:stopWithTask="true" />
+        <service
+            android:name="com.utility.OnMyService"
+            android:stopWithTask="false" />
+
+
+        <!--
+            <service
+            android:name=".networking.NetworkCheckerService"
+            android:exported="false" />
+        -->
+        <!-- Amazon S3 Service -->
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" /> <!-- LiveChat -->
+        <activity
+            android:name="com.livechatinc.inappchat.ChatWindowActivity"
+            android:configChanges="orientation|screenSize" /> <!-- FCM service -->
+        <service
+            android:name="com.utility.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <!-- <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" /> -->
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.utility.MyFirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service> <!-- <service android:name="com.utility.MyFirebaseInstanceIDService" /> -->
+        <!-- MQTT Service -->
+        <service android:name="org.eclipse.paho.android.service.MqttService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false"/>
+
+        <activity
+            android:name="com.localgenie.filter.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.bookingtype.BookingType"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.providerdetails.ProviderDetails"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.providerdetails.viewschedule.ScheduleActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.localgenie.confirmbookactivity.ConfirmBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.addTocart.AddToCart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.payment_edit_card.CardEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.payment_details.PaymentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.payment_method.PaymentMethodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.rateYourBooking.RateYourBooking"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.localgenie.home.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.localgenie.home.ViewAllCategory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.inCallOutCall.InCallOutCall"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.zendesk.zendeskHelpIndex.ZendeskHelpIndex"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.localgenie.home.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.localgenie.zendesk.zendeskTicketDetails.HelpIndexTicketDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.selectPaymentMethod.SelectPayment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.cancelledBooking.CancelledBooking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.change_email.ChangeEmailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.localgenie.AboutLSPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.faq.FaqActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.share.ShareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.add_address.SearchAddressLocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.faq_detail.FaqDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.faq_detail.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.home.SearchFilter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.utility.NotificationHandler"
+            android:parentActivityName="com.localgenie.home.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogTransparent">
+            <intent-filter>
+                <action android:name="com.iserve.passenger.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.localgenie.chatting.ChattingActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
+<!--
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.localgenie.home.MainActivity" />
+-->
+        </activity>
+        <activity
+            android:name="com.localgenie.wallet.WalletActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.localgenie.walletTransaction.WalletTransActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d931e59f21078fc24e1413e6e9b85e22ff09edc4" />
+
+        <activity
+            android:name="com.localgenie.promocode.PromoCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.localgenie.providerdetails.Image_Gallery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.bookingtype.RepeatDays"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.biddingFlow.BiddingQuestions"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.localgenie.favouriteProvider.FavouriteProvider"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.repeatDaysTime.RepeatDateTime"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.biddingFlow.BiddingOffers"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.localgenie.bookingtype.SelectTimeAndDuration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.inCallOutCall.TimeSlots"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.inCallOutCall.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.invoice.InvoiceActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videocalling.ExitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.localgenie.videocalling.IncomingCallScreen"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            android:showOnLockScreen="true"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true">
+            <intent-filter>
+                <action android:name="com.localgenie.videocalling.IncomingCallScreen" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

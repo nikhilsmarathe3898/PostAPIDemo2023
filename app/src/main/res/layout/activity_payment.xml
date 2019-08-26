@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    tools:context="com.localgenie.payment_method.PaymentMethodActivity">
+
+
+    <include android:id="@+id/toolbarLayout" layout="@layout/tool_barlayout"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlMainCardList"
+        android:layout_below="@+id/toolbarLayout"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/rvPaymentList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:divider="@color/grey_background"
+            android:dividerHeight="@dimen/dimen_2dp"
+            android:scrollbars="none" />
+        <View
+            android:id="@+id/divider_last"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_below="@+id/rvPaymentList"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:background="@color/dialogDivider"
+            android:padding="@dimen/dimen_5dp" />
+        <TextView
+            android:id="@+id/tvAddCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider_last"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/add_cards"
+            android:textColor="@color/parrotGreen"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlListCardEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_card_empty"
+            android:id="@+id/ivEmatyCard"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:id="@+id/tvCardNew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:background="@drawable/parrot_green_rounded_btn2"
+                android:gravity="center"
+                android:padding="@dimen/dimen_14dp"
+                android:text="@string/add_cards"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize_14sp"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

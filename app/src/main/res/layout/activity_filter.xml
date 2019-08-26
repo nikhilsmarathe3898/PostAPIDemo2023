@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.localgenie.filter.FilterActivity">
+
+    <include layout="@layout/tool_barlayout"
+        android:id="@+id/toolFilter"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolFilter"
+        android:layout_above="@+id/tvFilterSave"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/llmain"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvFilterLocationIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/locationDistance"
+                android:textSize="@dimen/textSize_14sp"
+                android:textColor="@color/black_john"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/app_margin"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                />
+            <!-- android:drawableLeft="@drawable/ic_location"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="@dimen/dimen_10dp"-->
+
+            <TextView
+                android:id="@+id/tvFilterLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_arrow"
+                android:drawableEnd="@drawable/ic_arrow"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:text="@string/location_hint"
+                android:textSize="@dimen/textSize_14sp"
+                android:textColor="@color/black_john"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_16dp"
+                android:paddingStart="@dimen/dimen_16dp"
+                android:paddingRight="@dimen/app_margin"
+                android:paddingEnd="@dimen/app_margin"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:maxLines="1"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5dp"
+                android:background="@color/grey_background"
+                />
+
+            <TextView
+                android:id="@+id/tvFilterDistanceIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/distance"
+                android:textSize="@dimen/textSize_14sp"
+                android:textColor="@color/black_john"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                />
+            <!-- android:drawableLeft="@drawable/ic_distance"
+                android:drawableStart="@drawable/ic_distance"
+                android:drawablePadding="@dimen/dimen_10dp"-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10dp">
+
+                <ImageView
+                    android:id="@+id/ivFilterDistanceMeasure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_distance_measure"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    android:contentDescription="@string/app_name" />
+
+                <com.ma.bubbleseekmodule.BubbleSeekBar
+                    android:layout_toRightOf="@+id/ivFilterDistanceMeasure"
+                    android:layout_toEndOf="@+id/ivFilterDistanceMeasure"
+                    android:layout_toStartOf="@+id/tvDistanceKm"
+                    android:layout_toLeftOf="@+id/tvDistanceKm"
+                    android:id="@+id/seekBarBubble"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:bsb_auto_adjust_section_mark="true"
+                    app:bsb_second_track_color="@color/parrotGreen"
+                    app:bsb_section_count="6"
+                    app:bsb_show_section_mark="true"
+                    app:bsb_show_thumb_text="true"
+                    app:bsb_thumb_text_size="14sp"
+                    app:bsb_touch_to_seek="true"
+                    app:bsb_bubble_color="@color/parrotGreen"
+                    app:bsb_section_text_color="@android:color/darker_gray"
+                    app:bsb_thumb_color="@color/parrotGreen"
+                    app:bsb_thumb_text_color="@color/parrotGreen"
+                    app:bsb_track_color="@color/grey_background_vdarker"
+                    app:bsb_min="0"
+                    app:bsb_max="30"
+                    app:bsb_progress="30"
+
+                    />
+                <!-- app:bsb_show_section_text="true"-->
+
+                <TextView
+                    android:id="@+id/tvDistanceKm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="30 km"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/dimen_8dp"
+                    android:layout_marginStart="@dimen/dimen_8dp"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:layout_marginEnd="@dimen/app_margin"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5dp"
+                android:background="@color/grey_background"
+                />
+            <TextView
+                android:id="@+id/tvFilterSubCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/categories"
+                android:textSize="@dimen/textSize_14sp"
+                android:textColor="@color/black_john"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:visibility="gone"
+                />
+            <!--  android:drawableLeft="@drawable/ic_categories"
+                android:drawableStart="@drawable/ic_categories"
+                android:drawablePadding="@dimen/dimen_10dp" -->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewSubCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:layout_marginLeft="@dimen/app_margin"
+                android:layout_marginRight="@dimen/app_margin"
+                >
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llFilteredPrice"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_5dp"
+                    android:background="@color/grey_background"
+                    android:id="@+id/categoryView"
+                    android:visibility="gone"
+                    />
+                <TextView
+                    android:id="@+id/tvFilterPriceIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/black_john"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    />
+                <!-- android:drawableLeft="@drawable/ic_categories"
+                    android:drawableStart="@drawable/ic_categories"
+                    android:drawablePadding="@dimen/dimen_10dp"-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey_background"/>
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/app_margin">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/tvFilterPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/from"
+                            android:textColor="@color/black_john"
+                            android:textSize="@dimen/textSize_14sp"/>
+
+                        <TextView
+                            android:id="@+id/tvFilterMinPrice"
+                            android:layout_width="@dimen/dimen_80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvFilterPrice"
+                            android:text="@string/min"
+                            android:textColor="@color/red_google"
+                            android:textSize="@dimen/textSize_12sp"/>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dimen_100dp"
+                            android:layout_height="@dimen/dimen_40dp"
+                            android:orientation="horizontal"
+                            android:layout_toRightOf="@+id/tvFilterMinPrice"
+                            android:layout_toEndOf="@+id/tvFilterMinPrice"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dimen_50dp"
+                            android:layout_marginStart="@dimen/dimen_50dp"
+                            >
+                            <!--                        android:background="@drawable/login_green_stroke_background"
+    -->
+                            <TextView
+                                android:id="@+id/tvFilterMinPriceFrom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/textSize_14sp"
+                                android:text="$"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/app_margin"
+                                android:layout_marginStart="@dimen/app_margin"
+                                android:visibility="gone"
+                                />
+                            <EditText
+                                android:id="@+id/etFilterMinPriceFrom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:layout_gravity="center_vertical"
+                                android:inputType="number"
+                                android:padding="@dimen/dimen_3dp"
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:layout_marginStart="@dimen/dimen_5dp"
+                                android:hint="@string/price"
+                                android:maxLength="4"
+                                android:textSize="@dimen/textSize_14sp"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/app_margin"
+                        >
+                        <TextView
+                            android:id="@+id/tvFilterPriceTo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/to"
+                            android:textColor="@color/black_john"
+                            android:textSize="@dimen/textSize_14sp"/>
+
+                        <TextView
+                            android:id="@+id/tvFilterMaxPrice"
+                            android:layout_width="@dimen/dimen_80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvFilterPriceTo"
+                            android:text="@string/max"
+                            android:textColor="@color/red_google"
+                            android:textSize="@dimen/textSize_12sp"/>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dimen_100dp"
+                            android:layout_height="@dimen/dimen_40dp"
+                            android:orientation="horizontal"
+                            android:layout_toRightOf="@+id/tvFilterMaxPrice"
+                            android:layout_toEndOf="@+id/tvFilterMaxPrice"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dimen_50dp"
+                            android:layout_marginStart="@dimen/dimen_50dp"
+                            >
+                            <TextView
+                                android:id="@+id/tvFilterMaxPriceTo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/textSize_14sp"
+                                android:text="$"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/app_margin"
+                                android:layout_marginStart="@dimen/app_margin"
+                                android:visibility="gone"
+                                />
+                            <EditText
+                                android:id="@+id/etFilterMaxPriceTo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:layout_gravity="center_vertical"
+                                android:inputType="number"
+                                android:padding="@dimen/dimen_3dp"
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:layout_marginStart="@dimen/dimen_5dp"
+                                android:hint="@string/price"
+                                android:maxLength="4"
+                                android:textSize="@dimen/textSize_14sp"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvFilterScheduledIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_schedule_icon"
+                android:drawableStart="@drawable/ic_schedule_icon"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:text="@string/schedule"
+                android:textSize="@dimen/textSize_14sp"
+                android:textColor="@color/black_john"
+                android:gravity="center_vertical"
+                android:background="@color/grey_background"
+                android:paddingLeft="@dimen/app_margin"
+                android:paddingRight="@dimen/app_margin"
+                android:paddingTop="@dimen/dimen_14dp"
+                android:paddingBottom="@dimen/dimen_14dp"
+                android:visibility="gone"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvFilterStartDateIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:text="@string/startDate"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/black_john"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingBottom="@dimen/dimen_14dp"
+                   android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tvFilterStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:drawableLeft="@drawable/ic_date"
+                    android:drawableStart="@drawable/ic_date"
+                    android:drawableRight="@drawable/ic_arrow"
+                    android:drawableEnd="@drawable/ic_arrow"
+                    android:text="12/09/2017"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/black_john"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingBottom="@dimen/dimen_14dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey_background_darker"
+                    android:layout_below="@+id/tvFilterStartDate"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvFilterEndDateIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:text="@string/endDate"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/black_john"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingBottom="@dimen/dimen_14dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tvFilterEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:drawableLeft="@drawable/ic_date"
+                    android:drawableStart="@drawable/ic_date"
+                    android:drawableRight="@drawable/ic_arrow"
+                    android:drawableEnd="@drawable/ic_arrow"
+                    android:text="12/09/2017"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/black_john"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingBottom="@dimen/dimen_14dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey_background_darker"
+                    android:layout_below="@+id/tvFilterEndDate"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvFilterRepeatDateIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:text="@string/repeatDays"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/black_john"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingBottom="@dimen/dimen_14dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tvFilterRepeatDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:drawableRight="@drawable/ic_arrow"
+                    android:drawableEnd="@drawable/ic_arrow"
+                    android:text="M,T,W..."
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/black_john"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingBottom="@dimen/dimen_14dp"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvFilterTimeIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_time"
+                android:drawableStart="@drawable/ic_time"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:text="@string/time"
+                android:textSize="@dimen/textSize_14sp"
+                android:textColor="@color/black_john"
+                android:gravity="center_vertical"
+                android:background="@color/grey_background"
+                android:paddingLeft="@dimen/app_margin"
+                android:paddingRight="@dimen/app_margin"
+                android:paddingTop="@dimen/app_margin"
+                android:paddingBottom="@dimen/app_margin"
+                android:visibility="gone"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvFilterStartTimeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:text="@string/StarTime"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/black_john"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingBottom="@dimen/dimen_14dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tvFilterStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:drawableRight="@drawable/ic_arrow"
+                    android:drawableEnd="@drawable/ic_arrow"
+                    android:text="00:00 AM"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/black_john"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingBottom="@dimen/dimen_14dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey_background_darker"
+                    android:layout_below="@+id/tvFilterStartTime"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvFilterEndTimeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:text="@string/EndTime"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/black_john"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingBottom="@dimen/dimen_14dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tvFilterEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:drawableRight="@drawable/ic_arrow"
+                    android:drawableEnd="@drawable/ic_arrow"
+                    android:text="11:55 PM"
+                    android:textSize="@dimen/textSize_14sp"
+                    android:textColor="@color/black_john"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingTop="@dimen/dimen_14dp"
+                    android:paddingBottom="@dimen/dimen_14dp"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <TextView
+
+        android:id="@+id/tvFilterSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/save"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:background="@drawable/button_appcolor_ripple_selector"
+        android:paddingTop="@dimen/dimen_11_5dp"
+        android:paddingBottom="@dimen/dimen_11_5dp"
+        android:textSize="@dimen/textSize_18sp"
+        android:layout_margin="@dimen/app_margin"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/ivSpinnerPriority"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/app_margin"
+        android:background="@drawable/circle_app_fill_color"
+        />
+    <TextView
+        android:id="@+id/tvSpinnerPriority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        tool:text="abcd"
+        android:textColor="@color/black_john"
+        android:textSize="@dimen/textSize_14sp"
+
+        />
+
+</LinearLayout>

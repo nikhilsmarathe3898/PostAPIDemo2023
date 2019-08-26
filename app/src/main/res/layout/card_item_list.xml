@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_7dp"
+    android:layout_marginBottom="@dimen/dimen_7dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivCardImage"
+            android:src="@drawable/ic_visa"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardInfo"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/app_margin"
+            android:layout_marginStart="@dimen/app_margin"
+            android:drawableRight="@drawable/ic_check_black_24dp"
+            android:drawableEnd="@drawable/ic_check_black_24dp"
+            />
+<!-- android:drawableEnd="@drawable/payment_check_uncheck"-->
+    </LinearLayout>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSelectedCardPay"
+        android:background="@drawable/button_appcolor_ripple_selector"
+        android:layout_marginRight="@dimen/dimen_35dp"
+        android:layout_marginLeft="@dimen/dimen_35dp"
+        android:layout_marginTop="@dimen/app_margin"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:text="@string/pay"
+        android:textSize="@dimen/textSize_14sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/dimen_8dp"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        />
+
+
+</LinearLayout>

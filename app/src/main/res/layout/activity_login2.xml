@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include android:id="@+id/login_tool"
+        layout="@layout/tool_barlayout"/>
+    <ScrollView
+        android:id="@+id/loginscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_login_signup"
+        android:layout_below="@+id/login_tool"
+        android:isScrollContainer="true"
+        android:scrollbars="none">
+        <RelativeLayout
+            android:id="@+id/signin_relativellout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <include android:id="@+id/fb_login_or"
+                layout="@layout/facebooknador"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fb_login_or"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                >
+                <AutoCompleteTextView
+                    android:id="@+id/at_login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="40"
+                    android:paddingLeft="@dimen/dimen_5dp"
+                    android:paddingRight="@dimen/dimen_5dp"
+                    android:textColor="@color/black" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_login_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/til_login_email"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/grey_background_vdarker">
+
+                <EditText
+                    android:id="@+id/et_login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingLeft="@dimen/dimen_5dp"
+                    android:paddingRight="@dimen/dimen_5dp"
+                    android:textColor="@color/black"
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_forgotpass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/til_login_pwd"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/dimen_5dp"
+                android:text="@string/helpwithpassword"
+                android:textSize="@dimen/textSize_14sp"/>
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_forgotpass"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:background="@drawable/parrot_green_rounded_btn2"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/dimen_15dp"
+                android:text="@string/signin_login"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dimen_16dp"
+                />
+        </RelativeLayout>
+
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/rl_login_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_10dp">
+
+        <TextView
+            android:id="@+id/tv_donthaveacount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:text="@string/donthaveanAccount"
+            android:textColor="@color/grey_background_vdarker"/>
+        <TextView
+            android:id="@+id/tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_toEndOf="@+id/tv_donthaveacount"
+            android:layout_toRightOf="@+id/tv_donthaveacount"
+            android:background="?attr/selectableItemBackground"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:text="@string/signup"
+            android:textColor="@color/parrotGreen"
+            />
+    </RelativeLayout>
+
+    <!--<ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity = "center"
+        android:layout_marginTop="8dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        />-->
+
+
+</RelativeLayout>

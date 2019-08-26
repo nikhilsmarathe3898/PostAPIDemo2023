@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/app_margin"
+    android:background="@drawable/service_desc_dialog"
+    tools:context="com.localgenie.addTocart.DescDialogFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_closebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_black_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"/>
+        <TextView
+            android:id="@+id/tv_serviceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Standart Notary"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black_john"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/tv_servicePrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$ 35.00"
+            android:layout_gravity="center_horizontal"
+            android:textSize="19dp"
+            android:textColor="@color/black_john"
+            android:gravity="center_horizontal"
+            android:layout_margin="@dimen/dimen_20dp"/>
+        <TextView
+            android:id="@+id/tv_serviceDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_john"
+            android:text="@string/about_me"
+            android:paddingBottom="@dimen/app_margin"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

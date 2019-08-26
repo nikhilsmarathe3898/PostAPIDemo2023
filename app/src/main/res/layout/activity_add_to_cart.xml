@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.localgenie.addTocart.AddToCart">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolProvider"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+            <TextView
+                android:id="@+id/toolBarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/Services"
+                android:textSize="@dimen/textSize_18sp"
+                android:textColor="@color/black_john"
+                android:layout_centerInParent="true"/>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+  <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollAddToCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_above="@+id/checkOutLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+               ><!-- android:layout_below="@id/appBarLayout"
+                android:layout_above="@id/checkOutLayout"-->
+
+                <android.support.v7.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:rowCount="@integer/id_3"
+                    app:columnCount="@integer/id_3"
+                    android:id="@+id/glHireNow"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginRight="@dimen/app_margin"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:id="@+id/tvAddtoCartHourPrice"
+                        android:textColor="@color/black_john"
+                        android:textSize="@dimen/textSize_16sp"
+                        app:layout_columnSpan="@integer/id_2"
+                        app:layout_columnWeight="2"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        />
+                    <ImageView android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:src="@drawable/ic_hourglass"
+                        app:layout_rowSpan="@integer/id_2"
+                        app:layout_gravity="center|fill"
+                        app:layout_columnWeight="1"
+                        android:contentDescription="@string/app_name"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:layout_marginBottom="@dimen/dimen_3dp"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        app:layout_columnWeight="2"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textSize_13sp"
+                        android:text="@string/hireByHour"
+                        android:id="@+id/tvAddToCartHourlyInfo"
+                        android:textColor="@color/black_john"
+
+                        app:layout_columnSpan="@integer/id_2"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        tools:text="@string/hire"
+                        app:layout_columnWeight="2"
+                        app:layout_gravity="center_vertical"
+                        app:layout_columnSpan="@integer/id_2"
+                        android:gravity="center_vertical"
+                        />
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cardFrameLayout"
+                        app:layout_gravity="center_vertical"
+                        app:layout_columnWeight="@integer/id_1"
+                        >
+                        <TextView
+                            android:id="@+id/tvHireHourly"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/hire"
+                            android:textColor="@color/black_john"
+                            android:paddingTop="@dimen/dimen_5dp"
+                            android:paddingBottom="@dimen/dimen_5dp"
+                            android:background="@drawable/card_grey_green"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            />
+                        <LinearLayout
+                            android:id="@+id/llAddToCartHr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/parrot_green_stroke_bottom_background"
+                            android:layout_gravity="center_vertical"
+                            >
+                            <ImageView
+                                android:id="@+id/tvCartRemoveHr"
+                                android:layout_width="25dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_remove_black_24dp"
+                                android:paddingTop="@dimen/dimen_4dp"
+                                android:paddingBottom="@dimen/dimen_4dp"
+                                android:paddingLeft="@dimen/dimen_5dp"
+                                android:paddingStart="@dimen/dimen_5dp"
+                                android:layout_gravity="end"
+                                android:contentDescription="@string/app_name" />
+
+                            <TextView
+                                android:id="@+id/tvCartNoHr"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/parrotGreen"
+                                android:textSize="@dimen/textSize_20sp"
+                                tools:text="3"/>
+
+                            <ImageView
+                                android:id="@+id/tvCartAddHr"
+                                android:layout_width="25dp"
+                                android:src="@drawable/ic_add_black_24dp"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/dimen_4dp"
+                                android:paddingBottom="@dimen/dimen_4dp"
+                                android:paddingRight="@dimen/dimen_5dp"
+                                android:paddingEnd="@dimen/dimen_5dp"
+                                android:contentDescription="@string/app_name" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </android.support.v7.widget.GridLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_background"
+                    android:layout_marginTop="@dimen/dimen_5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_services"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/llAddToCartService"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </LinearLayout>
+  </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/checkOutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/parrotGreen"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/ivCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:src="@drawable/ic_cart"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name" />
+        <TextView
+            android:id="@+id/tvCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkout"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ivCart"
+            android:layout_toStartOf="@id/ivCart"
+            android:textAllCaps="true"
+            android:textStyle="bold"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="@dimen/dimen_15dp">
+            <TextView
+                android:id="@+id/numOfService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="0 Services"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/tvOr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:layout_toRightOf="@id/numOfService"
+                android:layout_toEndOf="@id/numOfService"
+                />
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 0.00"
+                android:layout_toRightOf="@id/tvOr"
+                android:layout_toEndOf="@id/tvOr"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvAdditionalFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="TRAVEL FEE ADDITIONAL"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_12sp"
+                android:layout_below="@id/numOfService"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/dimen_50dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
+

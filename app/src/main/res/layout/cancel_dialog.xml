@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_corner_shape">
+
+    <TextView
+        android:id="@+id/cancelDialogReson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginStart="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:text="What happened?"
+        android:padding="3dp"
+        android:textColor="@color/black_john" />
+
+    <ImageView
+        android:id="@+id/cancelDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin"
+        android:gravity="end"
+        android:src="@drawable/ic_close_black_24dp"
+        android:padding="3dp"
+         />
+
+    <RelativeLayout
+        android:id="@+id/rlListview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_260dp"
+        android:layout_below="@+id/cancelDialog"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:layout_marginTop="@dimen/app_margin">
+
+      <!--  <ListView
+            android:id="@+id/listcancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.5dp">
+        </ListView>-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listcancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lastrlout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlListview"
+        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:background="@drawable/button_appcolor_ripple_selector"><!--android:layout_alignParentBottom="true"-->
+
+        <!-- <View
+             android:layout_width="match_parent"
+             android:layout_height="0.5dp"
+             android:background="@color/silvercolor"/>-->
+
+        <TextView
+            android:id="@+id/submitcancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/dimen_14dp"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_14sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastrlout"
+        android:text="abd"
+        android:visibility="invisible"
+
+        />
+</RelativeLayout>

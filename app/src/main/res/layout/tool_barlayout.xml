@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:elevation="@dimen/dimen_0dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+    <TextView
+        android:id="@+id/tv_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:textColor="@color/black_john"
+        android:textSize="@dimen/textSize_18sp" />
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/app_margin"
+        android:layout_marginRight="@dimen/app_margin"
+        android:gravity="end"
+        android:padding="@dimen/dimen_5dp"
+        android:text=""
+        android:textColor="@color/black_john"
+        android:textSize="@dimen/textSize_14sp"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/rlToolImage"
+        android:gravity="end"
+        android:layout_gravity="end"
+
+        >
+        <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:padding="@dimen/dimen_5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_cancel_black_24dp"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/ivFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin"
+            android:gravity="end"
+            android:padding="@dimen/dimen_5dp"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+
+
+</android.support.v7.widget.Toolbar>

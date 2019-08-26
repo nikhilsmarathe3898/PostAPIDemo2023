@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include android:id="@+id/tool_helpIndex"
+        layout="@layout/tool_barlayout"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srlZenDesk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerHelpIndex"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+            </android.support.v7.widget.RecyclerView>
+            <RelativeLayout
+                android:id="@+id/rlHelpIndex"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/empty_ticket" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbarHelpIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:foregroundGravity="center"
+        android:visibility="gone"/>
+
+
+
+</LinearLayout>
