@@ -35,7 +35,7 @@ public class MyBookingStatus implements Serializable {
 "bidProvider":[]*/
         String statusMsg, proProfilePic,firstName,lastName,msg,reminderId;
 
-        long statusUpdateTime,bookingRequestedFor, bookingId;
+        long bookingRequestedFor, bookingId;  //statusUpdateTime
         int status,bookingModel,bookingType,callType;
 
 
@@ -95,7 +95,7 @@ public class MyBookingStatus implements Serializable {
             return proProfilePic;
         }
 
-        public void setProProfilePic(String proProfilePic) {
+      /*  public void setProProfilePic(String proProfilePic) {
             this.proProfilePic = proProfilePic;
         }
 
@@ -105,7 +105,7 @@ public class MyBookingStatus implements Serializable {
 
         public void setStatusUpdateTime(long statusUpdateTime) {
             this.statusUpdateTime = statusUpdateTime;
-        }
+        }*/
 
         public long getBookingId() {
             return bookingId;

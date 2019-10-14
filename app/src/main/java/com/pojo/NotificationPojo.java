@@ -16,9 +16,9 @@ public class NotificationPojo implements Serializable
     "bookingId":1532415607356,"statusUpdateTime":1532415623,
     "proProfilePic":"https:\/\/s3-ap-southeast-1.amazonaws.com\/appscrip\/iserve2.0\/Provider\/ProfilePics\/Profile1531897704802.png",
     "status":3},title=Booking accepted by the Provider, pushType=1}*/
-    private long bookingId,statusUpdateTime,timestamp,bid;
+    private long bookingId,timestamp,bid;  //statusUpdateTime
     private int type,bookingModel,bookingType,bookingRequestedFor,callType;
-    private String targetId,_id,fromID,content,name,profilePic,statusMsg;
+    private String _id,fromID,content,name,profilePic,statusMsg;  //targetId
 
 
     public int getCallType() {
@@ -61,9 +61,11 @@ public class NotificationPojo implements Serializable
         return type;
     }
 
+/*
     public String getTargetId() {
         return targetId;
     }
+*/
 
     public String get_id() {
         return _id;
@@ -81,7 +83,9 @@ public class NotificationPojo implements Serializable
         return bookingId;
     }
 
+/*
     public long getStatusUpdateTime() {
         return statusUpdateTime;
     }
+*/
 }

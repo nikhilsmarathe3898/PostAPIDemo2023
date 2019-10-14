@@ -18,10 +18,10 @@ public class ChatData
         return custProType;
     }
 
+
     public void setCustProType(int custProType) {
         this.custProType = custProType;
     }
-
     public long getBid() {
             return bid;
         }

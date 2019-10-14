@@ -95,7 +95,7 @@ public class ServicesAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return categoryList.size();
+        return categoryList == null ? 0 : categoryList.size();
     }
 
     public interface OnServiceClicked{

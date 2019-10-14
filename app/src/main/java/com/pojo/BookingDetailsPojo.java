@@ -20,10 +20,10 @@ public class BookingDetailsPojo implements Serializable
     {
         private int bookingType,status,bookingModel,callType;
         private long bookingId,bookingRequestedFor,bookingRequestedAt,bookingExpireTime,serverTime;
-        private String currencySymbol,currency,statusMsg,addLine1,paymentMethod,signURL,cancellationReason
-                ,jobDescription,categoryId,categoryName;
+        private String currencySymbol,currency,statusMsg,addLine1
+                ,jobDescription,categoryId,categoryName; //paymentMethod,signURL,cancellationReason
         private ProviderDetailsBooking providerDetail;
-        private BookingJobStatusLogs jobStatusLogs;
+      //  private BookingJobStatusLogs jobStatusLogs;
         private BookingTimer bookingTimer;
         private BookingAccounting accounting;
         private double latitude,longitude;
@@ -125,7 +125,7 @@ public class BookingDetailsPojo implements Serializable
             return addLine1;
         }
 
-        public String getPaymentMethod() {
+        /*public String getPaymentMethod() {
             return paymentMethod;
         }
 
@@ -135,7 +135,7 @@ public class BookingDetailsPojo implements Serializable
 
         public String getCancellationReason() {
             return cancellationReason;
-        }
+        }*/
 
         public String getJobDescription() {
             return jobDescription;
@@ -145,9 +145,11 @@ public class BookingDetailsPojo implements Serializable
             return providerDetail;
         }
 
+/*
         public BookingJobStatusLogs getJobStatusLogs() {
             return jobStatusLogs;
         }
+*/
 
         public BookingTimer getBookingTimer() {
             return bookingTimer;
@@ -160,6 +162,7 @@ public class BookingDetailsPojo implements Serializable
 
 
 
+/*
     private class BookingJobStatusLogs
     {
         private long requestedTime,receivedTime;
@@ -172,6 +175,7 @@ public class BookingDetailsPojo implements Serializable
             return receivedTime;
         }
     }
+*/
 
 
 

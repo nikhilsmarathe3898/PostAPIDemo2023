@@ -11,9 +11,9 @@ public class Subcat implements Serializable {
     @SerializedName("Name")
     @Expose
     private String name;
-    @SerializedName("desc")
+   /* @SerializedName("desc")
     @Expose
-    private String desc;
+    private String desc;*/
     @SerializedName("link")
     @Expose
     private String link;
@@ -26,13 +26,13 @@ public class Subcat implements Serializable {
         this.name = name;
     }
 
-    public String getDesc() {
+   /* public String getDesc() {
         return desc;
     }
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
+    }*/
 
     public String getLink() {
         return link;

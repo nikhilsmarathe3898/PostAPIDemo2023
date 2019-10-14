@@ -73,7 +73,7 @@
                 android:layout_marginLeft="@dimen/app_margin"
                 android:layout_marginStart="@dimen/app_margin"
                 android:layout_marginTop="@dimen/app_margin"
-                android:text="JOB DETAILS"
+                android:text="@string/job_detials"
                 android:layout_below="@id/tvReceiptDetailsHead"
                 android:textColor="@color/black_john"
                 android:textSize="@dimen/textSize_16sp" />
@@ -109,7 +109,7 @@
                 android:layout_marginLeft="@dimen/app_margin"
                 android:layout_marginStart="@dimen/app_margin"
                 android:layout_marginTop="@dimen/app_margin"
-                android:text="BILL DETAILS"
+                android:text="@string/bill_detials"
                 android:layout_below="@id/view2"
                 android:textColor="@color/black_john"
                 android:textSize="@dimen/textSize_16sp" />

@@ -112,6 +112,7 @@ public class MainActivity extends DaggerAppCompatActivity implements MyBookingPa
             UtilityVideoCall.getInstance().setActiveOnACall(false, false);
             mqttManager.subscribeToTopic(MqttEvents.Calls.value+"/"+manager.getSID(),0);
             mqttManager.subscribeToTopic(MqttEvents.Call.value+"/"+manager.getSID(),0);
+            mqttManager.subscribeToTopic(MqttEvents.GoogleMapKey.value,0);
         } catch (JSONException e) {
             e.printStackTrace();
         }

@@ -31,8 +31,8 @@ public class PromoCodeResponse implements Serializable
 "howItWorks":"<p>Get free delivery on all orders placed on Swiggy using Standard Chartered Debit or Credit cards (TCA*)</p>\n",
 "ab":true*/
 private String code,termsAndConditions,description,howItWorks;
-private double minimumPurchaseValue;
-private DiscountAmount discount;
+/*private double minimumPurchaseValue;
+private DiscountAmount discount;*/
 
         public String getCode() {
             return code;
@@ -50,21 +50,24 @@ private DiscountAmount discount;
             return howItWorks;
         }
 
-        public double getMinimumPurchaseValue() {
+      /*  public double getMinimumPurchaseValue() {
             return minimumPurchaseValue;
         }
 
         public DiscountAmount getDiscount() {
             return discount;
-        }
+        }*/
     }
 
+/*
     private class DiscountAmount implements Serializable
     {
-        /*"typeId":2,
+        */
+/*"typeId":2,
 "typeName":"percentage",
 "value":30,
-"maximumDiscountValue":60*/
+"maximumDiscountValue":60*//*
+
         private int typeId;
         private String typeName;
         private double value,maximumDiscountValue;
@@ -85,4 +88,5 @@ private DiscountAmount discount;
             return maximumDiscountValue;
         }
     }
+*/
 }

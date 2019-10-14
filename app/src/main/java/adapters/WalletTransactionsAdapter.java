@@ -79,7 +79,7 @@ public class WalletTransactionsAdapter extends RecyclerView.Adapter<WalletTransa
 
     @Override
     public int getItemCount() {
-        return transactionsAL.size();
+        return transactionsAL == null ? 0 : transactionsAL.size();
     }
     //====================================================================
 

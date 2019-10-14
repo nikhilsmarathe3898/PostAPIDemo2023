@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Schedule {
     private String providerId;
-    private String scheduleId;
+   // private String scheduleId;
     //private String long;
     private String lat;
     private String address;
@@ -20,14 +20,14 @@ public class Schedule {
         this.providerId = providerId;
     }
 
-    public String getScheduleId() {
+   /* public String getScheduleId() {
         return scheduleId;
     }
 
     public void setScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
     }
-
+*/
     public String getLat() {
         return lat;
     }
@@ -48,23 +48,29 @@ public class Schedule {
         return startTime;
     }
 
+/*
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+*/
 
     public String getEndTime() {
         return endTime;
     }
 
+/*
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+*/
 
     public ArrayList<Booked> getBooked() {
         return booked;
     }
 
+/*
     public void setBooked(ArrayList<Booked> booked) {
         this.booked = booked;
     }
+*/
 }

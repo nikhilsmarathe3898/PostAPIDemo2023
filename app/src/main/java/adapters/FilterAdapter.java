@@ -57,7 +57,7 @@ public class FilterAdapter extends RecyclerView.Adapter
     @Override
     public int getItemCount()
     {
-        return filteredResponces.size();
+        return filteredResponces == null ? 0 : filteredResponces.size();
     }
 
     class ViewHolderClass extends RecyclerView.ViewHolder

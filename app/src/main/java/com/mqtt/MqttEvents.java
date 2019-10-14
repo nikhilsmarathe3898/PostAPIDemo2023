@@ -17,7 +17,8 @@ public enum MqttEvents {
     CallsAvailability("CallsAvailability"),
     PresenceTopic("PresenceTopic"),
     WillTopic("lastWill"),
-    Call("call");
+    Call("call"),
+    GoogleMapKey("googleMapKey");
     public String value;
 
     MqttEvents(String value) {

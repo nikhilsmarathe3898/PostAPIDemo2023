@@ -59,13 +59,15 @@ public class CartInfo implements Serializable
 "quntity":1,
 "amount":175*/
 
-        private String serviceId,serviceName;
+        private String serviceName;  //serviceId
         private int quntity;
         private double amount;
 
+/*
         public String getServiceId() {
             return serviceId;
         }
+*/
 
         public String getServiceName() {
             return serviceName;

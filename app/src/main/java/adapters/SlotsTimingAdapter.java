@@ -84,7 +84,7 @@ public class SlotsTimingAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return slotData.size();
+        return slotData == null ? 0 : slotData.size();
     }
 
     private class SlotView extends RecyclerView.ViewHolder

@@ -16,13 +16,15 @@ public class HelpReason implements Serializable
 "res_for":"provider",
 "name":"texst"*/
 
-    private String name,res_for;
+    private String name;  //res_for;
 
     public String getName() {
         return name;
     }
 
+/*
     public String getRes_for() {
         return res_for;
     }
+*/
 }

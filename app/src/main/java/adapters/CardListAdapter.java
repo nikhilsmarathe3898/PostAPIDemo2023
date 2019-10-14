@@ -74,8 +74,8 @@ public class CardListAdapter extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        Log.d("TAG", "getItemCount: "+cardItem.size());
-        return cardItem.size();
+        //Log.d("TAG", "getItemCount: "+cardItem.size());
+        return cardItem == null ? 0 : cardItem.size();
     }
 
 

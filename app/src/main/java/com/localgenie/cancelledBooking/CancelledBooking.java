@@ -220,12 +220,12 @@ public class CancelledBooking extends DaggerAppCompatActivity {
             //tabs.addTab(tabs.newTab().setText("Receipt"));
             tabs.addTab(tabs.newTab().setText(getString(R.string.detailsCaps)));
 
-            tabs.addTab(tabs.newTab().setText("Help"));
+            tabs.addTab(tabs.newTab().setText(getString(R.string.help)));
             tabReceipt = (TextView) LayoutInflater.from(this).inflate(R.layout.tab_custom_text, null);
             //  tabReceipt.setText("Receipt");
             tabReceipt.setText(getString(R.string.detailsCaps));
             TextView tabHelp = (TextView) LayoutInflater.from(this).inflate(R.layout.tab_custom_text, null);
-            tabHelp.setText("Help");
+            tabHelp.setText(getString(R.string.help));
             tabHelp.setTypeface(appTypeface.getHind_semiBold());
             tabs.getTabAt(1).setCustomView(tabHelp);
         }

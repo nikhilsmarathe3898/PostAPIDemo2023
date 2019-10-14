@@ -244,7 +244,7 @@ public class FavouriteProvider extends DaggerAppCompatActivity implements Favour
 
         @Override
         public int getItemCount() {
-            return dataList.size();
+            return dataList == null ? 0 : dataList.size();
         }
 
 

@@ -55,7 +55,7 @@ public class CartModifiedData implements Serializable
         @Expose
 
         private String CatId;
-        private String categoryId,categoryName,currencySymbol;
+        private String categoryName,currencySymbol; //categoryId
         private double totalAmount;
         private int totalQuntity,serviceType;
 
@@ -70,9 +70,11 @@ public class CartModifiedData implements Serializable
             return serviceType;
         }
 
+/*
         public String getCategoryId() {
             return categoryId;
         }
+*/
 
         public String getCategoryName() {
             return categoryName;
@@ -109,7 +111,7 @@ public class CartModifiedData implements Serializable
 "addedToCartOn":1518170455,
 "status":1,
 "action":[]*/
-       private String serviceId,serviceName,unit,quantityAction;
+       private String serviceId,serviceName,quantityAction;//unit
        private double unitPrice,amount;
        private int maxquantity,quntity;
        private int tempQuantity;
@@ -136,9 +138,11 @@ public class CartModifiedData implements Serializable
             return serviceName;
         }
 
+/*
         public String getUnit() {
             return unit;
         }
+*/
 
         public double getUnitPrice() {
             return unitPrice;

@@ -830,7 +830,7 @@ public class ProviderDetails extends DaggerAppCompatActivity implements Provider
                 if (scrollRange + verticalOffset == 0)
                 {
                     collapsingToolbarLayout.setTitle(name);
-                    toolBarTitle.setText("Registereres");
+                    toolBarTitle.setText(getString(R.string.registereres));
                     ivProDtlsPic.setVisibility(View.GONE);
                     toolProvider.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
                     isShow = true;
@@ -903,7 +903,7 @@ public class ProviderDetails extends DaggerAppCompatActivity implements Provider
 
         @Override
         public int getItemCount() {
-            return ratingLog.size();
+            return ratingLog == null ? 0 : ratingLog.size();
         }
 
         private class RecyclerHolder extends RecyclerView.ViewHolder

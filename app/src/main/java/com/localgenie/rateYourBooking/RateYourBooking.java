@@ -118,7 +118,7 @@ public class RateYourBooking extends DaggerAppCompatActivity implements RateYour
         tvRateProviderName.setTypeface(appTypeface.getHind_medium());
         btnSave.setTypeface(appTypeface.getHind_semiBold());
         tvComments.setTypeface(appTypeface.getHind_regular());
-        tb_service_header.setText("Your Last Booking on");
+        tb_service_header.setText(getString(R.string.your_last_booking_on));
 
     }
 

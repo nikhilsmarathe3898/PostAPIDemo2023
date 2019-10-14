@@ -95,7 +95,7 @@ public class RecommendedTrendingAdapter extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return categoryList.size();
+        return categoryList == null ? 0 : categoryList.size();
     }
 
     public class RecommendedHolder extends RecyclerView.ViewHolder

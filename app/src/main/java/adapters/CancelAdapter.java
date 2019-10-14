@@ -66,7 +66,7 @@ public class CancelAdapter extends RecyclerView.Adapter
     @Override
     public int getItemCount()
     {
-        return data.size();
+        return data == null ? 0 : data.size();
     }
 
     class ViewCancelHolder extends RecyclerView.ViewHolder

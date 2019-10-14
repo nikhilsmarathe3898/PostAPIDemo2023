@@ -42,18 +42,18 @@ public class Data {
     @SerializedName("profilePic")
     @Expose
     private String profilePic;
-    @SerializedName("paymentId")
+ /*   @SerializedName("paymentId")
     @Expose
-    private String paymentId;
+    private String paymentId;*/
     @SerializedName("fcmTopic")
     @Expose
     private String fcmTopic;
-    @SerializedName("currencyCode")
+   /* @SerializedName("currencyCode")
     @Expose
     private String currencyCode;
     @SerializedName("PublishableKey")
     @Expose
-    private String publishableKey;
+    private String publishableKey;*/
 
     @SerializedName("requester_id")
     @Expose
@@ -145,9 +145,11 @@ public class Data {
         this.profilePic = profilePic;
     }
 
+/*
     public String getPaymentId() {
         return paymentId;
     }
+*/
 
 
     public String getFcmTopic() {
@@ -155,7 +157,7 @@ public class Data {
     }
 
 
-    public String getCurrencyCode() {
+   /* public String getCurrencyCode() {
         return currencyCode;
     }
 
@@ -170,5 +172,5 @@ public class Data {
     public void setPublishableKey(String publishableKey) {
         this.publishableKey = publishableKey;
     }
-
+*/
 }

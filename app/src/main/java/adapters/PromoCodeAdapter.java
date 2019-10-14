@@ -124,7 +124,7 @@ public class PromoCodeAdapter extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return promoCodeData.size();
+        return promoCodeData == null ? 0 : promoCodeData.size();
     }
 
     private class ViewPromoCode extends RecyclerView.ViewHolder

@@ -36,8 +36,8 @@ public class BidDispatchLog implements Serializable
 
     private String providerId,firstName,lastName,providerName,profilePic,phone,
             statusMsg,bidDescription,catName;
-    private float averageRating;
-    private long offerdAt,bid;
+  //  private float averageRating;
+    private long bid;  //offerdAt
     private double quotedPrice;
     private ProLocation location;
     private int status;
@@ -105,13 +105,13 @@ public class BidDispatchLog implements Serializable
         return bidDescription;
     }
 
-    public float getAverageRating() {
+   /* public float getAverageRating() {
         return averageRating;
     }
 
     public long getOfferdAt() {
         return offerdAt;
-    }
+    }*/
 
     public double getQuotedPrice() {
         return quotedPrice;

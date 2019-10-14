@@ -398,11 +398,11 @@ public class RateYourProviderImpl implements RateYourProviderContract.Presenter 
         rv_jobDropPhotos.setAdapter(new CourierFlowJobPhotosAdapter(dropImageList, null, false));
 
         if (callType == 3) {
-            tvJobDialog.setText("TIME SLOTS");
+            tvJobDialog.setText(context.getString(R.string.time_slot));
             tvLocation.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
             tvLocation.setText(formatHoursAndMinutes(accounting.getTotalActualJobTimeMinutes()));
           //  Log.d("abc", "openDialog: " + formatHoursAndMinutes(accounting.getTotalActualJobTimeMinutes()));
-            tvInvCard.setText("Card ending by " + "" + accounting.getLast4());
+            tvInvCard.setText(context.getString(R.string.card_ending_by) + "" + accounting.getLast4());
             if (accounting.getDiscount() > 0) {
                 Utility.setAmtOnRecept(accounting.getVisitFee(), tvInvAmount, currencySymbol);
                 // rlVisitFee.setVisibility(View.VISIBLE);
@@ -411,7 +411,7 @@ public class RateYourProviderImpl implements RateYourProviderContract.Presenter 
             Utility.setAmtOnRecept(accounting.getTotal(), tvInvAmount, currencySymbol);
 
         } else {
-            tvJobDialog.setText("JOB LOCATION");
+            tvJobDialog.setText(context.getString(R.string.job_location));
             tvLocation.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_place_black_24dp, 0, 0, 0);
             tvLocation.setText(addressLine);
 

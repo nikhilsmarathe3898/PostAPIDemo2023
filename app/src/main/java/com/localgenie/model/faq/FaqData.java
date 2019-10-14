@@ -15,9 +15,9 @@ public class FaqData implements Serializable {
     @SerializedName("subcat")
     @Expose
     private List<Subcat> subcat = null;
-    @SerializedName("desc")
+    /*@SerializedName("desc")
     @Expose
-    private String desc;
+    private String desc;*/
     @SerializedName("link")
     @Expose
     private String link;
@@ -38,13 +38,13 @@ public class FaqData implements Serializable {
         this.subcat = subcat;
     }
 
-    public String getDesc() {
+  /*  public String getDesc() {
         return desc;
     }
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
+    }*/
 
     public String getLink() {
         return link;

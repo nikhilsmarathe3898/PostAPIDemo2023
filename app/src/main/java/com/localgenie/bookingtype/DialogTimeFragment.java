@@ -154,7 +154,7 @@ public class DialogTimeFragment extends DialogFragment {
                 tempPlusBuffer.setTimeInMillis(Calendar.getInstance().getTimeInMillis() + TimeUnit.HOURS.toMillis(1));
                 tempCal.set(tempCal.get(Calendar.YEAR),tempCal.get(Calendar.MONTH),tempCal.get(Calendar.DATE),hours,minute);
                 if(tempCal.before(tempPlusBuffer)){
-                    alertProgress.alertinfo(mContext,"Please select time atleast 1 hours from now !");
+                    alertProgress.alertinfo(mContext,getString(R.string.select_time_hour));
                     return;
                 }
             }

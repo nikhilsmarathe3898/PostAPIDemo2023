@@ -43,7 +43,7 @@ public class ServiceSelectAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return services.size();
+        return services == null ? 0 : services.size();
     }
     class ViewHolderService extends RecyclerView.ViewHolder{
         TextView tvService;

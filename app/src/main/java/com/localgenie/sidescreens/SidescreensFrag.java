@@ -153,7 +153,7 @@ public class SidescreensFrag extends DaggerFragment implements
                 if (scrollRange + verticalOffset == 0)
                 {
                    // toolbar_layout.setTitle(name);
-                    toolbar_layout.setTitle("Accounts");
+                    toolbar_layout.setTitle(getString(R.string.accounts));
                   //  toolBarTitle.setText("Registereres");
                    // ivProDtlsPic.setVisibility(View.GONE);
                    // toolProvider.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);

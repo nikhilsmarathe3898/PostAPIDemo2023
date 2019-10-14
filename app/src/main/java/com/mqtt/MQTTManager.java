@@ -211,6 +211,9 @@ public class MQTTManager
                     else if(topicSplit[0].equals(MqttEvents.Call.value))
                     {
                         handleActiveCall(new String(message.getPayload()));
+                    } else if(topicSplit[0].equals(MqttEvents.GoogleMapKey.value))
+                    {
+                        handleGoogleMapKey(new String(message.getPayload()));
                     }
                 }
 
@@ -263,6 +266,23 @@ public class MQTTManager
         }
         return obj;
     }
+    /*
+     * handle new googlemap key when is limit is over
+     */
+    public void handleGoogleMapKey(String googleMapKey)
+    {
+        try
+        {
+
+            String dataRes = new JSONObject(googleMapKey).getJSONObject("data").toString();
+            RxCallInfo.getInstance().emitData(dataRes);
+        }
+        catch (Exception exc)
+        {
+            exc.printStackTrace();
+        }
+    }
+
     /*
      * handle new Call data and open incoming screen
      */

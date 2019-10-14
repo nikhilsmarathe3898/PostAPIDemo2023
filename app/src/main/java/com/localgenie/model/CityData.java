@@ -18,8 +18,9 @@ public class CityData  implements Serializable
 "currency":"USD",
 "isDeleted":false,*/
     //@SerializedName("_id")
-    private String _id,country,city,currencySymbol,currency,providerPushTopic,customerPushTopic
-            ,stripeKeys,appVersion;
+    private String _id,country,currencySymbol,currency,stripeKeys;;
+    //providerPushTopic,customerPushTopic,appVersion,city
+
     private int distanceMatrix,currencyAbbr;
     private PolyGone polygons;
     private PaymentMode paymentMode;
@@ -27,7 +28,12 @@ public class CityData  implements Serializable
     private PushTopics pushTopics;;
     private boolean mandatory;
     private ArrayList<String> custGoogleMapKeys;
+    private String googleMapKey;
 
+
+    public String getGoogleMapKey() {
+        return googleMapKey;
+    }
 
     public ArrayList<String> getCustGoogleMapKeys() {
         return custGoogleMapKeys;
@@ -37,9 +43,11 @@ public class CityData  implements Serializable
         return stripeKeys;
     }
 
+/*
     public String getAppVersion() {
         return appVersion;
     }
+*/
 
     public CustomerFrequency getCustomerFrequency() {
         return customerFrequency;
@@ -69,9 +77,11 @@ public class CityData  implements Serializable
         return country;
     }
 
+/*
     public String getCity() {
         return city;
     }
+*/
 
     public String getCurrencySymbol() {
         return currencySymbol;
@@ -81,13 +91,13 @@ public class CityData  implements Serializable
         return currency;
     }
 
-    public String getProviderPushTopic() {
+/*    public String getProviderPushTopic() {
         return providerPushTopic;
     }
 
     public String getCustomerPushTopic() {
         return customerPushTopic;
-    }
+    }*/
 
     public int getDistanceMatrix() {
         return distanceMatrix;
@@ -114,8 +124,8 @@ public class CityData  implements Serializable
             return coordinates;
         }*/
 
-        public class PolyGoneCordinate {
-        }
+       /* public class PolyGoneCordinate {
+        }*/
     }
 
     public class PaymentMode implements Serializable
@@ -161,7 +171,8 @@ public class CityData  implements Serializable
 
     public class PushTopics implements Serializable
     {
-        private String city,allCustomers,allCitiesCustomers,outZoneCustomers;
+        private String city,allCustomers,allCitiesCustomers;
+        //outZoneCustomers;
 
         public String getCity() {
             return city;
@@ -175,8 +186,10 @@ public class CityData  implements Serializable
             return allCitiesCustomers;
         }
 
+/*
         public String getOutZoneCustomers() {
             return outZoneCustomers;
         }
+*/
     }
 }

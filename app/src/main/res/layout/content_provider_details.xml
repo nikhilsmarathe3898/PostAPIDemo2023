@@ -47,7 +47,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jobs"
+                    android:text="@string/jobs"
                     android:textColor="@color/black_john"
                     android:textSize="@dimen/textSize_12sp"
                     android:id="@+id/tvProviderJob"
@@ -75,7 +75,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Avg rating"
+                    android:text="@string/avg_rating"
                     android:textColor="@color/black_john"
                     android:textSize="@dimen/textSize_12sp"
                     android:id="@+id/tvProviderRating"
@@ -142,7 +142,7 @@
                     android:drawableRight="@drawable/ic_info_outline_black_24dp"
                     android:drawableEnd="@drawable/ic_info_outline_black_24dp"
                     android:drawablePadding="@dimen/dimen_10dp"
-                    android:text="Consultation Fee $ 200.00"
+                    android:text="@string/consulationFeeOne"
                     android:paddingTop="@dimen/dimen_10dp"
                     android:paddingBottom="@dimen/dimen_10dp"
                     android:layout_gravity="center"

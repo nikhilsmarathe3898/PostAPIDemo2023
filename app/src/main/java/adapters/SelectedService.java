@@ -98,7 +98,7 @@ public class SelectedService extends RecyclerView.Adapter
                     vHolder.tvSelectedQuantity.setText(ss1);
                 }else {
                   //  vHolder.tvServiceQuant.setVisibility(View.VISIBLE);
-                    hiredBy = "Consultation Fee";
+                    hiredBy = mContext.getString(R.string.consultation_fee);
                 //    String quant = "dur "+servicesList.get(position).getQuntity()+" mn";
                    // vHolder.tvServiceQuant.setText(quant);
                 }
@@ -131,7 +131,7 @@ public class SelectedService extends RecyclerView.Adapter
         }else {
             if(inCall == 1 )
             {
-                vHolder.selectedServiceName.setText("Consultation Fee");
+                vHolder.selectedServiceName.setText(mContext.getString(R.string.consultation_fee));
             }else
             {
                 String serviceQuantName = checkOutItems.get(position).getServiceName() +"   x "+checkOutItems.get(position).getQuntity();
@@ -151,9 +151,9 @@ public class SelectedService extends RecyclerView.Adapter
     @Override
     public int getItemCount() {
         if(isEditable)
-            return servicesList.size();
+            return servicesList == null ? 0 : servicesList.size();
         else
-            return checkOutItems.size();
+            return checkOutItems == null ? 0 : checkOutItems.size();
     }
 
     public void onInCallValue(int i) {

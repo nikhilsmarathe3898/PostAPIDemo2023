@@ -73,7 +73,7 @@ public class RecyclrAdapter extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return dbSavedAddresses.size();
+        return dbSavedAddresses == null ? 0 : dbSavedAddresses.size();
     }
 
     private class VeiwHlder extends RecyclerView.ViewHolder

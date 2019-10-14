@@ -8,7 +8,7 @@ package com.pojo;
 public class ProviderDetailsBooking
 {
     double distance;
-    private int distanceMatrix,reviewCount,proStatus;
+    private int reviewCount;  //proStatus,distanceMatrix;
     private float averageRating;
     private String firstName,lastName,phone,providerId,profilePic;
     private ProLocation proLocation;
@@ -17,17 +17,21 @@ public class ProviderDetailsBooking
         return distance;
     }
 
+/*
     public int getDistanceMatrix() {
         return distanceMatrix;
     }
+*/
 
     public int getReviewCount() {
         return reviewCount;
     }
 
+/*
     public int getProStatus() {
         return proStatus;
     }
+*/
 
     public float getAverageRating() {
         return averageRating;

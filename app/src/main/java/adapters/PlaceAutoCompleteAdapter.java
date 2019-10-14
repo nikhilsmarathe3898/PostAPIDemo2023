@@ -223,10 +223,7 @@ public class PlaceAutoCompleteAdapter extends RecyclerView.Adapter<PlaceAutoComp
      */
     @Override
     public int getItemCount() {
-        if(mResultList != null)
-            return mResultList.size();
-        else
-            return 0;
+       return mResultList == null ? 0 : mResultList.size();
     }
 
     /**

@@ -58,7 +58,7 @@ public class ServicesCategoryAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return serviceCategories.size();
+        return serviceCategories == null ? 0 : serviceCategories.size();
     }
     class ServicesCategoryViewHolder extends RecyclerView.ViewHolder{
         @BindView(R.id.tvServiceCategory)TextView tvServiceCategory;

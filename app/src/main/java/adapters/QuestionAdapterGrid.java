@@ -93,7 +93,7 @@ public class QuestionAdapterGrid extends RecyclerView.Adapter {
     @Override
     public int getItemCount()
     {
-        return questionImages.size();
+        return questionImages == null ? 0 : questionImages.size();
     }
 
     @Override

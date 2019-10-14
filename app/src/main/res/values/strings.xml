@@ -46,7 +46,9 @@
     <string name="payment_method">Payment Method</string>
     <string name="select_payment">Select payment method</string>
     <string name="select_lang">Select Language</string>
+<!--
     <string name="mapKey">AIzaSyCGuMdlNff07useqJz2Z2MqhXvAljLqPUo</string>
+-->
     <string-array name="dummy_array">
         <item>All</item>
         <item>Tutor</item>
@@ -1352,5 +1354,35 @@
         <item>SUN</item>
     </string-array>
     <string name="gettingSchedule">Getting Schedule</string>
+
+
+    <string name="driver_phone_num_not_available">Driver phone number not available</string>
+    <string name="language_switcher_dialog_title">Language</string>
+    <string name="language_switcher_positive_button">Ok</string>
+    <string name="language_switcher_negative_button">Cancel</string>
+    <string name="asap">Asap</string>
+    <string name="bid_amount">Bid Amount</string>
+    <string name="select_time_hour">Please select time atleast 1 hours from now !</string>
+    <string name="jobs">Jobs</string>
+    <string name="avg_rating">Avg rating</string>
+    <string name="what_hapened">What happened?</string>
+    <string name="job_location">JOB LOCATION</string>
+    <string name="time_slot">TIME SLOTS</string>
+    <string name="accounts">Accounts</string>
+    <string name="booking_for">Booking For</string>
+    <string name="shift_summary">Shift Summary</string>
+    <string name="help">Help</string>
+    <string name="your_last_booking_on">Your Last Booking on</string>
+    <string name="registereres">Registereres</string>
+    <string name="morning_slots">Morning Slots</string>
+    <string name="after_noon_slots">After Noon Slots</string>
+    <string name="evening_slots">Evening Slots</string>
+    <string name="night_slots">Night Slots</string>
+    <string name="per_shift">Per Shift</string>
+    <string name="job_detials">JOB DETAILS</string>
+    <string name="bill_detials">BILL DETAILS</string>
+    <string name="view_more">View more..</string>
+    <string name="card_ending_by">Card ending by</string>
+    <string name="consulationFeeOne">Consultation Fee $ 200.00</string>
 
 </resources>

@@ -71,7 +71,7 @@ public class HelpIndexRecyclerAdapter extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return zendexDataEvents.size();
+        return zendexDataEvents == null ? 0 : zendexDataEvents.size();
     }
 
     public class ViewHolders extends RecyclerView.ViewHolder

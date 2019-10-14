@@ -53,31 +53,33 @@ public class AllBookingEventPojo implements Serializable
 "cart" :""*/
 
    // private long bookingEndtime;
-    private int distanceMatrix,bookingType;
-    private float averageRating;
+    private int bookingType; //distanceMatrix
+   // private float averageRating;
     private String currency,lastName,
-            category,jobDescription;
+            category;
+    //jobDescription
 
 
-    private String state, addLine2, addLine1, statusMsg, country, city,currencySymbol,cancellationReason;
+    private String state, addLine1, statusMsg, country,currencySymbol,cancellationReason;  //addLine2,city
 
     //  private ProLocation proLocation;
 
-    private String pincode, placeId, profilePic,phone;
+    private String profilePic,phone; //pincode,placeId
 
     private double distance,totalAmount;
 
-    private long bookingExpireTime, serverTime, bookingId, bookingRequestedFor,bookingRequestedAt;
+    private long  serverTime, bookingId, bookingRequestedFor;  //bookingRequestedAt,bookingExpireTime
     private int status,bookingModel,callType;
-    private String longitude, latitude, firstName, paymentMethod;
+    private String longitude, latitude, firstName;
+   // paymentMethod
 
     //private TypeofEvent typeofEvent;
-    private ReviewByCustomer reviewByCustomer ;
+  //  private ReviewByCustomer reviewByCustomer ;
     private BookingAccounting accounting;
     private CartInfo cart;
     private ArrayList<AdditionalService> additionalService;
     private ArrayList<HelpReason>helpReasons;
-    private String reminderId;
+  //  private String reminderId;
     private boolean needApproveBycustomer;
 
 
@@ -91,9 +93,11 @@ public class AllBookingEventPojo implements Serializable
         this.bidDispatchLog = bidDispatchLog;
     }
 
+/*
     public String getReminderId() {
         return reminderId;
     }
+*/
 
 
     public boolean isNeedApproveBycustomer() {
@@ -143,9 +147,11 @@ public class AllBookingEventPojo implements Serializable
         this.phone = phone;
     }
 
+/*
     public int getDistanceMatrix() {
         return distanceMatrix;
     }
+*/
 
     public int getBookingType() {
         return bookingType;
@@ -155,21 +161,23 @@ public class AllBookingEventPojo implements Serializable
         return category;
     }
 
-    public String getJobDescription() {
+  /*  public String getJobDescription() {
         return jobDescription;
     }
 
     public ReviewByCustomer getReviewByCustomer() {
         return reviewByCustomer;
     }
-
+*/
     public String getCancellationReason() {
         return cancellationReason;
     }
 
+/*
     public void setCancellationReason(String cancellationReason) {
         this.cancellationReason = cancellationReason;
     }
+*/
 
     public BookingAccounting getAccounting() {
         return accounting;
@@ -179,9 +187,11 @@ public class AllBookingEventPojo implements Serializable
         return totalAmount;
     }
 
+/*
     public ReviewByCustomer getReviewByProvider() {
         return reviewByCustomer;
     }
+*/
 
     public String getCurrencySymbol() {
         return currencySymbol;
@@ -194,9 +204,11 @@ public class AllBookingEventPojo implements Serializable
 */
 
 
+/*
     public long getBookingRequestedAt() {
         return bookingRequestedAt;
     }
+*/
 
     public long getBookingRequestedFor() {
         return bookingRequestedFor;
@@ -218,9 +230,11 @@ public class AllBookingEventPojo implements Serializable
         this.bookingId = bookingId;
     }
 
+/*
     public float getAverageRating() {
         return averageRating;
     }
+*/
 
     public int getStatus() {
         return status;
@@ -234,9 +248,11 @@ public class AllBookingEventPojo implements Serializable
         return state;
     }
 
+/*
     public String getAddLine2() {
         return addLine2;
     }
+*/
 
     public String getAddLine1() {
         return addLine1;
@@ -254,29 +270,33 @@ public class AllBookingEventPojo implements Serializable
         return country;
     }
 
-    public String getCity() {
+   /* public String getCity() {
         return city;
     }
 
     public long getBookingExpireTime() {
         return bookingExpireTime;
     }
-
+*/
     public long getServerTime() {
         return serverTime;
     }
 
+/*
     public String getPincode() {
         return pincode;
     }
+*/
 
     public double getDistance() {
         return distance;
     }
 
+/*
     public String getPlaceId() {
         return placeId;
     }
+*/
 
     public String getProfilePic() {
         return profilePic;
@@ -302,16 +322,21 @@ public class AllBookingEventPojo implements Serializable
         this.firstName = firstName;
     }
 
+/*
     public String getPaymentMethod() {
         return paymentMethod;
     }
+*/
 
+/*
     public class TypeofEvent implements Serializable {
-        /*"_id":"59cc98e4b05549255330ae12",
+        */
+/*"_id":"59cc98e4b05549255330ae12",
 "name":"Birthday Party",
 "selectImage":"https://s3.amazonaws.com/iserve/8988260408472.png",
 "unselectImage":"https://s3.amazonaws.com/iserve/4937064970285.png",
-"status":1*/
+"status":1*//*
+
 
         private String _id, name;
 
@@ -323,19 +348,24 @@ public class AllBookingEventPojo implements Serializable
             return name;
         }
     }
+*/
 
 
+/*
     public class ReviewByCustomer implements Serializable
     {
-        /*   "rating" : 4,
+        */
+/*   "rating" : 4,
                 "review" : "xfhhvyff",
                 "userId" : ObjectId("5a50e8b3b121331d381cd93d"),
-       "reviewAt" : 1515409348*/
+       "reviewAt" : 1515409348*//*
+
 
         private float rating;
         public float getRating() {
             return rating;
         }
     }
+*/
 
 }

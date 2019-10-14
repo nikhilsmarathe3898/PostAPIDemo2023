@@ -88,7 +88,7 @@ public class ResponsesAdapter extends RecyclerView.Adapter {
     }
     @Override
     public int getItemCount() {
-        return responseList.size();
+        return responseList == null ? 0 : responseList.size();
     }
 
     public void setType(int type) {

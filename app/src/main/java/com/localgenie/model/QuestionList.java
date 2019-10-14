@@ -14,7 +14,8 @@ public class QuestionList implements Serializable
 "isManadatory":0,
 "Description":"gender",*/
         private String _id,question,Description;
-        private int questionType,isManadatory,num;
+        private int questionType,isManadatory;
+        //num;
         private ArrayList<PreDefinedQuestions>preDefined;
 
     public String get_id() {
@@ -37,9 +38,11 @@ public class QuestionList implements Serializable
         return isManadatory;
     }
 
+/*
     public int getNum() {
         return num;
     }
+*/
 
     public ArrayList<PreDefinedQuestions> getPreDefined() {
         return preDefined;

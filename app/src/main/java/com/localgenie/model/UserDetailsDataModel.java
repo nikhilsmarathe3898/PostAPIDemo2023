@@ -13,15 +13,18 @@ public class UserDetailsDataModel implements Serializable {
     private String profilePicUrl;
     private String emailOrPhone;
     private String password;
+/*
     private String deviceId;
+
     private String pushToken;
     private String appVersion;
     private String devMake;
     private String devModel;
     private Integer devType;
     private String deviceTime;
+    private String deviceOsVersion;*/
     private Integer loginType;
-    private String deviceOsVersion;
+
     private String facebookId;
     private String googleId;
     private Double latitude;
@@ -51,7 +54,7 @@ public class UserDetailsDataModel implements Serializable {
         this.profilePicUrl = profilePicUrl;
     }
 
-    public String getPushToken() {
+   /* public String getPushToken() {
         return pushToken;
     }
 
@@ -97,7 +100,7 @@ public class UserDetailsDataModel implements Serializable {
 
     public void setDeviceOsVersion(String deviceOsVersion) {
         this.deviceOsVersion = deviceOsVersion;
-    }
+    }*/
 
     public String getFacebookId() {
         return facebookId;
@@ -147,7 +150,7 @@ public class UserDetailsDataModel implements Serializable {
         this.password = password;
     }
 
-    public String getDeviceId() {
+/*    public String getDeviceId() {
         return deviceId;
     }
 
@@ -161,7 +164,7 @@ public class UserDetailsDataModel implements Serializable {
 
     public void setDevType(Integer devType) {
         this.devType = devType;
-    }
+    }*/
 
     public Integer getLoginType() {
         return loginType;

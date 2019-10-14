@@ -124,7 +124,6 @@ public class IntroActivity extends DaggerAppCompatActivity implements IntroActiv
 
       /*  String get_Auth = getAuthToken(device_id);
         Log.e("LOGIN","auth_token :  "+get_Auth);*/
-
         Constants.selLang = manager.getLanguageSettings().getCode();
         Log.d("TAG", "loginSuccess: " + Constants.selLang);
         Intent intent = new Intent(this, MainActivity.class);

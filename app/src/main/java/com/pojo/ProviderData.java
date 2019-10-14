@@ -49,13 +49,13 @@ public class ProviderData implements Serializable {
     @Expose
     private Location location;
 
-    @SerializedName("bannerImage")
+   /* @SerializedName("bannerImage")
     @Expose
-    private String bannerImage;
+    private String bannerImage;*/
 
-    @SerializedName("distanceMatrix")
+ /*   @SerializedName("distanceMatrix")
     @Expose
-    private int distanceMatrix;
+    private int distanceMatrix;*/
 
     @SerializedName("distance")
     @Expose
@@ -151,9 +151,11 @@ public class ProviderData implements Serializable {
         this.location = location;
     }
 
+/*
     public String getBannerImage() {
         return bannerImage;
     }
+*/
 
 
     public Integer getStatus() {
@@ -191,7 +193,9 @@ public class ProviderData implements Serializable {
         this.currency = currency;
     }
 
+/*
     public int getDistanceMatrix() {
         return distanceMatrix;
     }
+*/
 }

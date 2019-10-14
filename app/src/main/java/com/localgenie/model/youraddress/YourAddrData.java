@@ -35,7 +35,11 @@ public class YourAddrData implements Serializable {
     @Expose
     private String userId;
 
+    @SerializedName("houseNo")
+    @Expose
     private String houseNo;
+    @SerializedName("name")
+    @Expose
     private String name;
 
     @SerializedName("addLine1")
@@ -58,9 +62,9 @@ public class YourAddrData implements Serializable {
     @Expose
     private String country;
 
-    @SerializedName("placeId")
+   /* @SerializedName("placeId")
     @Expose
-    private String placeId;
+    private String placeId;*/
 
 
     private String pincode;
@@ -73,9 +77,9 @@ public class YourAddrData implements Serializable {
     @Expose
     private Double longitude;
 
-    @SerializedName("userType")
+/*    @SerializedName("userType")
     @Expose
-    private Integer userType;
+    private Integer userType;*/
 
 
     public String getHouseNo() {
@@ -98,9 +102,11 @@ public class YourAddrData implements Serializable {
         return taggedAs;
     }
 
+/*
     public void setTaggedAs(String taggedAs) {
         this.taggedAs = taggedAs;
     }
+*/
 
     public String getUserId() {
         return userId;
@@ -122,17 +128,21 @@ public class YourAddrData implements Serializable {
         return addLine2;
     }
 
+/*
     public void setAddLine2(String addLine2) {
         this.addLine2 = addLine2;
     }
+*/
 
     public String getCity() {
         return city;
     }
 
+/*
     public void setCity(String city) {
         this.city = city;
     }
+*/
 
     public String getState() {
         return state;
@@ -147,9 +157,9 @@ public class YourAddrData implements Serializable {
     }
 
 
-    public String getPlaceId() {
+  /*  public String getPlaceId() {
         return placeId;
-    }
+    }*/
 
 
     public String getPincode() {

@@ -17,12 +17,12 @@ public class ProfileData {
     @SerializedName("lastName")
     @Expose
     private String lastName;
-    @SerializedName("dateOfBirth")
+   /* @SerializedName("dateOfBirth")
     @Expose
     private String dateOfBirth;
     @SerializedName("preferredGenres")
     @Expose
-    private List<Object> preferredGenres = null;
+    private List<Object> preferredGenres = null;*/
 
     @SerializedName("email")
     @Expose
@@ -60,7 +60,7 @@ public class ProfileData {
         this.lastName = lastName;
     }
 
-    public String getDateOfBirth() {
+   /* public String getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -75,7 +75,7 @@ public class ProfileData {
     public void setPreferredGenres(List<Object> preferredGenres) {
         this.preferredGenres = preferredGenres;
     }
-
+*/
     public String getEmail() {
         return email;
     }

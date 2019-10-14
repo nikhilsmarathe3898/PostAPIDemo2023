@@ -613,19 +613,20 @@ public class ChattingActivity extends DaggerAppCompatActivity implements View.On
     @Override
     public void onChatHistoryResponse(ArrayList<ChatData> data) {
 
-        chatDataArry.addAll(data);
+        if(data.size() > 0) {
+            chatDataArry.addAll(data);
 
-        Collections.sort(chatDataArry, new Comparator<ChatData>() {
-            @Override
-            public int compare(ChatData o1, ChatData o2) {
-                return (int)(o1.getTimestamp() - o2.getTimestamp());
+            Collections.sort(chatDataArry, new Comparator<ChatData>() {
+                @Override
+                public int compare(ChatData o1, ChatData o2) {
+                    return (int) (o1.getTimestamp() - o2.getTimestamp());
+                }
+            });
+            cAdapter.notifyDataSetChanged();
+
+            if (pageIndex == 0) {
+                scrollToBottom();
             }
-        });
-        cAdapter.notifyDataSetChanged();
-
-        if(pageIndex == 0)
-        {
-            scrollToBottom();
         }
     }
 

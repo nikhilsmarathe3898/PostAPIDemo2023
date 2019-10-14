@@ -31,17 +31,19 @@ public class FilteredResponse implements Serializable
         return selectedPriceMin;
     }
 
-    public void setSelectedPriceMin(double selectedPriceMin) {
+   /* public void setSelectedPriceMin(double selectedPriceMin) {
         this.selectedPriceMin = selectedPriceMin;
     }
-
+*/
     public double getSelectedPriceMax() {
         return selectedPriceMax;
     }
 
+/*
     public void setSelectedPriceMax(double selectedPriceMax) {
         this.selectedPriceMax = selectedPriceMax;
     }
+*/
 
     public double getLat() {
         return lat;
@@ -73,9 +75,11 @@ public class FilteredResponse implements Serializable
         return generalName;
     }
 
+/*
     public void setGeneralName(String generalName) {
         this.generalName = generalName;
     }
+*/
 
     public int getType() {
         return type;

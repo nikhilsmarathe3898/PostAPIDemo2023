@@ -10,9 +10,9 @@ public class SubCategory implements Serializable{
     @SerializedName("_id")
     @Expose
     private String id;
-    @SerializedName("city_id")
+    /*@SerializedName("city_id")
     @Expose
-    private String cityId;
+    private String cityId;*/
     @SerializedName("cat_id")
     @Expose
     private String catId;
@@ -23,14 +23,14 @@ public class SubCategory implements Serializable{
     @SerializedName("sub_cat_desc")
     @Expose
     private String subCatDesc;
-
     @SerializedName("App_image_url")
     @Expose
     private String appImageUrl;
+    /*
     @SerializedName("Website_banner_image_url")
     @Expose
     private String websiteBannerImageUrl;
-
+*/
     @SerializedName("UnselBannerImageApp")
     @Expose
     private String UnSelAppImageUrl;
@@ -57,14 +57,14 @@ public class SubCategory implements Serializable{
         this.id = id;
     }
 
-    public String getCityId() {
+   /* public String getCityId() {
         return cityId;
     }
 
     public void setCityId(String cityId) {
         this.cityId = cityId;
     }
-
+*/
     public String getCatId() {
         return catId;
     }
@@ -77,7 +77,7 @@ public class SubCategory implements Serializable{
         return subCatName;
     }
 
-    public void setSubCatName(String subCatName) {
+/*    public void setSubCatName(String subCatName) {
         this.subCatName = subCatName;
     }
 
@@ -87,13 +87,13 @@ public class SubCategory implements Serializable{
 
     public void setSubCatDesc(String subCatDesc) {
         this.subCatDesc = subCatDesc;
-    }
+    }*/
 
     public String getAppImageUrl() {
         return appImageUrl;
     }
 
-    public void setAppImageUrl(String appImageUrl) {
+   /* public void setAppImageUrl(String appImageUrl) {
         this.appImageUrl = appImageUrl;
     }
 
@@ -103,6 +103,6 @@ public class SubCategory implements Serializable{
 
     public void setWebsiteBannerImageUrl(String websiteBannerImageUrl) {
         this.websiteBannerImageUrl = websiteBannerImageUrl;
-    }
+    }*/
 
 }

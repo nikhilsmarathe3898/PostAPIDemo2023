@@ -114,7 +114,7 @@ public class SubServicesAdapter extends RecyclerView.Adapter{
 
     @Override
     public int getItemCount() {
-        return servicesList.size();
+        return servicesList == null ? 0 : servicesList.size();
     }
 
 

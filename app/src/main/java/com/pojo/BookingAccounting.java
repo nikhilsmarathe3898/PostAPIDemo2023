@@ -25,9 +25,9 @@ public class BookingAccounting implements Serializable
 "chargeId":0,
 "last4":"",
 "appCommission":20*/
-    private double amount,cancellationFee,discount,total,appEarning,providerEarning,pgCommissionApp
-            ,pgCommissionProvider,visitFee,travelFee,bidPrice
-            ,appEarningPgComm,paymentMethod,appCommission,captureAmount,remainingAmount;
+    private double amount,cancellationFee,discount,total
+            ,visitFee,travelFee,bidPrice
+            ,paymentMethod,captureAmount,remainingAmount; //appEarning,providerEarning,appCommission,appEarningPgComm,pgCommissionProvider,pgCommissionApp
     private String last4,paymentMethodText;
     private int paidByWallet,serviceType,totalShiftBooking;
     private long totalJobTime,totalActualJobTimeMinutes;
@@ -93,7 +93,7 @@ public class BookingAccounting implements Serializable
         return total;
     }
 
-    public double getAppEarning() {
+  /*  public double getAppEarning() {
         return appEarning;
     }
 
@@ -111,7 +111,7 @@ public class BookingAccounting implements Serializable
 
     public double getAppEarningPgComm() {
         return appEarningPgComm;
-    }
+    }*/
 
     public double getPaymentMethod() {
         return paymentMethod;
@@ -124,9 +124,11 @@ public class BookingAccounting implements Serializable
 */
 
 
+/*
     public double getAppCommission() {
         return appCommission;
     }
+*/
 
     public String getLast4() {
         return last4;

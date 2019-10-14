@@ -19,9 +19,11 @@ public class QuestionImage
         return imagePostion;
     }
 
+/*
     public void setImagePostion(int imagePostion) {
         this.imagePostion = imagePostion;
     }
+*/
 
     public String getImage() {
         return image;

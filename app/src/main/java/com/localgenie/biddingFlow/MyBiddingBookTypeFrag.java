@@ -934,7 +934,7 @@ public class MyBiddingBookTypeFrag extends DaggerFragment implements BiddingCont
         Date maxDate = calendarMax.getTime();
 
         DatePickerDialog fromDatePickerDialog = new DatePickerDialog(mContext, (view, year, monthOfYear, dayOfMonth) -> {
-            tvEditSingleShiftDetails.setText("Edit");
+            tvEditSingleShiftDetails.setText(getString(R.string.edit));
             calendar.set(year,monthOfYear,dayOfMonth);
             callTimePicker(mContext,isLater);
         },calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
@@ -950,7 +950,7 @@ public class MyBiddingBookTypeFrag extends DaggerFragment implements BiddingCont
         fromDatePickerDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialogInterface) {
-                tvEditSingleShiftDetails.setText("Edit");
+                tvEditSingleShiftDetails.setText(getString(R.string.edit));
                 Log.d("TAG", "onCancel: "+ " Cancelled");
             }
         });

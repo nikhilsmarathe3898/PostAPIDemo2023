@@ -14,7 +14,7 @@ public class ProviderEvents implements Serializable
 "selectImage":"https://s3.amazonaws.com/iserve/8988260408472.png",
 "unselectImage":"https://s3.amazonaws.com/iserve/4937064970285.png",
 "status":true*/
-    private String _id, name, selectImage, unselectImage;
+    private String _id, name;  // selectImage, unselectImage;
     private boolean status;
 
     public String get_id() {
@@ -25,13 +25,13 @@ public class ProviderEvents implements Serializable
         return name;
     }
 
-    public String getSelectImage() {
+   /* public String getSelectImage() {
         return selectImage;
     }
 
     public String getUnselectImage() {
         return unselectImage;
-    }
+    }*/
 
     public boolean isStatus() {
         return status;

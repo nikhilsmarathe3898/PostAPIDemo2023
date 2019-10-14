@@ -528,7 +528,7 @@ public class TimeSlots extends DaggerAppCompatActivity {
             tvDayTime.setTypeface(appTypeface.getHind_semiBold());
             tvDayTimeSlotsNo.setTypeface(appTypeface.getHind_regular());
             tvDayTimeSlotsNo.setText("("+morningSlots.size()+")");
-            tvDayTime.setText("Morning Slots");
+            tvDayTime.setText(getString(R.string.morning_slots));
             ivPeriod.setImageResource(R.drawable.ic_morning);
             adapter.notifyDataSetChanged();
         }else
@@ -555,7 +555,7 @@ public class TimeSlots extends DaggerAppCompatActivity {
             tvDayTime.setTypeface(appTypeface.getHind_semiBold());
             tvDayTimeSlotsNo.setTypeface(appTypeface.getHind_regular());
             tvDayTimeSlotsNo.setText("("+afterNoonSlots.size()+")");
-            tvDayTime.setText("After Noon Slots");
+            tvDayTime.setText(getString(R.string.after_noon_slots));
             ivPeriod.setImageResource(R.drawable.ic_afternoon);
             adapterAfterNoon.notifyDataSetChanged();
 
@@ -582,7 +582,7 @@ public class TimeSlots extends DaggerAppCompatActivity {
             tvDayTime.setTypeface(appTypeface.getHind_semiBold());
             tvDayTimeSlotsNo.setTypeface(appTypeface.getHind_regular());
             tvDayTimeSlotsNo.setText("("+eveningSlots.size()+")");
-            tvDayTime.setText("Evening Slots");
+            tvDayTime.setText(getString(R.string.evening_slots));
             ivPeriod.setImageResource(R.drawable.ic_evening);
             adapterEvening.notifyDataSetChanged();
 
@@ -610,7 +610,7 @@ public class TimeSlots extends DaggerAppCompatActivity {
             tvDayTime.setTypeface(appTypeface.getHind_semiBold());
             tvDayTimeSlotsNo.setTypeface(appTypeface.getHind_regular());
             tvDayTimeSlotsNo.setText("("+nightSlots.size()+")");
-            tvDayTime.setText("Night Slots");
+            tvDayTime.setText(getString(R.string.night_slots));
             ivPeriod.setImageResource(R.drawable.ic_night);
             adapterNight.notifyDataSetChanged();
 

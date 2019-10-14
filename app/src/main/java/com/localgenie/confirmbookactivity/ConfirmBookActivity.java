@@ -512,20 +512,20 @@ public class ConfirmBookActivity extends DaggerAppCompatActivity implements Conf
 
         if(Constants.bookingType == 2 && Constants.jobType == 2) {
             tvConfirmBookingType.setText(getString(R.string.schedule));
-            tvConfirmBookFor.setText("Booking For ("+getString(R.string.schedule)+")");
+            tvConfirmBookFor.setText(getString(R.string.booking_for)+" ("+getString(R.string.schedule)+")");
             Log.d(TAG, "work: "+Constants.scheduledDate);
             tvInConfirmBookingTypeDesc.setText(Constants.selectedDate +"\n"+"Duration "+ Constants.selectedDuration+" hr(s)");
         }else if(Constants.bookingType == 2 && Constants.jobType == 3) {
             tvConfirmBookingType.setText(getString(R.string.scheduled_shift));
-            tvConfirmBookFor.setText("Shift Summary ("+getString(R.string.outTeleCall)+")");
+            tvConfirmBookFor.setText(getString(R.string.shift_summary)+" ("+getString(R.string.outTeleCall)+")");
             Log.d(TAG, "work: "+Constants.scheduledDate);
             tvInConfirmBookingTypeDesc.setText(Constants.selectedDate +"\n"+"Duration "+ Constants.selectedDuration+" hr(s)");
         }
         if(Constants.jobType == 1) {
-            tvConfirmBookingType.setText("Booking For ("+getString(R.string.inCall)+")");
+            tvConfirmBookingType.setText(getString(R.string.booking_for)+" ("+getString(R.string.inCall)+")");
             presenter.timeMethod(tvInConfirmBookingTypeDesc,Constants.fromTime);
         }else if(Constants.jobType == 3) {
-            tvConfirmBookingType.setText("Booking For ("+getString(R.string.outTeleCall)+")");
+            tvConfirmBookingType.setText(getString(R.string.booking_for)+" ("+getString(R.string.outTeleCall)+")");
             presenter.timeMethod(tvInConfirmBookingTypeDesc,Constants.fromTime);
         }
     }
@@ -744,14 +744,14 @@ public class ConfirmBookActivity extends DaggerAppCompatActivity implements Conf
             case "home":
                 tvAddressType.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
                 tvAddressType.setCompoundDrawablesWithIntrinsicBounds( R.drawable.ic_home, 0, 0, 0);
-                tvAddressType.setText("Home");
+                tvAddressType.setText(getString(R.string.home));
                 presenter.setAddressWithImage(tvConfirmLocation,bookingAddress);
                 break;
 
             case "office":
                 tvAddressType.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
                 tvAddressType.setCompoundDrawablesWithIntrinsicBounds( R.drawable.ic_work, 0, 0, 0);
-                tvAddressType.setText("Work");
+                tvAddressType.setText(getString(R.string.work));
                 presenter.setAddressWithImage(tvConfirmLocation,bookingAddress);
                 break;
 
@@ -851,107 +851,98 @@ public class ConfirmBookActivity extends DaggerAppCompatActivity implements Conf
     @Override
     public void onCartModification(CartModifiedData.DataSelected data)
     {
-        progressBarService.setVisibility(View.GONE);
+        if(data != null) {
+            progressBarService.setVisibility(View.GONE);
 
-        cartId = data.getCatId();
+            cartId = data.getCatId();
 
-        serviceAmount = data.getTotalAmount();
+            serviceAmount = data.getTotalAmount();
 
-        if(!tvConfirmPromocode.getText().toString().trim().equals(getString(R.string.promocode)))
-            presenter.callPromoCodeApi(bookingLat,bookingLng,paymentType,cartId,tvConfirmPromocode.getText().toString().trim());
+            if (!tvConfirmPromocode.getText().toString().trim().equals(getString(R.string.promocode)))
+                presenter.callPromoCodeApi(bookingLat, bookingLng, paymentType, cartId, tvConfirmPromocode.getText().toString().trim());
 
-        if(Constants.serviceSelected==2)
-        {
-            if( Constants.bookingType == 2 && Constants.jobType==2)
-            {
-                tvConfirmBookingType.setText(getString(R.string.schedule));
-                tvInConfirmBookingTypeDesc.setText(Constants.selectedDate +"\n"+"Duration "+ data.getTotalQuntity()+" hr(s)");
-            }
-            String hourly;
-            if(Constants.jobType != 2)
-            {
-                tbServiceAvailable.setVisibility(View.GONE);
-            }else {
-                hourly = "Hourly @ "+Constants.currencySymbol + data.getTotalAmount()+" for "+data.getTotalQuntity() +" hr(s)";
-                tbServiceAvailable.setText(hourly);
-            }
+            if (Constants.serviceSelected == 2) {
+                if (Constants.bookingType == 2 && Constants.jobType == 2) {
+                    tvConfirmBookingType.setText(getString(R.string.schedule));
+                    tvInConfirmBookingTypeDesc.setText(Constants.selectedDate + "\n" + "Duration " + data.getTotalQuntity() + " hr(s)");
+                }
+                String hourly;
+                if (Constants.jobType != 2) {
+                    tbServiceAvailable.setVisibility(View.GONE);
+                } else {
+                    hourly = "Hourly @ " + Constants.currencySymbol + data.getTotalAmount() + " for " + data.getTotalQuntity() + " hr(s)";
+                    tbServiceAvailable.setText(hourly);
+                }
 
-            if(Constants.bookingType == 3)
-            {
+                if (Constants.bookingType == 3) {
 
-                double totalPerShift=0;
-                    if(Constants.bookingOffer!=0)
-                    {
+                    double totalPerShift = 0;
+                    if (Constants.bookingOffer != 0) {
                         discountAmt = Constants.bookingOffer;
-                        if(Constants.offerType == 2)
-                        {
-                            discountAmt =  (discountAmt/100)*((serviceAmount+visitFee));
-                            double OfferTotal = ((serviceAmount+visitFee))-discountAmt;
+                        if (Constants.offerType == 2) {
+                            discountAmt = (discountAmt / 100) * ((serviceAmount + visitFee));
+                            double OfferTotal = ((serviceAmount + visitFee)) - discountAmt;
                             //totalPerShift = OfferTotal/Constants.repeatNumOfShift;
-                        }else
-                            totalPerShift = ((serviceAmount+visitFee))-(discountAmt);
-                        Utility.setAmtOnRecept(discountAmt,tvConfirmDiscountFeeAmt,Constants.currencySymbol);
-                    }else
-                        totalPerShift = (serviceAmount+visitFee)-discountAmt;
+                        } else
+                            totalPerShift = ((serviceAmount + visitFee)) - (discountAmt);
+                        Utility.setAmtOnRecept(discountAmt, tvConfirmDiscountFeeAmt, Constants.currencySymbol);
+                    } else
+                        totalPerShift = (serviceAmount + visitFee) - discountAmt;
 
 
-                String priceIs = Constants.currencySymbol +" "+(totalPerShift);// Constants.pricePerHour;//data.getTotalAmount()+visitFee
-                tvPricePerShiftsAmt.setText(priceIs);
-                tvConfirmViewBillPerShift.setText(priceIs+" Per Shift");
-                tvTotalToPayAmt.setText(priceIs+" Per Shift");
-                String duration = data.getTotalQuntity()+" hr : "+hrNHalf+" mn";
-                tvBiddingDurationHR.setText(duration);
-                checkForHours(data.getTotalQuntity());
+                    String priceIs = Constants.currencySymbol + " " + (totalPerShift);// Constants.pricePerHour;//data.getTotalAmount()+visitFee
+                    tvPricePerShiftsAmt.setText(priceIs);
+                    tvConfirmViewBillPerShift.setText(priceIs + getString(R.string.per_shift));
+                    tvTotalToPayAmt.setText(priceIs + getString(R.string.per_shift));
+                    String duration = data.getTotalQuntity() + " hr : " + hrNHalf + " mn";
+                    tvBiddingDurationHR.setText(duration);
+                    checkForHours(data.getTotalQuntity());
 
+                }
+            } else {
+                String toolBarQuant = data.getTotalQuntity() + " service(s)   " + Constants.currencySymbol
+                        + data.getTotalAmount();
+                tbServiceAvailable.setText(toolBarQuant);
+
+                double totalPerShift = 0;
+                if (Constants.bookingOffer != 0) {
+                    discountAmt = Constants.bookingOffer;
+                    if (Constants.offerType == 2) {
+                        discountAmt = (discountAmt / 100) * ((serviceAmount + visitFee));
+                        double OfferTotal = ((serviceAmount + visitFee)) - discountAmt;
+                        //totalPerShift = OfferTotal/Constants.repeatNumOfShift;
+                    } else
+                        totalPerShift = ((serviceAmount + visitFee)) - (discountAmt);
+                    Utility.setAmtOnRecept(discountAmt, tvConfirmDiscountFeeAmt, Constants.currencySymbol);
+                } else
+                    totalPerShift = (serviceAmount + visitFee) - discountAmt;
+
+                tvTotalToPayAmt.setText(Constants.currencySymbol + totalPerShift + getString(R.string.per_shift));
+                tvConfirmViewBillPerShift.setText(Constants.currencySymbol + totalPerShift + getString(R.string.per_shift));
+
+                Utility.setAmtOnRecept(totalPerShift, tvPricePerShiftsAmt, Constants.currencySymbol);
             }
-        }else {
-            String toolBarQuant = data.getTotalQuntity() +" service(s)   "+Constants.currencySymbol
-                    +data.getTotalAmount();
-            tbServiceAvailable.setText(toolBarQuant);
 
-            double totalPerShift=0;
-            if(Constants.bookingOffer!=0)
-            {
-                discountAmt = Constants.bookingOffer;
-                if(Constants.offerType == 2)
-                {
-                    discountAmt =  (discountAmt/100)*((serviceAmount+visitFee));
-                    double OfferTotal = ((serviceAmount+visitFee))-discountAmt;
-                    //totalPerShift = OfferTotal/Constants.repeatNumOfShift;
-                }else
-                    totalPerShift = ((serviceAmount+visitFee))-(discountAmt);
-                Utility.setAmtOnRecept(discountAmt,tvConfirmDiscountFeeAmt,Constants.currencySymbol);
-            }else
-                totalPerShift = (serviceAmount+visitFee)-discountAmt;
-
-            tvTotalToPayAmt.setText(Constants.currencySymbol +totalPerShift +" Per Shift");
-            tvConfirmViewBillPerShift.setText(Constants.currencySymbol +totalPerShift +" Per Shift");
-
-            Utility.setAmtOnRecept(totalPerShift,tvPricePerShiftsAmt,Constants.currencySymbol);
-        }
-
-        if(data.getItem().size()>0)
-        {
-            onSelectedCart.clear();
-            for(int i =0;i<data.getItem().size();i++)
-            {
-                if(data.getItem().get(i).getQuntity()>0)
-                {
-                    onSelectedCart.add(data.getItem().get(i));
+            if (data.getItem().size() > 0) {
+                onSelectedCart.clear();
+                for (int i = 0; i < data.getItem().size(); i++) {
+                    if (data.getItem().get(i).getQuntity() > 0) {
+                        onSelectedCart.add(data.getItem().get(i));
+                    }
                 }
             }
+            totalToPay(visitFee, discountAmt, serviceAmount);
+
+            if (onSelectedCart.size() > 0) {
+                SelectedService selectedServiceAdapter = new SelectedService(this, true);
+                selectedServiceAdapter.onSelectedInterFace(this, onSelectedCart);
+                recyclerViewService.setAdapter(selectedServiceAdapter);
+                selectedServiceAdapter.notifyDataSetChanged();
+
+            } else
+                onBackPressed();
+
         }
-        totalToPay(visitFee,discountAmt,serviceAmount);
-
-        if(onSelectedCart.size()>0)
-        {
-            SelectedService selectedServiceAdapter = new SelectedService(this, true);
-            selectedServiceAdapter.onSelectedInterFace(this,onSelectedCart);
-            recyclerViewService.setAdapter(selectedServiceAdapter);
-            selectedServiceAdapter.notifyDataSetChanged();
-
-        }else
-            onBackPressed();
     }
 
     private void checkForHours(int totalQuntity) {

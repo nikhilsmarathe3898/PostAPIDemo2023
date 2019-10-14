@@ -236,7 +236,7 @@
                 android:layout_marginTop="@dimen/app_margin"
                 android:layout_marginLeft="@dimen/app_margin"
                 android:layout_marginRight="@dimen/app_margin"
-                android:text="Bid Amount"
+                android:text="@string/bid_amount"
                 android:textSize="@dimen/textSize_14sp"/>
 
             <TextView

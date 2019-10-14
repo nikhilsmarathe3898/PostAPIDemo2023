@@ -55,7 +55,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventViewH
 
     @Override
     public int getItemCount() {
-        return eventList.size();
+        return eventList == null ? 0 : eventList.size();
     }
 
     public void update(List<CalendarEvent> eventList) {

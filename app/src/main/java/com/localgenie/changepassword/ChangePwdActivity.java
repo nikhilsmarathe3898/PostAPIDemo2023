@@ -199,7 +199,7 @@ public class ChangePwdActivity extends DaggerAppCompatActivity implements Change
             View dialogView = inflater.inflate(R.layout.progress_dialog_layout, null);
             TextView tv_progress = dialogView.findViewById(R.id.tv_progress);
             if ("profile".equals(coming_from))
-                tv_progress.setText("Change Password");
+                tv_progress.setText(getString(R.string.change_password));
             else
                 tv_progress.setText(getString(R.string.wait_signin));
             dialogBuilder.setView(dialogView);

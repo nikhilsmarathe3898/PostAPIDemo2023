@@ -105,11 +105,11 @@ public class AddressListAdapter extends RecyclerView.Adapter {
             if(context.getResources().getString(R.string.home).equals(addressType))
             {
                 hold.iv_address_type.setImageResource(R.drawable.ic_home);
-                hold.tv_type.setText("HOME");
+                hold.tv_type.setText(context.getString(R.string.home));
             }else if( context.getResources().getString(R.string.office).equals(addressType))
             {
                 hold.iv_address_type.setImageResource(R.drawable.ic_work);
-                hold.tv_type.setText("WORK");
+                hold.tv_type.setText(context.getString(R.string.work));
             }else
             {
                 hold.iv_address_type.setImageResource(R.drawable.ic_other_addr);
@@ -142,7 +142,7 @@ public class AddressListAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return items.size();
+        return items == null ? 0 : items.size();
     }
 
     public void removeSelectedItem() {

@@ -30,9 +30,11 @@ public class Booked {
         return customerId;
     }
 
+/*
     public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
+*/
 
     public String getStart() {
         return start;

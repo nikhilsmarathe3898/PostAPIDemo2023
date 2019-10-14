@@ -86,7 +86,7 @@ public class CustomScrollDateAdapter extends RecyclerView.Adapter{
 
     @Override
     public int getItemCount() {
-        return longArrayList.size();
+        return longArrayList == null ? 0 : longArrayList.size();
     }
     class ViewDateHolder extends RecyclerView.ViewHolder {
         TextView tvCustomDateTime;

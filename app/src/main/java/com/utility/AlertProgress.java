@@ -193,6 +193,7 @@ public class AlertProgress
             isclick.dialogClick(true);
         });
 
+
         builder.setNegativeButton(negativeClick, (dialog12, i) -> {
             dialog12.dismiss();
             dialog12.cancel();

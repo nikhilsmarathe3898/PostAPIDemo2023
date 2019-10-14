@@ -122,9 +122,11 @@ public class OtpData {
         return referralCode;
     }
 
+/*
     public void setReferralCode(String referralCode) {
         this.referralCode = referralCode;
     }
+*/
 
     public String getProfilePic() {
         return profilePic;

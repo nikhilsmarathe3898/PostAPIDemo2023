@@ -118,7 +118,7 @@ public class RatingReviewAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return mReviwList.size();
+        return mReviwList == null ? 0 : mReviwList.size();
     }
 
     private class ViewHoldr extends RecyclerView.ViewHolder {

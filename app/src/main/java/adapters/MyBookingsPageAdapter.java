@@ -161,7 +161,7 @@ public class MyBookingsPageAdapter extends RecyclerView.Adapter{
 
     @Override
     public int getItemCount() {
-        return allEvents.size();
+        return allEvents == null ? 0 : allEvents.size();
     }
 
     class ViewHolderHold extends RecyclerView.ViewHolder implements View.OnClickListener

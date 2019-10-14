@@ -365,8 +365,9 @@ public class AddToCart extends DaggerAppCompatActivity implements AddToCartContr
     public void onCartModifiedSuccess(CartModifiedData.DataSelected data)
     {
 
-        onDataSetToTextView(data,true);
-
+        if(data != null) {
+            onDataSetToTextView(data, true);
+        }
     }
 
     private void onDataSetToTextView(CartModifiedData.DataSelected data,boolean isService)
@@ -484,6 +485,7 @@ public class AddToCart extends DaggerAppCompatActivity implements AddToCartContr
     @Override
     public void addHourly(CartModifiedData.DataSelected data) {
 
+        if(data != null)
         onDataSetToTextView(data,false);
         for(int i = 0;i<servicesList.size();i++)
         {
@@ -494,7 +496,7 @@ public class AddToCart extends DaggerAppCompatActivity implements AddToCartContr
             }
 
         }
-        if(adapter!=null)
+       // if(adapter!=null)
             adapter.notifyDataSetChanged();
         // subServiceAdapter.adapter.notifyDataSetChanged();
     }

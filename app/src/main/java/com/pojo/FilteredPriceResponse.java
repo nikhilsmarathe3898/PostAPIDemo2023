@@ -27,17 +27,21 @@ public class FilteredPriceResponse
         isMax = max;
     }
 
+/*
     public double isMinPrice() {
         return minPrice;
     }
+*/
 
     public void setMinPrice(double minPrice) {
         this.minPrice = minPrice;
     }
 
+/*
     public double isMaxPrice() {
         return MaxPrice;
     }
+*/
 
     public void setMaxPrice(double maxPrice) {
         MaxPrice = maxPrice;

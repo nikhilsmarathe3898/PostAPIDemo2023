@@ -1642,7 +1642,7 @@ public class BiddingQuestions extends DaggerAppCompatActivity implements MyBiddi
 
         @Override
         public int getItemCount() {
-            return preDefined.size();
+            return preDefined == null ? 0 : preDefined.size();
         }
 
 

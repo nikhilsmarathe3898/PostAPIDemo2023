@@ -15,9 +15,9 @@ public class CatDataArray implements Serializable {
 "selectImage":"https://s3.amazonaws.com/localserviceprocustomer/6826542321060.png",
 "description":"Cleaner, Plumber, Electrician, Interior Designer, Pest Control, Carpenter, Packers & Movers, Painter",*/
 
-    @SerializedName("groupId")
+   /* @SerializedName("groupId")
     @Expose
-    private String groupId;
+    private String groupId;*/
 
     @SerializedName("groupName")
     @Expose
@@ -45,9 +45,11 @@ public class CatDataArray implements Serializable {
         this.expanded = expanded;
     }
 
+/*
     public String getGroupId() {
         return groupId;
     }
+*/
 
     public String getGroupName() {
         return groupName;

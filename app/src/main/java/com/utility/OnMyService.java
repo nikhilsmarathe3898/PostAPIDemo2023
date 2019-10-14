@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.Configuration;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.util.Log;
@@ -180,5 +181,19 @@ public class OnMyService extends DaggerService
         } catch (Exception e) {
             Log.e("exc" , String.valueOf(e));
         }
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        Log.d("ClearFromRecentService", "Service Low Memory");
+
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Log.d("ClearFromRecentService", "Service onConfigurationChanged");
+
     }
 }

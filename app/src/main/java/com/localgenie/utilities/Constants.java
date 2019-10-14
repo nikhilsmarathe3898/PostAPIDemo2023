@@ -34,7 +34,7 @@ public class Constants {
 
  public static final String MQTT_URL_HOST = "tcp://45.77.190.140";
  public static final String MQTT_PORT = "1883";
- public static final String BASE_URL = "https://api.service-genie.xyz";
+ public static final String BASE_URL = "https://dev-api.service-genie.xyz";
 /* public static final String MQTT_URL_HOST = "tcp://206.189.39.225";
  public static final String MQTT_PORT = "2052";*/
  public static final String MQTT_TOPIC = "provider/";
@@ -52,12 +52,16 @@ public class Constants {
 
  //public static final String CHAT_URL = "https://dev-call.service-genie.xyz";
  //public static final String CHAT_URL = "http://45.77.190.140:5011/";
- public static final String CHAT_URL = "https://call.service-genie.xyz";
+ public static final String CHAT_URL = "https://dev-call.service-genie.xyz";
 
  public static final String CHAT_DATA_UPLOAD = "http://45.77.190.140:8009/";/*"http://45.77.190.140:8009/";*/
 
  //public static final String SERVER_KEY = "AIzaSyAbz187ZVtHiI6rK_bjtm1ILKa8gIqpMT8";
- public static final String SERVER_KEY = "AIzaSyAbz187ZVtHiI6rK_bjtm1ILKa8gIqpMT8";
+/*
+ public static String SERVER_KEY = "AIzaSyAbz187ZVtHiI6rK_bjtm1ILKa8gIqpMT8";
+*/
+ public static String SERVER_KEY = "";
+
  public static final String Amazonbucket = "appscrip";
  public static final String Amazoncognitoid = "us-east-1:9a14c311-0b08-4a80-a725-157af6547833";
  public static final String AmazonProfileFolderName = "iserve2.0/ProfileImages";

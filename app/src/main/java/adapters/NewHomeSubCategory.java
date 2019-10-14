@@ -72,7 +72,7 @@ public class NewHomeSubCategory extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return categoryList.size();
+        return categoryList == null ? 0 : categoryList.size();
     }
 
     class NewHomeSubHolder extends RecyclerView.ViewHolder

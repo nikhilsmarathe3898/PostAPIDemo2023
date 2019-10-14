@@ -20,7 +20,7 @@ public class BookingChatHistory implements Serializable
 "lastCahtMsgTimeStamp":0,
 "currency":"INR",
 "currencySymbol":"₹",*/
-    private long bookingId,bookingRequestedFor,bookingRequestedAt,lastCahtMsgTimeStamp;
+    private long bookingId,bookingRequestedFor,lastCahtMsgTimeStamp; //bookingRequestedAt
     private int status,callType;
     private double amount;
     private String providerId,firstName,lastName,profilePic,catName,currencySymbol;
@@ -49,9 +49,11 @@ public class BookingChatHistory implements Serializable
         return bookingRequestedFor;
     }
 
+/*
     public long getBookingRequestedAt() {
         return bookingRequestedAt;
     }
+*/
 
     public String getCatName() {
         return catName;

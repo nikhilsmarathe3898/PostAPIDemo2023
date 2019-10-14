@@ -24,18 +24,18 @@ public class ReviewPojo implements Serializable
 
     public class SignUpDataSid implements Serializable
     {
-        private float averageRating; // for Review Fragment
+       /* private float averageRating; // for Review Fragment
         private int reviewCount; // for Review Fragment
-
+*/
         private ArrayList<ProviderDetailsResponse.ProviderResponseDetails.ReviewList> reviews; //ArrayList For Reviews
 
-        public float getAverageRating() {
+       /* public float getAverageRating() {
             return averageRating;
         }
 
         public int getReviewCount() {
             return reviewCount;
-        }
+        }*/
 
         public ArrayList<ProviderDetailsResponse.ProviderResponseDetails.ReviewList> getReviews() {
             return reviews;

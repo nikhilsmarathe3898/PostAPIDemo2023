@@ -11,7 +11,7 @@ public class Category implements Serializable {
 @SerializedName("_id")
 @Expose
 private String id;
-@SerializedName("city_id")
+/*@SerializedName("city_id")
 @Expose
 private String cityId;
 @SerializedName("city")
@@ -22,13 +22,13 @@ private String city;
 private String prepTime;
 @SerializedName("packupTime")
 @Expose
-private String packupTime;
+private String packupTime;*/
 @SerializedName("bookingType")
 @Expose
 private String bookingType;
-@SerializedName("bussinessgp")
+/*@SerializedName("bussinessgp")
 @Expose
-private String bussinessgp;
+private String bussinessgp;*/
 @SerializedName("service_type")
 @Expose
 private int serviceType;
@@ -39,7 +39,7 @@ private int billingModel;
 @SerializedName("cat_name")
 @Expose
 private String catName;
-@SerializedName("cat_desc")
+/*@SerializedName("cat_desc")
 @Expose
 private String catDesc;
 @SerializedName("can_fees")
@@ -47,16 +47,16 @@ private String catDesc;
 private Integer canFees;
 @SerializedName("bannerImageWeb")
 @Expose
-private String bannerImageWeb;
+private String bannerImageWeb;*/
 @SerializedName("bannerImageApp")
 @Expose
 private String bannerImageApp;
-@SerializedName("sel_img")
+/*@SerializedName("sel_img")
 @Expose
 private String selImg;
 @SerializedName("unsel_img")
 @Expose
-private String unselImg;
+private String unselImg;*/
 @SerializedName("minimum_fees")
 @Expose
 private double minimumFees;
@@ -67,9 +67,9 @@ private double maximumFees;
 @SerializedName("subCategory")
 @Expose
 private ArrayList<SubCategory> subCategory = null;
-@SerializedName("bussinessGroup")
+/*@SerializedName("bussinessGroup")
 @Expose
-private String bussinessGroup;
+private String bussinessGroup;*/
 
     private BookingTypeAction bookingTypeAction;
     private CallType callType;
@@ -111,9 +111,11 @@ private String bussinessGroup;
         return offers;
     }
 
+/*
     public void setCategoryId(String categoryId) {
         this.categoryId = categoryId;
     }
+*/
 
     public String getRecommendedBannerImageApp() {
         return recommendedBannerImageApp;
@@ -153,7 +155,7 @@ public void setId(String id) {
 this.id = id;
 }
 
-public String getCityId() {
+/*public String getCityId() {
 return cityId;
 }
 
@@ -170,7 +172,7 @@ return prepTime;
 
 public String getPackupTime() {
 return packupTime;
-}
+}*/
 
 
 public String getBookingType() {
@@ -178,9 +180,9 @@ return bookingType;
 }
 
 
-public String getBussinessgp() {
+/*public String getBussinessgp() {
 return bussinessgp;
-}
+}*/
 
 
 public int getServiceType() {
@@ -200,7 +202,7 @@ return catName;
 }
 
 
-public String getCatDesc() {
+/*public String getCatDesc() {
 return catDesc;
 }
 
@@ -212,14 +214,14 @@ return canFees;
 
 public String getBannerImageWeb() {
 return bannerImageWeb;
-}
+}*/
 
 
 public String getBannerImageApp() {
 return bannerImageApp;
 }
 
-
+/*
 public String getSelImg() {
 return selImg;
 }
@@ -227,7 +229,7 @@ return selImg;
 
 public String getUnselImg() {
 return unselImg;
-}
+}*/
 
 
 public double getMinimumFees() {
@@ -245,9 +247,11 @@ return subCategory;
 }
 
 
+/*
 public String getBussinessGroup() {
 return bussinessGroup;
 }
+*/
 
 
     public class BookingTypeAction implements Serializable

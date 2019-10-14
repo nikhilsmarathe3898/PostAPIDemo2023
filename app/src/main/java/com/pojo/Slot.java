@@ -13,7 +13,7 @@ public class Slot {
     private String slotEndPeriodBooking;
     private String bookedStartHour;
     private String bookedEndHour;
-    private boolean isBooked;
+  //  private boolean isBooked;
     private String cutomerName;
     private String event;
     private String startTimeStamp;
@@ -84,13 +84,13 @@ public class Slot {
         this.bookedEndHour = bookedEndHour;
     }
 
-    public boolean isBooked() {
+   /* public boolean isBooked() {
         return isBooked;
     }
 
     public void setBooked(boolean booked) {
         isBooked = booked;
-    }
+    }*/
 
     public String getCutomerName() {
         return cutomerName;

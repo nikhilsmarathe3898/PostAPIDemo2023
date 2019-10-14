@@ -9,13 +9,15 @@ public class LoginCalls implements Serializable
 {
 
     String authToken;
-    String willTopic;
+  //  String willTopic;
 
     public String getAuthToken() {
         return authToken;
     }
 
+/*
     public String getWillTopic() {
         return willTopic;
     }
+*/
 }

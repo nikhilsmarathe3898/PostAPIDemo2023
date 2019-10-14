@@ -177,7 +177,7 @@ public class SearchAddressLocation extends AppCompatActivity implements PlaceAut
         Toolbar actionbar = (Toolbar) findViewById(R.id.actionbar);
         setSupportActionBar(actionbar);
         TextView tvgeneralTitle =  findViewById(R.id.tv_center);
-        tvgeneralTitle.setText("Search Location");
+        tvgeneralTitle.setText(getString(R.string.search_location));
         actionbar.setNavigationIcon(R.drawable.ic_clear_black_24dp);
         tvgeneralTitle.setTypeface(AppTypeface.getInstance(this).getHind_semiBold());
         actionbar.setNavigationOnClickListener(new View.OnClickListener() {

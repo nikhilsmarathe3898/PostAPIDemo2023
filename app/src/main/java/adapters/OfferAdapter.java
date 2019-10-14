@@ -57,7 +57,7 @@ public class OfferAdapter extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return offers.size();
+        return offers == null ? 0 : offers.size();
     }
 
     private class ViewHold extends RecyclerView.ViewHolder

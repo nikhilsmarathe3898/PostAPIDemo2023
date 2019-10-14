@@ -85,41 +85,46 @@ public class IntroActivityPresenter implements IntroActivityContract.IntroPresen
                     @Override
                     public void onNext(Response<GuestLoginResponse> value) {
                         Log.e("TAG","Req URL :   "+value.raw().request().url());
-                        switch (value.code()) {
-                            case 200:
-                                //try {
-                                    GuestLoginResponse loginResponse = value.body();
-                                    if (loginResponse != null) {
-                                        GuestLoginData loginData = loginResponse.getGuestLoginData();
-                                        if (loginData != null) {
-                                            String auth = loginData.getToken();
-                                            String sid = loginData.getSid();
 
-                                            sessionManager.setAUTH(auth);
-                                            sessionManager.setSID(sid);
-                                            sessionManager.setEmail(device_id);
-                                            sessionManager.setGuestLogin(true);
+                        try {
+                            switch (value.code()) {
+                                case 200:
+                                    //try {
+                                        GuestLoginResponse loginResponse = value.body();
+                                        if (loginResponse != null) {
+                                            GuestLoginData loginData = loginResponse.getGuestLoginData();
+                                            if (loginData != null) {
+                                                String auth = loginData.getToken();
+                                                String sid = loginData.getSid();
 
-                                            introView.loginSuccess(auth,device_id);
-                                        } else {
-                                            introView.hideProgress();
+                                                sessionManager.setAUTH(auth);
+                                                sessionManager.setSID(sid);
+                                                sessionManager.setEmail(device_id);
+                                                sessionManager.setGuestLogin(true);
+
+                                                introView.loginSuccess(auth,device_id);
+                                            } else {
+                                                introView.hideProgress();
+                                            }
                                         }
-                                    }
-                                /*} catch (Exception e) {
-                                    introView.hideProgress();
-                                }*/
-                                break;
+                                    /*} catch (Exception e) {
+                                        introView.hideProgress();
+                                    }*/
+                                    break;
 
-                            default:
-                                try {
-                                    if (value.errorBody()!=null) {
-                                        JSONObject errJson = new JSONObject(value.errorBody().string());
-                                        introView.onError(errJson.getString("message"));
+                                default:
+                                    try {
+                                        if (value.errorBody()!=null) {
+                                            JSONObject errJson = new JSONObject(value.errorBody().string());
+                                            introView.onError(errJson.getString("message"));
+                                        }
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
                                     }
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                                break;
+                                    break;
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
                     }
                     @Override

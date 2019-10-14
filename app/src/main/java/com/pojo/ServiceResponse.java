@@ -69,8 +69,8 @@ public class ServiceResponse implements Serializable
 "maxquantity":10,
 "minFees":10,
 "maxFees":300*/
-        private String _id,currency,currencySymbol,cat_id,sub_cat_id,ser_name,ser_desc,unit,bannerImageApp;
-        private double is_unit,plusOneCost,additionalPrice,minFees,maxFees;
+        private String _id,currency,currencySymbol,ser_name,ser_desc,unit;   //cat_id,sub_cat_id
+        private double is_unit;  //plusOneCost,additionalPrice,minFees,maxFees,bannerImageApp
         private int  quantity,maxquantity,tempQuant;
 
          /*  private ArrayList<CartItem>item; //when get item called
@@ -99,13 +99,13 @@ public class ServiceResponse implements Serializable
             return currencySymbol;
         }
 
-        public String getCat_id() {
+/*        public String getCat_id() {
             return cat_id;
         }
 
         public String getSub_cat_id() {
             return sub_cat_id;
-        }
+        }*/
 
         public String getSer_name() {
             return ser_name;
@@ -119,15 +119,17 @@ public class ServiceResponse implements Serializable
             return unit;
         }
 
+/*
         public String getBannerImageApp() {
             return bannerImageApp;
         }
+*/
 
         public double getIs_unit() {
             return is_unit;
         }
 
-        public double getPlusOneCost() {
+/*        public double getPlusOneCost() {
             return plusOneCost;
         }
 
@@ -141,7 +143,7 @@ public class ServiceResponse implements Serializable
 
         public double getMaxFees() {
             return maxFees;
-        }
+        }*/
 
         public int getQuantity() {
             return quantity;

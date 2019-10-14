@@ -62,7 +62,7 @@ public class CategoryAndServiceAdapter extends RecyclerView.Adapter<CategoryAndS
 
     @Override
     public int getItemCount() {
-        return categoryLists.size();
+        return categoryLists == null ? 0 :  categoryLists.size();
     }
 
     @Override

@@ -123,7 +123,7 @@ public class SubCategoryAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return subCategoryArrayList.size();
+        return subCategoryArrayList == null ? 0 : subCategoryArrayList.size();
     }
 
     class ViewHolders extends RecyclerView.ViewHolder

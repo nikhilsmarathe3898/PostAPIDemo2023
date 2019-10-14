@@ -110,7 +110,7 @@ public class NewHomeServiceAdapter extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return catArray.size();
+        return catArray == null ? 0 : catArray.size();
     }
 
     class NewHomeHolder extends RecyclerView.ViewHolder

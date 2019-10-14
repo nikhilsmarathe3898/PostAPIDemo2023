@@ -62,7 +62,7 @@ public class RatingAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return ratingTextList.size();
+        return ratingTextList == null ? 0 : ratingTextList.size();
     }
 
     class RatingViewHolder extends RecyclerView.ViewHolder{

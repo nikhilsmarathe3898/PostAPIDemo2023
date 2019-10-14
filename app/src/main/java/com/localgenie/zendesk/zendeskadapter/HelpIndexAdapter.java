@@ -89,7 +89,7 @@ public class HelpIndexAdapter extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return openCloses.size();
+        return  openCloses == null ? 0 : openCloses.size();
     }
 
     public void openCloseSize(int openSize)

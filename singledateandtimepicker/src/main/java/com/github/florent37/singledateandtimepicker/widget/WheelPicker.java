@@ -976,7 +976,7 @@ public abstract class WheelPicker extends View {
 
     @Override
     public int getItemCount() {
-      return data.size();
+      return data == null ? 0 : data.size();
     }
 
     @Override

@@ -44,7 +44,9 @@ public class InvoiceDetails implements Serializable {
         private ArrayList<CustomerRating>customerRating;
         private ArrayList<AdditionalService>additionalService;
         private int bookingModel;
+/*
         private String dropNotes,pickupNotes;
+*/
         private ArrayList<String> pickupImages;
         private ArrayList<String> dropImages;
 
@@ -106,14 +108,14 @@ public class InvoiceDetails implements Serializable {
         }
 
 
-        public String getDropNotes() {
+       /* public String getDropNotes() {
             return dropNotes;
         }
 
         public String getPickupNotes() {
             return pickupNotes;
         }
-
+*/
         public ArrayList<String> getPickupImages() {
             return pickupImages;
         }

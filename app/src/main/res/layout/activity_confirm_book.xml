@@ -45,6 +45,7 @@
                         android:layout_marginTop="@dimen/app_margin"
                         />
                     <EditText
+                        android:textDirection="rtl"
                         android:layout_marginTop="@dimen/dimen_5dp"
                         android:layout_marginLeft="@dimen/app_margin"
                         android:layout_marginRight="@dimen/app_margin"

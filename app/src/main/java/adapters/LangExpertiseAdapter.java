@@ -97,13 +97,13 @@ public class LangExpertiseAdapter extends RecyclerView.Adapter {
     {
         if(isPromoCode)
         {
-            return spans.size();
+            return spans == null ? 0 : spans.size();
         }else
         {
             if(isIconAvailable)
-                return preDefined.size();
+                return preDefined == null ? 0 : preDefined.size();
             else
-                return langExpertise.length;
+                return langExpertise == null ? 0 : langExpertise.length;
         }
 
     }

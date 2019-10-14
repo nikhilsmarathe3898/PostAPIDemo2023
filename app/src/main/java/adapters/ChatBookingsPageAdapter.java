@@ -90,7 +90,7 @@ public class ChatBookingsPageAdapter extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return bookingChatHistories.size();
+        return bookingChatHistories == null ? 0 : bookingChatHistories.size();
     }
 
     class ChatViewHolder extends RecyclerView.ViewHolder

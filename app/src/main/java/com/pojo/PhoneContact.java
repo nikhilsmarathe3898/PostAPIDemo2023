@@ -15,7 +15,7 @@ public class PhoneContact implements Serializable
 
     private String countryCode,phone;
 
-    private boolean isCurrentlyActive;
+ //   private boolean isCurrentlyActive;
 
     public String getCountryCode() {
         return countryCode;
@@ -33,11 +33,11 @@ public class PhoneContact implements Serializable
         this.phone = phone;
     }
 
-    public boolean isCurrentlyActive() {
+    /*public boolean isCurrentlyActive() {
         return isCurrentlyActive;
     }
 
     public void setCurrentlyActive(boolean currentlyActive) {
         isCurrentlyActive = currentlyActive;
-    }
+    }*/
 }

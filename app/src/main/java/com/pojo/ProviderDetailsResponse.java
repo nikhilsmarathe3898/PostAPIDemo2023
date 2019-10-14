@@ -72,9 +72,9 @@ public class ProviderDetailsResponse implements Serializable
 "address":{},
 "metaDataArr[]"*/
 
-        private String firstName,lastName,profilePic,email,bannerImage,photo,
-                countryCode,mobile,about,rules,musicGenres,instrument,youtubeUrlLink
-                ,currencySymbol,experties,lanKnow;
+        private String firstName,lastName,profilePic,email,
+                countryCode,mobile,about
+                ,currencySymbol;  //experties,lanKnow,rules,musicGenres,instrument,youtubeUrlLink,bannerImage,photo
         private int noOfReview,distanceMatrix,totalBooking;
         private float rating;
         private double distance,amount;
@@ -84,7 +84,7 @@ public class ProviderDetailsResponse implements Serializable
         private ArrayList<MetaDataArray>metaDataArr;
         private ArrayList<RatingLog>ratingLog;
         private ArrayList<String>workImage;
-        private ArrayList<Slots>slotData;
+       // private ArrayList<Slots>slotData;
         private Location location;
         private YourAddrData address;
 
@@ -92,9 +92,11 @@ public class ProviderDetailsResponse implements Serializable
             return address;
         }
 
+/*
         public ArrayList<Slots> getSlotData() {
             return slotData;
         }
+*/
 
         public Location getLocation() {
             return location;
@@ -136,13 +138,13 @@ public class ProviderDetailsResponse implements Serializable
             return email;
         }
 
-        public String getBannerImage() {
+   /*     public String getBannerImage() {
             return bannerImage;
         }
 
         public String getPhoto() {
             return photo;
-        }
+        }*/
 
         public String getCountryCode() {
             return countryCode;
@@ -156,7 +158,7 @@ public class ProviderDetailsResponse implements Serializable
             return about;
         }
 
-        public String getRules() {
+      /*  public String getRules() {
             return rules;
         }
 
@@ -171,7 +173,7 @@ public class ProviderDetailsResponse implements Serializable
         public String getYoutubeUrlLink() {
             return youtubeUrlLink;
         }
-
+*/
         public String getCurrencySymbol() {
             return currencySymbol;
         }
@@ -180,13 +182,13 @@ public class ProviderDetailsResponse implements Serializable
             return distanceMatrix;
         }
 
-        public String getExperties() {
+/*        public String getExperties() {
             return experties;
         }
 
         public String getLanKnow() {
             return lanKnow;
-        }
+        }*/
 
         public int getNoOfReview() {
             return noOfReview;
@@ -255,9 +257,11 @@ public class ProviderDetailsResponse implements Serializable
                 return reviewAt;
             }
 
+/*
             public void setReviewAt(long reviewAt) {
                 this.reviewAt = reviewAt;
             }
+*/
         }
 
         public class ServiceCategory implements Serializable
@@ -267,19 +271,19 @@ public class ProviderDetailsResponse implements Serializable
 "unit":"MINS",
 "price":45*/
 
-            private String id,name,unit,description;
+            private String id,name,description;  //unit
             private double price;
-            private int getTempQuant;
+          //  private int getTempQuant;
 
 
-            public int getGetTempQuant() {
+        /*    public int getGetTempQuant() {
                 return getTempQuant;
             }
 
             public void setGetTempQuant(int getTempQuant) {
                 this.getTempQuant = getTempQuant;
             }
-
+*/
             public String getId() {
                 return id;
             }
@@ -288,9 +292,11 @@ public class ProviderDetailsResponse implements Serializable
                 return name;
             }
 
+/*
             public String getUnit() {
                 return unit;
             }
+*/
 
             public String getDescription() {
                 return description;
@@ -349,7 +355,7 @@ public class ProviderDetailsResponse implements Serializable
 "rating":1,
 "totalRating":1*/
         String name,_id;
-        float rating,totalRating;
+        float rating;//totalRating;
 
         public String getName() {
             return name;
@@ -363,8 +369,10 @@ public class ProviderDetailsResponse implements Serializable
             return rating;
         }
 
+/*
         public float getTotalRating() {
             return totalRating;
         }
+*/
     }
 }

@@ -77,7 +77,7 @@ public class ResponsesAdapterMsg  extends RecyclerView.Adapter {
     }
     @Override
     public int getItemCount() {
-        return responseList.size();
+        return responseList == null ? 0 : responseList.size();
     }
     class ResponseViewHolder extends RecyclerView.ViewHolder {
         ImageView ivPic,callbtn,msgBtn;

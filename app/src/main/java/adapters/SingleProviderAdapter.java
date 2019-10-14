@@ -193,7 +193,7 @@ public class SingleProviderAdapter extends RecyclerView.Adapter implements Filte
     public int getItemCount() {
 
 
-        return ((providerData!=null)?providerData.size():0);
+        return providerData == null ? 0 : providerData.size();
     }
 
     @Override

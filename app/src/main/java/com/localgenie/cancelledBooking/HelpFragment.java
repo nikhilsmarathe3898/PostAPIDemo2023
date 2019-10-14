@@ -93,7 +93,7 @@ public class HelpFragment extends DaggerFragment
 
         @Override
         public int getItemCount() {
-            return helpReasons.size();
+            return helpReasons == null ? 0 : helpReasons.size();
         }
 
 

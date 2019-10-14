@@ -132,7 +132,7 @@ public class ScheduleListAdapter extends RecyclerView.Adapter<ScheduleListAdapte
 
     @Override
     public int getItemCount() {
-        return slots.size();
+        return slots == null ? 0 : slots.size();
     }
 
     /*@Override

@@ -16,13 +16,15 @@ public class LiveTackPojo implements Serializable {
     "latitude":13.028637,
     "pid":"59e5ee0c348a5441f36066cf"}*/
 
-    private String appVersion, status, locationHeading, pid;
+    private String status, pid;  //appVersion, locationHeading
 
     private double latitude, longitude;
 
+/*
     public String getAppVersion() {
         return appVersion;
     }
+*/
 
     public double getLongitude() {
         return longitude;
@@ -32,9 +34,11 @@ public class LiveTackPojo implements Serializable {
         return status;
     }
 
+/*
     public String getLocationHeading() {
         return locationHeading;
     }
+*/
 
     public double getLatitude() {
         return latitude;

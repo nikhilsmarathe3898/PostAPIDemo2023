@@ -54,7 +54,7 @@ public class RepeatDaysAdapter extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return allDaysArray.size();
+        return allDaysArray == null ? 0 : allDaysArray.size();
     }
 
     private class RecyclerViewHolders extends RecyclerView.ViewHolder

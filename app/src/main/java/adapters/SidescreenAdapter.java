@@ -60,7 +60,7 @@ public class SidescreenAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return sideScreenNames.length;
+        return sideScreenNames == null ? 0 : sideScreenNames.length;
     }
     public interface OnSideScreenClick{
         void onSideScreenClicked(String sideScreenName);

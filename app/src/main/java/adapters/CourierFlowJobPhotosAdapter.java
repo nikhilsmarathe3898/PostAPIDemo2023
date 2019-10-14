@@ -51,7 +51,7 @@ public class CourierFlowJobPhotosAdapter extends RecyclerView.Adapter {
         if(canbeEdited){
             return (imageSource.size()+1);
         }else{
-            return imageSource.size();
+            return imageSource == null ? 0 : imageSource.size();
         }
     }
 

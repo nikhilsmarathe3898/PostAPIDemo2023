@@ -9,8 +9,7 @@
     android:layout_marginBottom="@dimen/dimen_10dp"
     android:id="@+id/singleShiftBooking"
     android:background="@color/white"
-    android:padding="@dimen/dimen_10dp"
-    android:visibility="gone">
+    android:padding="@dimen/dimen_10dp">
 
     <FrameLayout
         android:layout_width="match_parent"
