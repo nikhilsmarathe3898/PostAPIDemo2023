@@ -237,7 +237,7 @@ public class ServicesFragPresenter implements ServiceFragContract.ServicePresent
                     Constants.customerHomePageInterval = cityData.getCustomerFrequency().getCustomerHomePageInterval();
                     Constants.stripeKeys = cityData.getStripeKeys();
                     Constants.GOOGLEKEY = cityData.getCustGoogleMapKeys();
-                    Constants.SERVER_KEY = cityData.getGoogleMapKey();
+                   // Constants.SERVER_KEY = cityData.getGoogleMapKey();
                     manager.setFcmTopicCity(cityData.getPushTopics().getCity());
                     manager.setFcmTopicAllCustomer(cityData.getPushTopics().getAllCustomers());
                     manager.setFcmTopicAllCity(cityData.getPushTopics().getAllCitiesCustomers());

@@ -60,7 +60,7 @@ public class Constants {
 /*
  public static String SERVER_KEY = "AIzaSyAbz187ZVtHiI6rK_bjtm1ILKa8gIqpMT8";
 */
- public static String SERVER_KEY = "";
+ public static String SERVER_KEY = "AIzaSyAbz187ZVtHiI6rK_bjtm1ILKa8gIqpMT8";
 
  public static final String Amazonbucket = "appscrip";
  public static final String Amazoncognitoid = "us-east-1:9a14c311-0b08-4a80-a725-157af6547833";
@@ -98,7 +98,7 @@ public class Constants {
  public static LatLng custLatLng ;
 
  public static int customerHomePageInterval = 5;
- public static String selLang = "en";
+ public static String selLang = "";
 
  public static String mqttErrorMsg = "";
  public static String providerId ="";

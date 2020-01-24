@@ -83,6 +83,7 @@ public class ChatPageFragment extends Fragment
     }
 
     public void notifyDataAdapter(ArrayList<BookingChatHistory> eventData) {
+        try {
         bookingChatHistories.clear();
         bookingChatHistories.addAll(eventData);
         if (bookingChatHistories.size() > 0) {
@@ -93,7 +94,10 @@ public class ChatPageFragment extends Fragment
             rlNoChatFound.setVisibility(View.VISIBLE);
         }
         adapterAssign.notifyDataSetChanged();
-    }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        }
 
     private void textValueToBeSet()
     {

@@ -327,10 +327,10 @@ public class ScheduleActivity extends DaggerAppCompatActivity implements Compact
     ArrayList<Slot> createSlotFromSchedules(List<Event> eventList) {
         ArrayList<Slot> slots = new ArrayList<>();
         ArrayList<Schedule> schedules = new ArrayList<>();
-        displayHourFormat = new SimpleDateFormat("h:mm", Locale.US);
-        displayHourFormatInBooked = new SimpleDateFormat("hh:mm a", Locale.US);
-        displayPeriodFormat = new SimpleDateFormat("a", Locale.US);
-        serverFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a", Locale.US);
+        displayHourFormat = new SimpleDateFormat("h:mm", Locale.getDefault());
+        displayHourFormatInBooked = new SimpleDateFormat("hh:mm a", Locale.getDefault());
+        displayPeriodFormat = new SimpleDateFormat("a", Locale.getDefault());
+        serverFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a", Locale.getDefault());
 
         for (Event event : eventList) {
             schedules.add((Schedule) event.getData());

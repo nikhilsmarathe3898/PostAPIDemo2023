@@ -26,7 +26,7 @@ public class SortCalls implements Comparator {
             return 0;
         }
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS z", Locale.US);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS z", Locale.getDefault());
 
 
         try {

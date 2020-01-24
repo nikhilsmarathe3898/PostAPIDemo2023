@@ -98,7 +98,7 @@ public class WalletTransactionsAdapter extends RecyclerView.Adapter<WalletTransa
         }
         long milliSecs = Long.parseLong(milliSecsString);
         Date date = new Date(milliSecs * 1000);
-        DateFormat format = new SimpleDateFormat("dd MMM yyyy, hh:mm a", Locale.US);
+        DateFormat format = new SimpleDateFormat("dd MMM yyyy, hh:mm a", Locale.getDefault());
         format.setTimeZone(Utility.getTimeZone());
         return format.format(date);
     }

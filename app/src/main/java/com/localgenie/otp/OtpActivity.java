@@ -114,7 +114,7 @@ public class OtpActivity extends DaggerAppCompatActivity implements OtpView {
 
         initialize();
         getSmsRetrival();
-        sessionManager.setGuestLogin(true);
+        sessionManager.setGuestLogin(false);
 /*
         intentFilter = new IntentFilter("android.provider.Telephony.SMS_RECEIVED");
         intentFilter.setPriority(IntentFilter.SYSTEM_HIGH_PRIORITY);

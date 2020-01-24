@@ -31,7 +31,7 @@ android {
 
     }
 
-    /*  packagingOptions {
+      packagingOptions {
         exclude 'AndroidManifest.xml'
         exclude 'lib/arm64-v8a/libcardioDecider.so'
         exclude 'lib/arm64-v8a/libcardioRecognizer.so'
@@ -58,7 +58,7 @@ android {
         exclude 'META-INF/ASL2.0'
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/NOTICE'
-    }*/
+    }
 
     buildTypes {
         release {
@@ -246,6 +246,7 @@ dependencies {
 
     //implementation files('libs/libjingle_peerconnection.jar')
     implementation files('libs/autobanh.jar')
+
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.github.sundeepk:compact-calendar-view:2.0.2.2'
     // ViewModel and LiveData

@@ -168,8 +168,10 @@ public class SignUpPresenterImpl implements SignUpPresenter,
         } else if (model.validPassword(password)) {
             signUpView.setPasswordInvalid();
             checklag.setpFlg(false);
-        }else
+        }else {
+            signUpView.clearError(3);
             checklag.setpFlg(true);
+        }
     }
 
     @Override
@@ -690,7 +692,7 @@ public class SignUpPresenterImpl implements SignUpPresenter,
     private void signUp() {
 
         Date currentTime = Calendar.getInstance().getTime();
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US);
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault());
         String deviceTime = df.format(currentTime);
         deviceTime = deviceTime.replace('T', ' ');
         Log.e("DATE", "date :: " + deviceTime +" profilePic "+profilePic +" UserType "
@@ -768,7 +770,7 @@ public class SignUpPresenterImpl implements SignUpPresenter,
 
     private void loginApi(String email, String password) {
         Date currentTime = Calendar.getInstance().getTime();
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US);
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault());
         String deviceTime = df.format(currentTime);
         deviceTime = deviceTime.replace('T',' ');
         lspServices.performLogin(Constants.selLang,email,password,device_id,"",

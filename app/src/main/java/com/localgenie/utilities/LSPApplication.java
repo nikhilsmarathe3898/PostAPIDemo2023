@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -79,7 +80,7 @@ public class LSPApplication extends DaggerApplication implements Application.Act
     @Inject Gson gson;
     @Inject MQTTManager mqttManager;
     @Inject SessionManagerImpl manager;
-
+    private static Context mContext;
     @Inject CompositeDisposable compositeDisposable;
 
     @Override
@@ -88,12 +89,17 @@ public class LSPApplication extends DaggerApplication implements Application.Act
         super.onCreate();
         Fabric.with(this, new Crashlytics());
 //        Fabric.with(this, new Crashlytics());
+        mContext = this;
         instance = this;
 
-
+        LocaleUtil.changeAppLanguage(mContext);
         ListenListener();
-        setLanguageValueTosession();
+        //setLanguageValueTosession();
 
+    }
+
+    public static Context getContext() {
+        return mContext;
     }
     /**
      * Its not strictly necessary to use this method - _usually_ invoking
@@ -113,6 +119,14 @@ public class LSPApplication extends DaggerApplication implements Application.Act
             application.registerActivityLifecycleCallbacks(instance);   //Registering life cycle for application class.
         }
         return instance;
+    }
+
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Log.e("TAG", "onConfigurationChanged");
+        LocaleUtil.setLanguage(mContext, newConfig);
     }
 
     /**

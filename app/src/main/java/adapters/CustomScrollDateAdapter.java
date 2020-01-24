@@ -59,8 +59,8 @@ public class CustomScrollDateAdapter extends RecyclerView.Adapter{
         try {
 
             Date date = new Date(bookingRequestedFor * 1000L);
-            //   SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.US);
-            SimpleDateFormat sdf = new SimpleDateFormat("EEE, d MMM", Locale.US);
+            //   SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.getDefault());
+            SimpleDateFormat sdf = new SimpleDateFormat("EEE, d MMM", Locale.getDefault());
 
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(date);

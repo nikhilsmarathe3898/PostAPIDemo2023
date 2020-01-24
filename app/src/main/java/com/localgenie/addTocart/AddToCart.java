@@ -130,7 +130,7 @@ public class AddToCart extends DaggerAppCompatActivity implements AddToCartContr
             String name = bundle.getString("NAME");
         }
 
-        if(Constants.bookingModel == 2 || Constants.bookingModel == 6)
+        if(Constants.bookingType != 1)
         {
             tvCartRemoveHr.setVisibility(View.INVISIBLE);
             tvCartAddHr.setVisibility(View.INVISIBLE);

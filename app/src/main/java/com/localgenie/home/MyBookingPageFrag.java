@@ -186,7 +186,11 @@ public class  MyBookingPageFrag extends Fragment {
                 rlMyEventNoBokinScheduled.setVisibility(View.VISIBLE);
         }
 
-        adapterAssign.notifyDataSetChanged();
+        try {
+            adapterAssign.notifyDataSetChanged();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         //  adapterAssign.isActivityCalled(true);
 
         if(bookingType == 2)
@@ -239,9 +243,13 @@ public class  MyBookingPageFrag extends Fragment {
     }
     public void todayDate()
     {
+        try {
         fromDate = getStartOfDayInMillisToday();
         toDate = getEndOfDayInMillisToday();
         mListener.onDateSelectedApi(getStartOfDayInMillisToday(),getEndOfDayInMillisToday(),false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     private void setCalendarValue() {
 

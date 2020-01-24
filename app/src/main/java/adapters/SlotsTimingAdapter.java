@@ -71,8 +71,8 @@ public class SlotsTimingAdapter extends RecyclerView.Adapter {
         try {
 
             Date date = new Date(bookingRequestedFor * 1000L);
-         //   SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.US);
-            SimpleDateFormat sdf = new SimpleDateFormat("hh:mm a", Locale.US);
+         //   SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.getDefault());
+            SimpleDateFormat sdf = new SimpleDateFormat("hh:mm a", Locale.getDefault());
             sdf.setTimeZone(Utility.getTimeZone());
             String formattedDate = sdf.format(date);
             tvTime.setText(formattedDate);

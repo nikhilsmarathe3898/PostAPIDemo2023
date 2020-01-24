@@ -1847,7 +1847,7 @@ public class AudioCallService extends DaggerService implements AppRTCClient.Sign
             public void onChronometerTick(Chronometer arg0) {
                 countUpHeader = (SystemClock.elapsedRealtime() - arg0.getBase()) / 1000;
 
-                callDurationHeader = String.format(Locale.US, "%02d:%02d:%02d", countUpHeader / 3600, countUpHeader / 60, countUpHeader % 60);
+                callDurationHeader = String.format(Locale.getDefault(), "%02d:%02d:%02d", countUpHeader / 3600, countUpHeader / 60, countUpHeader % 60);
 
 
                 try {

@@ -178,6 +178,7 @@ public class ChatFragment extends DaggerFragment implements ChattingFragPresente
 
     private void onNotifyAdapter(ArrayList<BookingChatHistory> activeChat, ArrayList<BookingChatHistory> pastChat) {
 
+        try{
         this.activeChat = activeChat;
         this.pastChat = pastChat;
 
@@ -186,6 +187,9 @@ public class ChatFragment extends DaggerFragment implements ChattingFragPresente
         }
         if (pastChatFrag != null) {
             pastChatFrag.notifyDataAdapter(this.pastChat);
+        }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

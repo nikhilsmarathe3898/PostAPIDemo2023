@@ -163,7 +163,7 @@ public class CountryPicker extends DialogFragment implements Comparator<Country>
     @SuppressLint("DefaultLocale") private void search(String text) {
         selectedCountriesList.clear();
         for (Country country : allCountriesList) {
-            if (country.getName().toLowerCase(Locale.ENGLISH).contains(text.toLowerCase())) {
+            if (country.getName().toLowerCase(Locale.getDefault()).contains(text.toLowerCase())) {
                 selectedCountriesList.add(country);
             }
         }
@@ -208,7 +208,7 @@ public class CountryPicker extends DialogFragment implements Comparator<Country>
     private int getFlagResId(String drawable) {
         try {
             return context.getResources()
-                    .getIdentifier("flag_" + drawable.toLowerCase(Locale.ENGLISH), "drawable",
+                    .getIdentifier("flag_" + drawable.toLowerCase(Locale.getDefault()), "drawable",
                             context.getPackageName());
         } catch (Exception e) {
             e.printStackTrace();

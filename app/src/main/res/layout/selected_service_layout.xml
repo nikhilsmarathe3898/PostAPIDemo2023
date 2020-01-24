@@ -72,7 +72,6 @@
             android:background="@drawable/parrot_green_stroke_bottom_background"
             >
                 <ImageView
-                    android:visibility="invisible"
                     android:id="@+id/ivSelectedRemove"
                     android:layout_width="@dimen/dimen_25dp"
                     android:layout_height="@dimen/dimen_20dp"
@@ -95,7 +94,6 @@
                     tools:text="3"
                     android:textSize="@dimen/textSize_12sp"/>
                 <ImageView
-                    android:visibility="invisible"
                     android:id="@+id/ivSelectedAdd"
                     android:layout_width="@dimen/dimen_25dp"
                     android:layout_height="@dimen/dimen_20dp"

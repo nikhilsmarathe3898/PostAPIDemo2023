@@ -25,7 +25,7 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif"
             android:gravity="center|left"
-            android:text="Loading data. Please wait.."
+            android:text="@string/lodaing_data"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:layout_marginLeft="@dimen/app_margin"

@@ -7,6 +7,7 @@ import com.localgenie.model.guest_login.GuestLoginData;
 import com.localgenie.model.guest_login.GuestLoginResponse;
 import com.localgenie.networking.LSPServices;
 import com.localgenie.utilities.Constants;
+import com.localgenie.utilities.LocaleUtil;
 import com.localgenie.utilities.SessionManagerImpl;
 import com.localgenie.utilities.Utility;
 import com.pojo.LanguageResponse;
@@ -73,7 +74,7 @@ public class IntroActivityPresenter implements IntroActivityContract.IntroPresen
         }
 
         Date currentTime = Calendar.getInstance().getTime();
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US);
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault());
         String deviceTime = df.format(currentTime);
         deviceTime = deviceTime.replace('T',' ');
 
@@ -161,14 +162,14 @@ public class IntroActivityPresenter implements IntroActivityContract.IntroPresen
 
                           Log.d("TAG", "onNextLAnguage: "+response);
                           LanguageResponse languageResponses = gson.fromJson(response,LanguageResponse.class);
-
+/*
                           Log.d("TAG", "onNext: "+languageResponses.getLanguagesLists().get(0).getCode()
-                          +" sess "+sessionManager.getLanguageSettings().getCode());
+                          +" sess "+sessionManager.getLanguageSettings().getCode());*/
 
                           boolean isLanguage = false;
                           for(int i = 0;i<languageResponses.getLanguagesLists().size(); i++)
                           {
-                              if(sessionManager.getLanguageSettings().getCode().equals(languageResponses.getLanguagesLists().get(i).getCode()))
+                              if(Constants.selLang.equals(languageResponses.getLanguagesLists().get(i).getCode()))
                               {
                                   isLanguage = true;
                                   introView.showLanguagesDialog(languageResponses.getLanguagesLists().indexOf(languageResponses.getLanguagesLists().get(i)),languageResponses.getLanguagesLists());
@@ -203,9 +204,12 @@ public class IntroActivityPresenter implements IntroActivityContract.IntroPresen
     }
 
     @Override
-    public void changeLanguage(String langCode, String langName, int direction)
+    public void changeLanguage(String langCode, String langName, int currentLanguage)
     {
-        sessionManager.setLanguageSettings(new LanguagesList(langCode,langName,direction));
+      if (currentLanguage != -1) {
+        LocaleUtil.changeAppLanguage(mContext, currentLanguage,true);
+      }
+       // sessionManager.setLanguageSettings(new LanguagesList(langCode,langName,direction));
         introView.setLanguage(langName,true);
     }
 }

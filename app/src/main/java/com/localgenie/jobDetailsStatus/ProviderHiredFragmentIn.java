@@ -208,7 +208,7 @@ public class ProviderHiredFragmentIn extends DaggerFragment implements JobProvid
                         Uri.parse("http://maps.google.com/maps?daddr="+proLat+","+proLng));
                 startActivity(intent);
 
-                /*String uri = String.format(Locale.ENGLISH, "geo:%f,%f", proLat, proLng);
+                /*String uri = String.format(Locale.getDefault(), "geo:%f,%f", proLat, proLng);
                  intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
                 startActivity(intent);*/
                 break;

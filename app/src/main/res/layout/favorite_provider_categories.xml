@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Select the category from where you want to remove the provider"
+        android:text="@string/select_the_category"
         android:textColor="@color/black"
         android:textAllCaps="true"
         android:padding="@dimen/dimen_10dp"

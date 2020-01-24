@@ -1910,7 +1910,7 @@ public class VideoCallSettings extends DaggerService implements AppRTCClient.Sig
 //                    countUp = (SystemClock.elapsedRealtime() - arg0.getBase()) / 1000;
 //
 //
-//                    tvStopWatch.setText(String.format(Locale.US, "%02d:%02d:%02d", countUp / 3600, countUp / 60, countUp % 60));
+//                    tvStopWatch.setText(String.format(Locale.getDefault(), "%02d:%02d:%02d", countUp / 3600, countUp / 60, countUp % 60));
 
 
                 }
@@ -2009,7 +2009,7 @@ public class VideoCallSettings extends DaggerService implements AppRTCClient.Sig
 
 
                 try {
-                    callHeaderTv.setText(String.format(Locale.US, "%02d:%02d:%02d", countUpHeader / 3600, countUpHeader / 60, countUpHeader % 60));
+                    callHeaderTv.setText(String.format(Locale.getDefault(), "%02d:%02d:%02d", countUpHeader / 3600, countUpHeader / 60, countUpHeader % 60));
 
 
                 } catch (NullPointerException e) {

@@ -309,8 +309,12 @@ public class MainActivity extends DaggerAppCompatActivity implements MyBookingPa
         Utility.checkAndShowNetworkError(this);
     }
 
+
     @Override
     public void onDateSelectedApi(long fromDate, long toDate, boolean ApiCalled) {
         fragmentProject.onDateSelected(fromDate,toDate,ApiCalled);
     }
+
+
+
 }

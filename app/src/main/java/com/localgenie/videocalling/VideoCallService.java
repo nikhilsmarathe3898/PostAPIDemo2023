@@ -2347,7 +2347,7 @@ public class VideoCallService extends DaggerService implements AppRTCClient.Sign
 
 
                 try {
-                    callHeaderTv.setText(String.format(Locale.US, "%02d:%02d:%02d", countUpHeader / 3600, countUpHeader / 60, countUpHeader % 60));
+                    callHeaderTv.setText(String.format(Locale.getDefault(), "%02d:%02d:%02d", countUpHeader / 3600, countUpHeader / 60, countUpHeader % 60));
 
 
                 } catch (NullPointerException e) {

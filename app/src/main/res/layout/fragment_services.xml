@@ -34,7 +34,7 @@
                     android:id="@+id/tvAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fetching location..."
+                    android:text="@string/fetch_location"
                     android:textColor="@color/black"
                     android:gravity="center"
                     android:textSize="@dimen/textSize_14sp"

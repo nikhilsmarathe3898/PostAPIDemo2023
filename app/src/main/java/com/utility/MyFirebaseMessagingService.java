@@ -97,7 +97,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
         manager = SessionManager.getInstance(this);
-        timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss", Locale.US).format(new Date());
+        timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss", Locale.getDefault()).format(new Date());
 
 
         if (remoteMessage == null)
@@ -291,7 +291,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.d(TAG, "handleChatNotification: " + notificationPojo);
 
         this.title = notificationPojo.getName();
-        timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss", Locale.US).format(new Date());
+        timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss", Locale.getDefault()).format(new Date());
 
 
         //  ChatData chatData = gson.fromJson(jsonRemoteMessage.getString("data"),ChatData.class);
@@ -360,7 +360,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         this.action = action;
         this.picUrl = picUrl;
         this.bid = bid;
-        timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss", Locale.US).format(new Date());
+        timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss", Locale.getDefault()).format(new Date());
 
         Constants.isJobBidDetailsOpen = false;
         Log.e(TAG, "action " + this.action);

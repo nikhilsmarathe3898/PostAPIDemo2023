@@ -55,6 +55,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
         <activity
             android:name="com.localgenie.ProviderSearch.ProviderSearchActivity"
             android:label="Search Providers"></activity>
@@ -68,10 +73,12 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
-        <provider
-            android:name="com.facebook.FacebookContentProvider"
-            android:authorities="com.facebook.app.FacebookContentProvider445340349536589"
-            android:exported="true" />
+        <!--
+                <provider
+                    android:name="com.facebook.FacebookContentProvider"
+                    android:authorities="com.facebook.app.FacebookContentProvider445340349536589"
+                    android:exported="true" />
+        -->
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -217,10 +224,11 @@
             </intent-filter>
         </service> <!-- <service android:name="com.utility.MyFirebaseInstanceIDService" /> -->
         <!-- MQTT Service -->
-        <service android:name="org.eclipse.paho.android.service.MqttService"
+        <service
+            android:name="org.eclipse.paho.android.service.MqttService"
             android:enabled="true"
             android:exported="false"
-            android:stopWithTask="false"/>
+            android:stopWithTask="false" />
 
         <activity
             android:name="com.localgenie.filter.FilterActivity"
@@ -321,11 +329,11 @@
             android:name="com.localgenie.chatting.ChattingActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait">
-<!--
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.localgenie.home.MainActivity" />
--->
+            <!--
+                        <meta-data
+                            android:name="android.support.PARENT_ACTIVITY"
+                            android:value="com.localgenie.home.MainActivity" />
+            -->
         </activity>
         <activity
             android:name="com.localgenie.wallet.WalletActivity"
@@ -382,8 +390,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.localgenie.videocalling.IncomingCallScreen"
-            android:screenOrientation="portrait"
             android:noHistory="true"
+            android:screenOrientation="portrait"
             android:showOnLockScreen="true"
             android:showWhenLocked="true"
             android:turnScreenOn="true">

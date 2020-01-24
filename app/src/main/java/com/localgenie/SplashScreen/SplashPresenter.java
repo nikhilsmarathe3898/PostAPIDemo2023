@@ -245,7 +245,7 @@ public class SplashPresenter implements SplashContract.Presenter {
             mContext.startActivity(intent);
             splashView.onFinishCalled();
         } else {
-            Constants.selLang = manager.getLanguageSettings().getCode();
+           // Constants.selLang = manager.getLanguageSettings().getCode();
 
             splashView.onToMainActivity();
 

@@ -144,12 +144,12 @@ public class LoginPresenterImpl implements LoginPresenter,
 
 
         Date currentTime = Calendar.getInstance().getTime();
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US);
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault());
         String deviceTime = df.format(currentTime);
         deviceTime = deviceTime.replace('T',' ');
         final  String pass = password;
 
-        /*Observable<Response<ResponseBody>> bad = */lspServices.performLogin(Constants.selLang,username,password,device_id,"",
+      /*Observable<Response<ResponseBody>> bad = */lspServices.performLogin(Constants.selLang,username,password,device_id,"",
                 Constants.APP_VERSION, Constants.DEVICE_MAKER, Constants.DEVICE_MODEL,
                 2,deviceTime,userDetailsDataModel.getLoginType(),
                 Constants.DEVICE_OS_VERSION,userDetailsDataModel.getFacebookId(),

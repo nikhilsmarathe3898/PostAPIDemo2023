@@ -131,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Registerer"
+                    android:text="@string/registereres"
                     android:visibility="invisible"
                     android:textColor="@color/black_john"/>
 
@@ -258,7 +258,7 @@
                 android:textColor="@color/white"
                 android:layout_marginLeft="@dimen/app_margin"
                 android:layout_marginRight="@dimen/app_margin"
-                android:text="view more details"
+                android:text="@string/view_more_detail"
                 android:visibility="gone"
                 android:textSize="@dimen/textSize_12sp"/>
 

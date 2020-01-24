@@ -73,6 +73,11 @@ public class SelectedService extends RecyclerView.Adapter
     {
         ViewHolderSelector vHolder = (ViewHolderSelector) holder;
 
+        if(Constants.bookingType != 1){
+            ((ViewHolderSelector) holder).ivSelectedAdd.setVisibility(View.INVISIBLE);
+            ((ViewHolderSelector) holder).ivSelectedRemove.setVisibility(View.INVISIBLE);
+        }
+
         if(isEditable)
         {
             int quantAct = 0;

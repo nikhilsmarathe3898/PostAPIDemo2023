@@ -103,7 +103,7 @@ public class TimeSlots extends DaggerAppCompatActivity {
     long eveningMin = 15;long eveningMax = 19;
     // long nightMin = 19;long nightMax = 23;
     int hours;
-    SimpleDateFormat formatted = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+    SimpleDateFormat formatted = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
 
     String currentDate,selectedDate;
     private CustomScrollDateAdapter customScrollDateAdapter;
@@ -639,8 +639,8 @@ public class TimeSlots extends DaggerAppCompatActivity {
         int hour = 0;
         try {
             Date date = new Date(bookingRequestedFor * 1000L);
-            //   SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.US);
-            SimpleDateFormat sdf = new SimpleDateFormat("HH", Locale.US);
+            //   SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.getDefault());
+            SimpleDateFormat sdf = new SimpleDateFormat("HH", Locale.getDefault());
             //  int hour = sdf
             sdf.setTimeZone(Utility.getTimeZone());
             String formattedDate = sdf.format(date);

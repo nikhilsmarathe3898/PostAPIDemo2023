@@ -43,6 +43,7 @@ public class AlertProgress
     private static final String TAG = "AlertProgress";
     private Context mcontect;
     private static AlertDialog alertDialogs = null;
+    private int currentLanguage = -1;
     public AlertProgress(Context mcontect)
     {
         this.mcontect  =mcontect;
@@ -169,8 +170,12 @@ public class AlertProgress
         builder.setMessage(message);
         builder.setCancelable(false);
         builder.setPositiveButton(positiveText, (dialog1, which) -> {
-            dialog1.dismiss();
-            dialog1.cancel();
+            if (dialog != null && dialog.isShowing()) {
+                dialog.dismiss();
+                dialog.cancel();
+            }
+           /* dialog1.dismiss();
+            dialog1.cancel();*/
             isclick.dialogClick(true);
         });
         builder.show();
@@ -315,9 +320,13 @@ public interface IpAddressInterface
 
                     String langCode = languagesList.get(languagesList.indexOf(languagesList.get(i))).getCode();
                     String langName = languagesList.get(languagesList.indexOf(languagesList.get(i))).getLan_name();
-                    int dir = Utility.changeLanguageConfig(langCode,mActivity);
+                   // int dir = Utility.changeLanguageConfig(langCode,mActivity);
                     //  dialogCallbackHelper.changeLanguage(langCode,langName,dir);
-                    presenter.changeLanguage(langCode,langName,dir);
+                if(langCode.equals("en"))
+                    currentLanguage = 2;
+                else
+                    currentLanguage = 1;
+                    presenter.changeLanguage(langCode,langName,currentLanguage);
 
                     if(alertDialogs!=null && alertDialogs.isShowing())
                         alertDialogs.dismiss();

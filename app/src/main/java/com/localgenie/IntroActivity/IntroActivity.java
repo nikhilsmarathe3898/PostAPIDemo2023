@@ -18,6 +18,7 @@ import com.localgenie.Login.LoginActivity;
 import com.localgenie.R;
 import com.localgenie.home.MainActivity;
 import com.localgenie.utilities.Constants;
+import com.localgenie.utilities.LocaleUtil;
 import com.localgenie.utilities.SessionManagerImpl;
 import com.pojo.LanguageResponse;
 import com.utility.AlertProgress;
@@ -73,6 +74,12 @@ public class IntroActivity extends DaggerAppCompatActivity implements IntroActiv
         btnGetStarted.startAnimation(rAnimation);
 
         accountManager = AccountManager.get(this);
+
+
+        if(LocaleUtil.getUserLocale().getLanguage().trim().equals("hi"))
+        {
+            btnLogin.setText("abcd");
+        }
     }
 
     @Override
@@ -104,7 +111,7 @@ public class IntroActivity extends DaggerAppCompatActivity implements IntroActiv
         Intent intent;
         switch (view.getId()) {
             case R.id.btnLogin:
-                Constants.selLang = manager.getLanguageSettings().getCode();
+               // Constants.selLang = manager.getLanguageSettings().getCode();
                 intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 break;
@@ -124,7 +131,7 @@ public class IntroActivity extends DaggerAppCompatActivity implements IntroActiv
 
       /*  String get_Auth = getAuthToken(device_id);
         Log.e("LOGIN","auth_token :  "+get_Auth);*/
-        Constants.selLang = manager.getLanguageSettings().getCode();
+       // Constants.selLang = manager.getLanguageSettings().getCode();
         Log.d("TAG", "loginSuccess: " + Constants.selLang);
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -136,12 +143,12 @@ public class IntroActivity extends DaggerAppCompatActivity implements IntroActiv
     public void setLanguage(String language, boolean restart) {
         Log.d("TAG", "setLanguage: " + language);
         tvLandingLanguages.setText(language);
-        if (restart) {
+       /* if (restart) {
             Intent intent = new Intent(this, IntroActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             Runtime.getRuntime().exit(0);
-        }
+        }*/
     }
 
     @Override

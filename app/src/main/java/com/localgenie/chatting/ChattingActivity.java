@@ -233,10 +233,8 @@ public class ChattingActivity extends DaggerAppCompatActivity implements View.On
         toolbarChatting.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChattingActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
-                //onBackPressed();
+
+                onBackPressed();
             }
         });
 
@@ -539,8 +537,18 @@ public class ChattingActivity extends DaggerAppCompatActivity implements View.On
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.mainfadein,R.anim.slide_down_acvtivity);
-        finish();
+       /* overridePendingTransition(R.anim.mainfadein,R.anim.slide_down_acvtivity);
+        finish();*/
+        if (Utility.isAppIsInBackground(getApplicationContext())) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+            overridePendingTransition(R.anim.mainfadein,R.anim.slide_down_acvtivity);
+            startActivity(intent);
+            finish();
+        }else {
+            overridePendingTransition(R.anim.mainfadein,R.anim.slide_down_acvtivity);
+            finish();
+        }
     }
 
 

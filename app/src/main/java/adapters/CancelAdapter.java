@@ -12,6 +12,7 @@ import com.localgenie.R;
 import com.localgenie.jobDetailsStatus.JobDetailsOnTheWayContract;
 import com.localgenie.utilities.AppTypeface;
 
+import com.localgenie.utilities.SpUtil;
 import java.util.ArrayList;
 
 import butterknife.BindView;
@@ -31,6 +32,7 @@ public class CancelAdapter extends RecyclerView.Adapter
     private ArrayList<CancelReasonPojo.CancelReasonData> data;
     private int selectedPosition = -1;
     private JobDetailsOnTheWayContract.CancelBooking cancelInterface;
+    private int currentLanguage = -1;
 
     public CancelAdapter(Context mContext, ArrayList<CancelReasonPojo.CancelReasonData> data, JobDetailsOnTheWayContract.CancelBooking cancelInterface)
     {
@@ -51,6 +53,14 @@ public class CancelAdapter extends RecyclerView.Adapter
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
         ViewCancelHolder vHolder = (ViewCancelHolder) holder;
+
+        int language = SpUtil.getInstance().getInt("currentLanguage", currentLanguage);
+        switch (language) {
+            case 0:
+            case 1:
+                vHolder.ivCheckSelector.setSelected(true);
+                break;
+        }
 
         if(selectedPosition == position)
         {

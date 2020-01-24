@@ -87,7 +87,7 @@
                     android:textSize="12sp"
                     android:gravity="center"
                     android:textAllCaps="true"
-                    android:text="PM"/>
+                    android:text="@string/pm"/>
 
             </LinearLayout>
 

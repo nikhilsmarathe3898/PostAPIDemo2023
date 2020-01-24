@@ -38,7 +38,9 @@ import com.localgenie.profile.ProfileActivity;
 import com.localgenie.share.ShareActivity;
 import com.localgenie.utilities.AppTypeface;
 import com.localgenie.utilities.Constants;
+import com.localgenie.utilities.LocaleUtil;
 import com.localgenie.utilities.SessionManagerImpl;
+import com.localgenie.utilities.SpUtil;
 import com.localgenie.utilities.Utility;
 import com.localgenie.wallet.WalletActivity;
 import com.localgenie.wallet.WalletActivityContract;
@@ -99,6 +101,7 @@ public class SidescreensFrag extends DaggerFragment implements
     @Inject
     WalletActivityContract.WalletPresenterBalance walletPresenterBalance;
     private String sidescreens[];
+  private int currentLanguage = -1;
 
     int drawableArray[] ={R.drawable.ic_menu_payment, R.drawable.ic_wallet_grey,R.drawable.ic_favourite,
             R.drawable.ic_menu_youraddress,R.drawable.ic_menu_share
@@ -498,13 +501,15 @@ public class SidescreensFrag extends DaggerFragment implements
                                 Log.d("TAG", "onNextLAnguage: "+response);
                                 LanguageResponse languageResponses = gson.fromJson(response,LanguageResponse.class);
 
+/*
                                 Log.d("TAG", "onNext: "+languageResponses.getLanguagesLists().get(0).getCode()
                                         +" sess "+sessionManager.getLanguageSettings().getCode());
+*/
 
                                 boolean isLanguage = false;
                                 for(int i = 0;i<languageResponses.getLanguagesLists().size(); i++)
                                 {
-                                    if(sessionManager.getLanguageSettings().getCode().equals(languageResponses.getLanguagesLists().get(i).getCode()))
+                                    if(Constants.selLang.equals(languageResponses.getLanguagesLists().get(i).getCode()))
                                     {
                                         isLanguage = true;
                                         showLanguagesDialog(languageResponses.getLanguagesLists().indexOf(languageResponses.getLanguagesLists().get(i)),languageResponses.getLanguagesLists());
@@ -539,12 +544,16 @@ public class SidescreensFrag extends DaggerFragment implements
     }
 
 
-    public void changeLanguage(String langCode, String langName, int direction)
+    public void changeLanguage(String langCode, String langName, int currentLanguage)
     {
-        sessionManager.setLanguageSettings(new LanguagesList(langCode,langName,direction));
+
+      if (currentLanguage != -1) {
+        LocaleUtil.changeAppLanguage(mContext, currentLanguage,false);
+      }
+        /*sessionManager.setLanguageSettings(new LanguagesList(langCode,langName,direction));
         Constants.selLang = sessionManager.getLanguageSettings().getCode();
 
-        setLanguage(langName,true);
+        setLanguage(langName,true);*/
     }
     public void onErrorMsg(String msg) {
         alertProgress.alertinfo(mContext, msg);
@@ -591,15 +600,23 @@ public class SidescreensFrag extends DaggerFragment implements
         AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
 
         builder.setTitle(mActivity.getString(R.string.select_lang));
+
         builder.setSingleChoiceItems((CharSequence[]) languageListTemp.toArray(new CharSequence[languagesList.size()]),
                 indexSelected,(dialogInterface, i) -> {
 
                     String langCode = languagesList.get(languagesList.indexOf(languagesList.get(i))).getCode();
                     String langName = languagesList.get(languagesList.indexOf(languagesList.get(i))).getLan_name();
-                    int dir = Utility.changeLanguageConfig(langCode,mActivity);
+                   // int dir = Utility.changeLanguageConfig(langCode,mActivity);
 
                     //  dialogCallbackHelper.changeLanguage(langCode,langName,dir);
-                    changeLanguage(langCode,langName,dir);
+              if(langCode.equals("en"))
+                currentLanguage = 2;
+              else
+                currentLanguage = 1;
+
+                    changeLanguage(langCode,langName,currentLanguage);
+
+
 
                     if(alertDialogs!=null && alertDialogs.isShowing())
                         alertDialogs.dismiss();

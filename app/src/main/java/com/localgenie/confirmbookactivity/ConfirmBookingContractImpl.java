@@ -634,8 +634,8 @@ public class ConfirmBookingContractImpl implements ConfirmBookingContract.Contra
             try {
 
                 Date date = new Date(fromTime * 1000L);
-                   SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.US);
-               // SimpleDateFormat sdf = new SimpleDateFormat("hh:mm a", Locale.US);
+                   SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.getDefault());
+               // SimpleDateFormat sdf = new SimpleDateFormat("hh:mm a", Locale.getDefault());
                 sdf.setTimeZone(Utility.getTimeZone());
                 tvInConfirmBookingTypeDesc.setText(sdf.format(date));
 

@@ -74,7 +74,7 @@ public class ChatBookingsPageAdapter extends RecyclerView.Adapter
 
             Log.d("TAGTIME", " expireTime " + bookingRequestedFor);
             Date date = new Date(bookingRequestedFor * 1000L);
-            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.US);
+            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.getDefault());
             sdf.setTimeZone(Utility.getTimeZone());
             String formattedDate = sdf.format(date);
             String splitDate[] =formattedDate.split(" ");

@@ -496,7 +496,7 @@ public class ProfileActivity extends DaggerAppCompatActivity implements ProfileV
 
                 countryCode.setText(country_code);
                 String drawableName = "flag_"
-                        + arrDial[1].trim().toLowerCase(Locale.ENGLISH);
+                        + arrDial[1].trim().toLowerCase(Locale.getDefault());
                 countryFlag.setImageResource(getResId(drawableName));
                 break;
             }

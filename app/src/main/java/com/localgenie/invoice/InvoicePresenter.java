@@ -170,7 +170,7 @@ public class InvoicePresenter implements InvoiceModel.InvoicePre
 
             Log.d("TAGTIME", " expireTime " + bookingRequestedFor);
             Date date = new Date(bookingRequestedFor * 1000L);
-            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy h:mm a", Locale.US);
+            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy h:mm a", Locale.getDefault());
             sdf.setTimeZone(Utility.getTimeZone());
             String formattedDate = sdf.format(date);
 
