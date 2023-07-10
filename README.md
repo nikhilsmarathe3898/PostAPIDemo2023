@@ -3,6 +3,7 @@ Send data in API and Get Response
 
 
 STEP 1 :  Create Empty Activity.
+
 STEP 2 :  Insert dependency implementation.
 
             implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -53,5 +54,7 @@ STEP 7 :   Declare UI's field variable in "MainActivity.java" file
 STEP 8 :   Create Button Click. Checks all The data is not null.
 
 STEP 9 :   Give Internet Permission.
+
 STEP 10 :   In the Button Click, Create Interface initialization and call the Pojo.
+
 STEP 11 :   Store Response Data in textview as an output.
